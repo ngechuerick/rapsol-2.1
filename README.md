@@ -1,0 +1,3 @@
+# REDESIGNING RAPSOLTECH CONSULTING WEBSITE VERSION 2.0 USING PHP LARAVEL
+
+- Google fonts used (Nunito sans and Kumb sans)

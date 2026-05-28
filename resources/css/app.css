@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin "daisyui";
 
@@ -10,19 +10,138 @@
 @source '../**/*.js';
 
 /* ── This is the missing line that makes dark: classes work ── */
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --font-sans:    'Nunito Sans', ui-sans-serif, system-ui, sans-serif;
-    --font-display: 'Kumbh Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Kumbh Sans", ui-sans-serif, system-ui, sans-serif;
+
+    /* --color-base:#0A1628; */
+    --color-black-pearl-50: #f2f6fd;
+    --color-black-pearl-100: #e4edfa;
+    --color-black-pearl-200: #c2d9f5;
+    --color-black-pearl-300: #8dbaec;
+    --color-black-pearl-400: #5097e0;
+    --color-black-pearl-500: #2a7acd;
+    --color-black-pearl-600: #1b5fae;
+    --color-black-pearl-700: #174c8d;
+    --color-black-pearl-800: #174175;
+    --color-black-pearl-900: #183862;
+    --color-black-pearl-950: #0a1628;
+
+    --color-primary: #c9a84c;
+    --color-roti-50: #f9f6ed;
+    --color-roti-100: #f1ebd1;
+    --color-roti-200: #e5d8a6;
+    --color-roti-300: #d7bf72;
+    --color-roti-400: #c9a84c;
+    --color-roti-500: #b69238;
+    --color-roti-600: #9a742d;
+    --color-roti-700: #7a5826;
+    --color-roti-800: #654826;
+    --color-roti-900: #573f25;
+    --color-roti-950: #322111;
+
+    --color-secondary: #cb7028;
+    --color-hot-cinnamon-50: #fcf7ee;
+    --color-hot-cinnamon-100: #f7e7ce;
+    --color-hot-cinnamon-200: #edcd9a;
+    --color-hot-cinnamon-300: #e4af65;
+    --color-hot-cinnamon-400: #de9541;
+    --color-hot-cinnamon-500: #cb7028;
+    --color-hot-cinnamon-600: #bc5823;
+    --color-hot-cinnamon-700: #9d3f20;
+    --color-hot-cinnamon-800: #803220;
+    --color-hot-cinnamon-900: #6a2b1d;
+    --color-hot-cinnamon-950: #3c140c;
+
+    /* For text and background colors */
+    --color-shark-50: #fafafa;
+    --color-shark-100: #f4f4f5;
+    --color-shark-200: #e4e4e7;
+    --color-shark-300: #d4d4d8;
+    --color-shark-400: #a1a1aa;
+    --color-shark-500: #71717a;
+    --color-shark-600: #52525b;
+    --color-shark-700: #3f3f46;
+    --color-shark-800: #27272a;
+    --color-shark-900: #18181b;
+    --color-shark-950: #09090b;
 }
 
 @layer base {
+    /* globals.css */
+
     body {
         font-family: var(--font-sans);
+        font-size: 1.6rem; /* = 16px */
+        font-weight: 400;
     }
 
+    /* prettier-ignore */
     h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-display);
     }
+}
+
+/* ══════════════════════════════════════════
+   SCROLL REVEAL ANIMATION SYSTEM
+   Elements start hidden, become visible
+   when they enter the viewport via JS observer
+══════════════════════════════════════════ */
+
+[data-animate] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays — use data-delay="1" through data-delay="5" */
+[data-animate][data-delay="1"] {
+    transition-delay: 80ms;
+}
+[data-animate][data-delay="2"] {
+    transition-delay: 160ms;
+}
+[data-animate][data-delay="3"] {
+    transition-delay: 240ms;
+}
+[data-animate][data-delay="4"] {
+    transition-delay: 320ms;
+}
+[data-animate][data-delay="5"] {
+    transition-delay: 400ms;
+}
+
+/* Slide from left variant */
+[data-animate="left"] {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition:
+        opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-animate="left"].is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale variant */
+[data-animate="scale"] {
+    opacity: 0;
+    transform: scale(0.96);
+    transition:
+        opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-animate="scale"].is-visible {
+    opacity: 1;
+    transform: scale(1);
 }

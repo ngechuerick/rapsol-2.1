@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" x-data="{ dark: false }" :class="dark ? 'dark' : ''" x-cloak>
+<!DOCTYPE html >
+<html lang="en" x-data="{
+          dark: localStorage.getItem('theme') === 'dark',
+          navOpen: false
+      }"
+      :class="dark ? 'dark' : ''"
+      x-init="$watch('dark', v => localStorage.setItem('theme', v ? 'dark' : 'light'))">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -1,0 +1,17 @@
+{
+    "plugins": ["prettier-plugin-blade"],
+    "useTabs": false,
+    "tabWidth": 4,
+    "endOfLine": "lf",
+    "overrides": [
+        {
+            "files": ["*.blade.php"],
+            "options": {
+                "parser": "blade",
+                "tabWidth": 4,
+                "printWidth": 120,
+                "wrapAttributes": "auto"
+            }
+        }
+    ]
+}

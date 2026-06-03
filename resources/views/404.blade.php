@@ -5,14 +5,14 @@
     <div class="relative min-h-[70vh] flex flex-col items-center justify-center px-7 py-24 overflow-hidden text-center">
         {{-- Grid background --}}
         <div
-            class="absolute inset-0 -z-10 [background-image:linear-gradient(rgba(161,161,170,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(161,161,170,0.14)_1px,transparent_1px)] dark:[background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:40px_40px]"
+            class="absolute inset-0 -z-10 bg-[linear-gradient(rgba(161,161,170,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(161,161,170,0.14)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[40px_40px]"
         ></div>
 
         {{-- Diamond corners --}}
-        <div class="absolute -top-[5px] -left-[5px] w-[10px] h-[10px] rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -top-[5px] -right-[5px] w-[10px] h-[10px] rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -bottom-[5px] -left-[5px] w-[10px] h-[10px] rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -bottom-[5px] -right-[5px] w-[10px] h-[10px] rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+        <div class="absolute -bottom-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+        <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         {{-- Large ambient 404 --}}
         <div

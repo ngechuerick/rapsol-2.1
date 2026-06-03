@@ -11,7 +11,7 @@
                     </div>
                     <span class="font-display font-semibold text-[15px] text-white"> {{ config('app.name') }} </span>
                 </div>
-                <p class="text-sm leading-relaxed opacity-50 mb-6 max-w-[200px]">Building world-class web experiences that create lasting results for people and teams.</p>
+                <p class="text-sm leading-relaxed opacity-50 mb-6 max-w-50">Building world-class web experiences that create lasting results for people and teams.</p>
                 {{-- Social links --}}
                 <div class="flex items-center gap-2.5">
                     @foreach ([
@@ -72,7 +72,6 @@
                         'Privacy Policy'   => '/privacy',
                         'Terms of Service' => '/terms',
                         'Cookie Policy'    => '/cookies',
-                        'Licenses'         => '/licenses',
                     ] as $label => $href)
                         <li>
                             <a
@@ -101,7 +100,7 @@
                         name="email"
                         placeholder="your@email.com"
                         required
-                        class="w-full px-4 py-2.5 rounded-lg text-sm bg-white/[0.04] border border-white/[0.08] text-zinc-300 placeholder-zinc-600 focus:outline-none focus:border-white/20 transition-colors duration-200"
+                        class="w-full px-4 py-2.5 rounded-lg text-sm bg-white/4 border border-white/8 text-zinc-300 placeholder-zinc-600 focus:outline-none focus:border-white/20 transition-colors duration-200"
                     />
                     <button
                         type="submit"

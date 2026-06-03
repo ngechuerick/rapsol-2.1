@@ -2,6 +2,9 @@
 
 return [
 
+
+
+   
     /*
     |--------------------------------------------------------------------------
     | Default Mailer
@@ -13,6 +16,8 @@ return [
     | "mailers" array. Examples of each type of mailer are provided.
     |
     */
+
+    'contact_address' => env('CONTACT_EMAIL', 'hello@yourdomain.com'),
 
     'default' => env('MAIL_MAILER', 'log'),
 

@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', 'About — Nexus Africa')
+@section ('title', 'About | Rapsoltech Consulting')
 
 @section ('content')
     <div class="relative px-7 py-24 overflow-hidden">
@@ -14,7 +14,7 @@
         <div class="flex items-center gap-3 mb-7" data-animate>
             <div class="w-8 h-px bg-amber-500"></div>
             <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
-                About Nexus Africa &mdash; Established 2018
+                About Rapsoltech Consulting &mdash; Established 2020
             </span>
         </div>
 

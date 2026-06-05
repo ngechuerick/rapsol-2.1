@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', 'Services — Nexus Africa')
+@section ('title', 'Services | Rapsoltech Consulting')
 
 @section ('content')
     {{-- ════════════════════════════
@@ -36,7 +36,7 @@
                     data-delay="2"
                 >We offer a focused set of technology and consulting services designed to work together. Every engagement is structured around outcomes, scalability, and long-term impact.</p>
             </div>
-            <div class="grid grid-cols-2 gap-3 lg:justify-self-end" data-animate data-delay="3">
+            {{-- <div class="grid grid-cols-2 gap-3 lg:justify-self-end" data-animate data-delay="3">
                 @foreach ([['340+','Projects delivered'],['8','Core services'],['7+','Years experience'],['98%','Client retention']] as $s)
                     <div
                         class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40"
@@ -47,7 +47,7 @@
                         <div class="text-xs text-zinc-500 dark:text-zinc-400">{{ $s[1] }}</div>
                     </div>
                 @endforeach
-            </div>
+            </div> --}}
         </div>
     </div>
     {{-- ════════════════════════════
@@ -202,20 +202,10 @@
 ════════════════════════════ --}}
     <div class="relative border-t border-zinc-200 dark:border-zinc-800 overflow-hidden bg-zinc-900 dark:bg-zinc-950">
         <div
-            class="absolute inset-0 opacity-[0.04]"
-            style="
-                background-image:
-                    linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
-                background-size: 40px 40px;
-            "
-            aria-hidden="true"
-        ></div>
-        <div
             class="absolute -right-8 -bottom-6 font-display font-black text-[180px] leading-none text-white/3 select-none"
             aria-hidden="true"
         >
-            NX
+            RTC
         </div>
 
         <div class="relative px-7 py-20 text-center" data-animate>
@@ -231,7 +221,7 @@
             >
                 Let's figure it out <span class="text-amber-400">together.</span>
             </h2>
-            <p class="text-base text-zinc-400 leading-relaxed mb-10 max-w-lg mx-auto">Book a free 30-minute discovery call. No commitment, no sales pitch — just an honest conversation about what your business needs.</p>
+            <p class="text-base text-zinc-400 leading-relaxed mb-10 max-w-lg mx-auto">Book a free 30-minute discovery call. No commitment, no sales pitch just an honest conversation about what your business needs.</p>
             <a
                 href="/contact"
                 class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm bg-amber-500 hover:bg-amber-400 text-zinc-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-amber-500/25"

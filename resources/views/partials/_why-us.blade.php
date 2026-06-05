@@ -19,7 +19,7 @@
     <div class="relative px-7 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         {{-- Left: Statement --}}
         <div data-animate>
-            <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-amber-600 dark:text-amber-500 mb-4">— Why Rapsoltech Consulting</p>
+            <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-black-pearl-950 dark:text-amber-500 mb-4">— Why Rapsoltech Consulting</p>
             <h2
                 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight mb-6"
             >
@@ -32,7 +32,7 @@
                 class="border border-shark-200 dark:border-shark-800 rounded-xl p-6 bg-white dark:bg-shark-900/40 inline-block"
             >
                 <div class="font-display text-5xl font-black text-shark-900 dark:text-white mb-1">
-                    100<span class="text-amber-500">%</span>
+                    100<span class="text-black-pear-950 dark:text-amber-500">%</span>
                 </div>
                 <div class="text-xs text-shark-500 dark:text-shark-400 font-medium">Projects & Solution delivery</div>
             </div>
@@ -78,10 +78,10 @@
                     data-delay="{{ $i + 2 }}"
                 >
                     <div
-                        class="w-9 h-9 rounded-lg bg-shark-100 dark:bg-shark-800 flex items-center justify-center shrink-0 group-hover:bg-amber-50 dark:group-hover:bg-amber-950/30 transition-colors duration-300"
+                        class="w-9 h-9 rounded-lg bg-black-pearl-100 dark:bg-black-pearl-900 flex items-center justify-center shrink-0 group-hover:bg-black-pearl-200 dark:group-hover:bg-black-pearl-200 transition-colors duration-300"
                     >
                         <svg
-                            class="w-4 h-4 text-shark-500 dark:text-shark-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300"
+                            class="w-4 h-4 text-black-pearl-700 dark:text-black-pearl-50 group-hover:text-black-pearl-950 dark:group-hover:text-black-pearl-950 transition-colors duration-300"
                             fill="none"
                             stroke="currentColor"
                             stroke-width="1.5"

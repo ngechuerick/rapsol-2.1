@@ -14,14 +14,14 @@
     <div class="px-7 pt-16 pb-16">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10" data-animate>
             <div>
-                <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-amber-600 dark:text-amber-500 mb-3">— Case Studies</p>
+                <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-amber-600 dark:text-amber-500 mb-3">Our Work</p>
                 <h2
                     class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight"
                 >
                     Work that speaks<br />for itself.
                 </h2>
             </div>
-            <a
+            {{-- <a
                 href="/case-studies"
                 class="inline-flex items-center gap-2 text-xs font-medium text-shark-500 dark:text-shark-400 hover:text-shark-900 dark:hover:text-white transition-colors duration-200"
             >
@@ -29,7 +29,7 @@
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-            </a>
+            </a> --}}
         </div>
 
         {{-- Featured case study (full width) --}}
@@ -57,7 +57,7 @@
                     <h3
                         class="font-display font-bold text-xl md:text-2xl text-shark-900 dark:text-white mb-3 leading-tight"
                     >
-                        HDF — Human Development Fund
+                        HDF Human Development Fund
                     </h3>
                     <p class="text-sm text-shark-500 dark:text-shark-400 leading-relaxed mb-6 max-w-xl">KCB Group's legacy core banking infrastructure was limiting their ability to launch new products. We led a full digital transformation migrating 4.2M customer accounts to a modern cloud-native architecture while maintaining zero downtime across 200+ branches.</p>
 

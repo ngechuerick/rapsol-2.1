@@ -14,10 +14,10 @@
                 <h2
                     class="font-display text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white leading-tight"
                 >
-                    The people behind Nexus
+                    The people behind Rapsoltech
                 </h2>
             </div>
-            <p class="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs md:text-right">A multidisciplinary team of engineers, strategists, and financial experts.</p>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs md:text-right">A multidisciplinary team of engineers, strategists, and consulting experts.</p>
         </div>
 
         {{--
@@ -28,10 +28,10 @@
         --}}
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
             @foreach ([
-                ['JN','from-amber-500 to-amber-700',   'John Njoroge', 'Co-Founder & CEO',        'Former banking technologist with 15 years building financial systems across Africa.', null],
-                ['GW','from-sky-500 to-sky-700',        'Grace Wanjiku','Co-Founder & CTO',        'Software architect who has led engineering teams from startup to scale across three continents.', null],
-                ['DM','from-emerald-500 to-emerald-700','David Mutua',  'Head of Consulting',      'Strategy consultant and CFA charterholder specialising in digital transformation.', null],
-                ['AA','from-violet-500 to-violet-700',  'Aisha Ahmed',  'Head of Finance',         'Financial strategist with deep expertise in M&A and corporate restructuring.', null],
+                ['JM','from-amber-500 to-amber-700',   'Josephat M.', 'Co-Founder & CEO',        'Former Logistics Manager and CEO with 15 years industrial expirience', null],
+                ['EN','from-sky-500 to-sky-700',        'Erick N.','Co-Founder & CTO',        'Software architect who has led engineering teams from startup to scale across three continents.', null],
+                ['KM','from-emerald-500 to-emerald-700','Kennedy M.',  'Head of Consulting',      'Strategy consultant and CFA charterholder specialising in digital transformation.', null],
+                ['CW','from-violet-500 to-violet-700',  'Cynthia W.',  'Head of Business IT',         'Business strategist with deep expertise in M&A and corporate restructuring.', null],
             ] as $i => [$initials, $grad, $name, $role, $bio, $photo])
                 <div
                     class="group border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden bg-white dark:bg-zinc-950 hover:-translate-y-1 transition-all duration-300"

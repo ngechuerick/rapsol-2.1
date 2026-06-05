@@ -1,29 +1,27 @@
 @extends ('layouts.app')
-@section ('title', 'Contact — Nexus Africa')
+@section ('title', 'Contact | Rapsoltech Consulting')
 
 @section ('content')
-    {{-- ════════════════════════════════
-     HERO
-════════════════════════════════ --}}
+    {{-- HERO --}}
     <div class="relative px-7 py-20 overflow-hidden">
         <div
             class="absolute inset-0 -z-10 bg-[linear-gradient(rgba(161,161,170,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(161,161,170,0.14)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[40px_40px]"
         ></div>
 
-        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -bottom-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+        <div class="absolute -bottom-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+        <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
             <div class="w-8 h-px bg-amber-500"></div>
-            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
                 Get In Touch
             </span>
         </div>
 
         <h1
-            class="font-display text-5xl md:text-6xl font-black leading-[1.05] tracking-tight text-zinc-900 dark:text-white mb-5 max-w-2xl"
+            class="font-display text-5xl md:text-6xl font-black leading-[1.05] tracking-tight text-shark-900 dark:text-white mb-5 max-w-2xl"
             data-animate
             data-delay="1"
         >
@@ -32,31 +30,31 @@
         </h1>
 
         <p
-            class="text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg"
+            class="text-lg text-shark-500 dark:text-shark-400 leading-relaxed max-w-lg"
             data-animate
             data-delay="2"
-        >Tell us about your project, your goals, or simply say hello. We respond to every inquiry within one business day.</p>
+        >Tell us about your project, your goals, or simply say hello. We respond to every inquiry as quickly as possible.</p>
     </div>
-    {{-- ════════════════════════════════
-     MAIN CONTENT — split layout
-════════════════════════════════ --}}
-    <div class="relative border-t border-zinc-200 dark:border-zinc-800">
-        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+    {{--  MAIN CONTENT — split layout --}}
+    <div class="relative border-t border-shark-200 dark:border-shark-800">
+        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
         <div
-            class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] divide-y lg:divide-y-0 lg:divide-x divide-zinc-200 dark:divide-zinc-800"
+            class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] divide-y lg:divide-y-0 lg:divide-x divide-shark-200 dark:divide-shark-800"
         >
             {{-- LEFT — Info panel --}}
             <div class="px-7 py-14 space-y-10" data-animate>
                 {{-- What happens next --}}
                 <div>
-                    <h2 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-6">What happens next</h2>
+                    <h2 class="font-display font-bold text-md text-shark-900 dark:text-white mb-6">
+                        What happens next
+                    </h2>
                     <div class="space-y-5">
                         @foreach ([
                         ['01', 'We review your inquiry', 'Your message goes directly to our team. We read every submission carefully before responding.'],
                         ['02', 'We reach out within 24h', 'A senior Nexus Africa team member will contact you within one business day to discuss your needs.'],
-                        ['03', 'We schedule a call', 'If there\'s a fit, we set up a 30-minute discovery call — free, no obligation, no sales pressure.'],
+                        ['03', 'We schedule a call', 'If there\'s a fit, we set up a 30-minute discovery call  free, no obligation, no sales pressure.'],
                     ] as [$num, $title, $desc])
                             <div class="flex gap-4">
                                 <div
@@ -65,10 +63,12 @@
                                     <span class="text-xs font-bold text-amber-600 dark:text-amber-400">{{ $num }}</span>
                                 </div>
                                 <div>
-                                    <div class="font-display font-semibold text-sm text-zinc-900 dark:text-white mb-1">
+                                    <div
+                                        class="font-display font-semibold text-base text-shark-900 dark:text-white mb-1"
+                                    >
                                         {{ $title }}
                                     </div>
-                                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ $desc }}</p>
+                                    <p class="text-sm text-shark-500 dark:text-shark-400 leading-relaxed">{{ $desc }}</p>
                                 </div>
                             </div>
                         @endforeach
@@ -76,31 +76,31 @@
                 </div>
 
                 {{-- Divider --}}
-                <div class="h-px bg-zinc-200 dark:bg-zinc-800"></div>
+                <div class="h-px bg-shark-200 dark:bg-shark-800"></div>
 
                 {{-- Direct contact --}}
                 <div>
-                    <h2 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-5">
+                    <h2 class="font-display font-bold text-lg text-shark-900 dark:text-white mb-5">
                         Prefer to reach us directly?
                     </h2>
                     <div class="space-y-4">
                         @foreach ([
                         ['Email', 'hello@nexusafrica.co.ke',
                          '<path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>',
-                         'mailto:hello@nexusafrica.co.ke'],
-                        ['Phone', '+254 700 000 000',
+                         'mailto:info@rapsoltechconsulting.co.ke'],
+                        ['Phone', '+254 103184092',
                          '<path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z"/>',
-                         'tel:+254700000000'],
-                        ['Office', 'Westlands, Nairobi, Kenya',
+                         'tel:+254103184092'],
+                        ['Office', 'Ruiru Lelani, Kenya',
                          '<path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>',
                          'https://maps.google.com'],
                     ] as [$label, $value, $icon, $href])
                             <a href="{{ $href }}" class="flex items-start gap-3 group">
                                 <div
-                                    class="w-9 h-9 rounded-lg bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center shrink-0 group-hover:bg-amber-50 dark:group-hover:bg-amber-950/30 transition-colors duration-200"
+                                    class="w-9 h-9 rounded-lg bg-shark-100 dark:bg-shark-800 flex items-center justify-center shrink-0 group-hover:bg-amber-50 dark:group-hover:bg-amber-950/30 transition-colors duration-200"
                                 >
                                     <svg
-                                        class="w-4 h-4 text-zinc-500 dark:text-zinc-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-200"
+                                        class="w-4 h-4 text-shark-500 dark:text-shark-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-200"
                                         fill="none"
                                         stroke="currentColor"
                                         stroke-width="1.5"
@@ -111,12 +111,12 @@
                                 </div>
                                 <div>
                                     <div
-                                        class="text-xs font-semibold uppercase tracking-[0.15em] text-zinc-400 dark:text-zinc-600 mb-0.5"
+                                        class="text-xs font-semibold uppercase tracking-[0.15em] text-shark-400 dark:text-shark-600 mb-0.5"
                                     >
                                         {{ $label }}
                                     </div>
                                     <div
-                                        class="text-sm font-medium text-zinc-700 dark:text-zinc-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-200"
+                                        class="text-sm font-medium text-shark-700 dark:text-shark-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-200"
                                     >
                                         {{ $value }}
                                     </div>
@@ -127,18 +127,17 @@
                 </div>
 
                 {{-- Divider --}}
-                <div class="h-px bg-zinc-200 dark:bg-zinc-800"></div>
+                <div class="h-px bg-shark-200 dark:bg-shark-800"></div>
 
                 {{-- Response time badge --}}
                 <div
-                    class="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/40"
+                    class="flex items-center gap-3 p-4 rounded-xl border border-shark-200 dark:border-shark-800 bg-shark-50 dark:bg-shark-900/40"
                 >
-                    <div class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></div>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400">
-                        <span class="font-semibold text-zinc-700 dark:text-zinc-300"
+                    <p class="text-xs text-shark-500 dark:text-shark-400">
+                        <span class="font-semibold text-shark-700 dark:text-shark-300"
                             >Average response time: 4 hours</span
                         >
-                        &nbsp;&mdash;&nbsp;Monday to Friday, 8am – 6pm EAT
+                        &nbsp;&mdash;&nbsp;Monday to Friday, 9am – 6pm EAT
                     </p>
                 </div>
             </div>
@@ -188,7 +187,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label
-                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                                 for="name"
                             >
                                 Full Name <span class="text-amber-500">*</span>
@@ -198,13 +197,13 @@
                                 id="name"
                                 name="name"
                                 value="{{ old('name') }}"
-                                placeholder="John Kamau"
+                                placeholder="Your name"
                                 required
                                 class="w-full px-4 py-3 rounded-lg border text-sm
-                                      bg-white dark:bg-zinc-900/40
-                                      border-zinc-200 dark:border-zinc-800
-                                      text-zinc-900 dark:text-zinc-100
-                                      placeholder-zinc-400 dark:placeholder-zinc-600
+                                      bg-white dark:bg-shark-900/40
+                                      border-shark-200 dark:border-shark-800
+                                      text-shark-900 dark:text-shark-100
+                                      placeholder-shark-400 dark:placeholder-shark-600
                                       focus:outline-none focus:border-amber-400 dark:focus:border-amber-600
                                       focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20
                                       transition-all duration-200
@@ -213,7 +212,7 @@
                         </div>
                         <div>
                             <label
-                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                                 for="email"
                             >
                                 Email Address <span class="text-amber-500">*</span>
@@ -223,13 +222,13 @@
                                 id="email"
                                 name="email"
                                 value="{{ old('email') }}"
-                                placeholder="john@company.com"
+                                placeholder="email@youremail.com"
                                 required
                                 class="w-full px-4 py-3 rounded-lg border text-sm
-                                      bg-white dark:bg-zinc-900/40
-                                      border-zinc-200 dark:border-zinc-800
-                                      text-zinc-900 dark:text-zinc-100
-                                      placeholder-zinc-400 dark:placeholder-zinc-600
+                                      bg-white dark:bg-shark-900/40
+                                      border-shark-200 dark:border-shark-800
+                                      text-shark-900 dark:text-shark-100
+                                      placeholder-shark-400 dark:placeholder-shark-600
                                       focus:outline-none focus:border-amber-400 dark:focus:border-amber-600
                                       focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20
                                       transition-all duration-200
@@ -242,7 +241,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label
-                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                                 for="company"
                             >
                                 Company / Organisation
@@ -252,13 +251,13 @@
                                 id="company"
                                 name="company"
                                 value="{{ old('company') }}"
-                                placeholder="Acme Ltd."
-                                class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20 transition-all duration-200"
+                                placeholder="Your company/Individual"
+                                class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-shark-900/40 border-shark-200 dark:border-shark-800 text-shark-900 dark:text-shark-100 placeholder-shark-400 dark:placeholder-shark-600 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20 transition-all duration-200"
                             />
                         </div>
                         <div>
                             <label
-                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                                 for="phone"
                             >
                                 Phone Number
@@ -269,7 +268,7 @@
                                 name="phone"
                                 value="{{ old('phone') }}"
                                 placeholder="+254 700 000 000"
-                                class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20 transition-all duration-200"
+                                class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-shark-900/40 border-shark-200 dark:border-shark-800 text-shark-900 dark:text-shark-100 placeholder-shark-400 dark:placeholder-shark-600 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20 transition-all duration-200"
                             />
                         </div>
                     </div>
@@ -277,7 +276,7 @@
                     {{-- Service interest --}}
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                         >
                             I'm interested in <span class="text-amber-500">*</span>
                         </label>
@@ -291,7 +290,7 @@
                             'SME Growth Program',
                         ] as $service)
                                 <label
-                                    class="relative flex items-center gap-2.5 px-3 py-2.5 rounded-lg border cursor-pointer border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 hover:border-amber-300 dark:hover:border-amber-700 has-checked:border-amber-400 dark:has-checked:border-amber-600 has-checked:bg-amber-50 dark:has-checked:bg-amber-950/30 transition-all duration-200"
+                                    class="relative flex items-center gap-2.5 px-3 py-2.5 rounded-lg border cursor-pointer border-shark-200 dark:border-shark-800 bg-white dark:bg-shark-900/40 hover:border-amber-300 dark:hover:border-amber-700 has-checked:border-amber-400 dark:has-checked:border-amber-600 has-checked:bg-amber-50 dark:has-checked:bg-amber-950/30 transition-all duration-200"
                                 >
                                     <input
                                         type="checkbox"
@@ -301,7 +300,7 @@
                                         class="w-3.5 h-3.5 rounded accent-amber-500 shrink-0"
                                     />
                                     <span
-                                        class="text-xs font-medium text-zinc-600 dark:text-zinc-400 leading-tight"
+                                        class="text-xs font-medium text-shark-600 dark:text-shark-400 leading-tight"
                                         >{{ $service }}</span
                                     >
                                 </label>
@@ -312,7 +311,7 @@
                     {{-- Budget --}}
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                             for="budget"
                         >
                             Estimated Budget
@@ -320,7 +319,7 @@
                         <select
                             id="budget"
                             name="budget"
-                            class="w-full px-4 py-3 rounded-lg border text-sm appearance-none bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20 transition-all duration-200"
+                            class="w-full px-4 py-3 rounded-lg border text-sm appearance-none bg-white dark:bg-shark-900/40 border-shark-200 dark:border-shark-800 text-shark-900 dark:text-shark-100 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20 transition-all duration-200"
                         >
                             <option value="" disabled {{ old('budget') ? '' : 'selected' }}>Select a range...</option>
                             <option
@@ -357,7 +356,7 @@
                     {{-- Message --}}
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                             for="message"
                         >
                             Your Message <span class="text-amber-500">*</span>
@@ -369,10 +368,10 @@
                             placeholder="Tell us about your project, goals, timeline, or any questions you have..."
                             required
                             class="w-full px-4 py-3 rounded-lg border text-sm resize-none
-                                     bg-white dark:bg-zinc-900/40
-                                     border-zinc-200 dark:border-zinc-800
-                                     text-zinc-900 dark:text-zinc-100
-                                     placeholder-zinc-400 dark:placeholder-zinc-600
+                                     bg-white dark:bg-shark-900/40
+                                     border-shark-200 dark:border-shark-800
+                                     text-shark-900 dark:text-shark-100
+                                     placeholder-shark-400 dark:placeholder-shark-600
                                      focus:outline-none focus:border-amber-400 dark:focus:border-amber-600
                                      focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20
                                      transition-all duration-200
@@ -383,10 +382,10 @@
 
                     {{-- Submit row --}}
                     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-1">
-                        <p class="text-xs text-zinc-400 dark:text-zinc-600 leading-relaxed max-w-xs">By submitting this form you agree to our <a href="/privacy" class="underline underline-offset-2 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">privacy policy</a>. We never share your data.</p>
+                        <p class="text-xs text-shark-400 dark:text-shark-600 leading-relaxed max-w-xs">By submitting this form you agree to our <a href="/privacy" class="underline underline-offset-2 hover:text-shark-700 dark:hover:text-shark-300 transition-colors">privacy policy</a>. We never share your data.</p>
                         <button
                             type="submit"
-                            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm shrink-0 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:opacity-85 hover:-translate-y-0.5 transition-all duration-200"
+                            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm shrink-0 bg-shark-900 dark:bg-white text-white dark:text-shark-900 hover:opacity-85 hover:-translate-y-0.5 transition-all duration-200"
                         >
                             Send Message
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -402,36 +401,35 @@
      FAQ STRIP
 ════════════════════════════════ --}}
     <div
-        class="relative border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/20"
+        class="relative border-t border-shark-200 dark:border-shark-800 bg-shark-50/50 dark:bg-shark-900/20"
         x-data="{ open: null }"
     >
-        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
         <div class="px-7 py-14">
             <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10">
                 <div data-animate>
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-8 h-px bg-amber-500"></div>
-                        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
+                        <span
+                            class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400"
                             >FAQ</span
                         >
                     </div>
-                    <h2 class="font-display text-2xl font-bold text-zinc-900 dark:text-white leading-tight">
+                    <h2 class="font-display text-2xl font-bold text-shark-900 dark:text-white leading-tight">
                         Common questions
                     </h2>
                 </div>
 
-                <div class="divide-y divide-zinc-200 dark:divide-zinc-800" data-animate data-delay="1">
+                <div class="divide-y divide-shark-200 dark:divide-shark-800" data-animate data-delay="1">
                     @foreach ([
                     ['How quickly will you respond to my inquiry?',
-                     'We aim to respond to all inquiries within one business day. For urgent matters, call us directly at +254 700 000 000.'],
+                     'We aim to respond to all inquiries within one business day. For urgent matters, call us directly at +254 103184092.'],
                     ['Do you work with clients outside Kenya?',
-                     'Yes. We serve clients across East Africa — Kenya, Uganda, Tanzania, Rwanda, and Ethiopia — and can work with international clients on a remote basis.'],
+                     'Yes. We serve clients across East Africa  Kenya, Uganda, Tanzania, Rwanda, and Ethiopia  and can work with international clients on a remote basis.'],
                     ['Is the initial consultation free?',
                      'Absolutely. The first discovery call is complimentary with no obligation. It\'s an opportunity for both sides to see if there\'s a good fit before any commitment is made.'],
-                    ['What size of projects do you typically take on?',
-                     'We work across scales — from SME digital setup packages starting at KES 150,000 to enterprise transformation engagements worth KES 50M+. Tell us your budget and we\'ll find the right scope.'],
                 ] as $i => [$q, $a])
                         <div>
                             <button
@@ -439,15 +437,15 @@
                                 @click="open = open === {{ $i }} ? null : {{ $i }}"
                             >
                                 <span
-                                    class="font-display font-semibold text-sm text-zinc-900 dark:text-white pr-4"
+                                    class="font-display font-semibold text-sm text-shark-900 dark:text-white pr-4"
                                     >{{ $q }}</span
                                 >
                                 <span
-                                    class="shrink-0 w-5 h-5 rounded-full border border-zinc-300 dark:border-zinc-700 flex items-center justify-center transition-transform duration-300"
+                                    class="shrink-0 w-5 h-5 rounded-full border border-shark-300 dark:border-shark-700 flex items-center justify-center transition-transform duration-300"
                                     :class="open === {{ $i }} ? 'rotate-45 border-amber-500 bg-amber-50 dark:bg-amber-950/30' : ''"
                                 >
                                     <svg
-                                        class="w-2.5 h-2.5 text-zinc-500 dark:text-zinc-400"
+                                        class="w-2.5 h-2.5 text-shark-500 dark:text-shark-400"
                                         :class="open === {{ $i }} ? 'text-amber-600 dark:text-amber-400' : ''"
                                         fill="none"
                                         stroke="currentColor"
@@ -463,7 +461,7 @@
                                 x-transition:enter="transition ease-out duration-200"
                                 x-transition:enter-start="opacity-0 -translate-y-1"
                                 x-transition:enter-end="opacity-100 translate-y-0"
-                                class="pb-4 text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xl"
+                                class="pb-4 text-sm text-shark-500 dark:text-shark-400 leading-relaxed max-w-xl"
                             >
                                 {{ $a }}
                             </div>

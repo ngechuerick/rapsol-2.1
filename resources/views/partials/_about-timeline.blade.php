@@ -32,7 +32,7 @@
             ] as $i => [$year, $title, $desc, $current])
                 <div class="relative pl-9 pb-8 last:pb-0" data-animate data-delay="{{ min($i + 1, 5) }}">
                     <div
-                        class="absolute left-0 top-0.5 w-4.5 h-4.5 rounded-full border-4 border-zinc-50 dark:border-zinc-950 bg-amber-500 z-10"
+                        class="absolute -left-2 top-0.5 w-4.5 h-4.5 rounded-full border-4 border-zinc-50 dark:border-zinc-950 bg-amber-500 z-10"
                     >
                         @if ($current)
                             <div class="absolute inset-0 rounded-full bg-amber-500 animate-ping opacity-40"></div>

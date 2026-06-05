@@ -1,27 +1,15 @@
 <section class="relative border-t border-zinc-200 dark:border-zinc-800 overflow-hidden bg-zinc-900 dark:bg-zinc-950">
     <div
-        class="absolute inset-0 opacity-[0.04]"
-        style="
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
-            background-size: 40px 40px;
-        "
-        aria-hidden="true"
-    ></div>
-    <div
         class="absolute -right-8 -bottom-6 font-display font-black text-[180px] leading-none text-white/3 select-none"
         aria-hidden="true"
     >
-        NX
+        RTC
     </div>
 
     <div class="relative px-7 py-20 text-center" data-animate>
         <div class="flex items-center justify-center gap-3 mb-7">
             <div class="w-8 h-px bg-amber-500"></div>
-            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400"
-                >We're hiring — 8 open roles</span
-            >
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400">Careers at Rapsoltech</span>
             <div class="w-8 h-px bg-amber-500"></div>
         </div>
 

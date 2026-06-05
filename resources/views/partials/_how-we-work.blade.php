@@ -16,7 +16,7 @@
         {{-- Header --}}
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12" data-animate>
             <div>
-                <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-amber-600 dark:text-amber-500 mb-3">— How We Work</p>
+                <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-dark-pearl-950 dark:text-amber-500 mb-3">— How We Work</p>
                 <h2
                     class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight"
                 >
@@ -71,7 +71,7 @@
                 <div class="relative bg-white dark:bg-shark-950 p-7 group" data-animate data-delay="{{ $i + 1 }}">
                     {{-- Large phase number (background) --}}
                     <div
-                        class="absolute top-5 right-6 font-display font-black text-[72px] leading-none text-shark-50 dark:text-shark-900 select-none pointer-events-none transition-colors duration-300"
+                        class="absolute top-5 right-6 font-display font-black text-[72px] leading-none text-shark-100 dark:text-shark-900 select-none pointer-events-none"
                         aria-hidden="true"
                     >
                         {{ $step['phase'] }}
@@ -83,11 +83,11 @@
                             <div
                                 class="w-9 h-9 rounded-lg flex items-center justify-center
                                     {{ $step['color'] === 'amber'
-                                        ? 'bg-amber-100 dark:bg-amber-950/40'
+                                        ? 'bg-black-pearl-200 dark:bg-black-pearl-800'
                                         : 'bg-shark-100 dark:bg-shark-800' }}"
                             >
                                 <svg
-                                    class="w-4 h-4 {{ $step['color'] === 'amber' ? 'text-amber-600 dark:text-amber-400' : 'text-shark-500 dark:text-shark-400' }}"
+                                    class="w-4 h-4 {{ $step['color'] === 'amber' ? 'text-black-pearl-950 dark:text-black-pearl-200' : 'text-shark-500 dark:text-shark-400' }}"
                                     fill="none"
                                     stroke="currentColor"
                                     stroke-width="1.5"
@@ -96,12 +96,12 @@
                                     {!! $step['icon'] !!}
                                 </svg>
                             </div>
-                            <span class="font-mono text-[9px] font-bold text-shark-300 dark:text-shark-700"
+                            <span class="font-mono text-[9px] font-bold text-shark-400 dark:text-shark-300"
                                 >PHASE {{ $step['phase'] }}</span
                             >
                         </div>
 
-                        <h3 class="font-display font-bold text-lg text-shark-900 dark:text-white mb-3">
+                        <h3 class="font-display font-bold text-lg text-shark-900 dark:text-shark-100 mb-3">
                             {{ $step['title'] }}
                         </h3>
                         <p class="text-base text-shark-500 dark:text-shark-400 leading-relaxed mb-5">{{ $step['desc'] }}</p>
@@ -126,7 +126,7 @@
                         <div
                             class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono font-medium
                                 {{ $step['color'] === 'amber'
-                                    ? 'bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400'
+                                    ? 'bg-black-pearl-100 dark:bg-amber-950/30 text-black-pearl-950 dark:text-amber-400'
                                     : 'bg-shark-50 dark:bg-shark-800 text-shark-500 dark:text-shark-400' }}"
                         >
                             <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">

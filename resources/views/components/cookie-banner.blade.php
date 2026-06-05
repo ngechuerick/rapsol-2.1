@@ -244,7 +244,12 @@
             class="w-10 h-10 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-lg shadow-black/10 dark:shadow-black/30 flex items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-amber-600 dark:hover:text-amber-400 hover:border-amber-300 dark:hover:border-amber-700 transition-all duration-200 hover:scale-110"
         >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                <circle cx="9" cy="10" r=".75" fill="currentColor" stroke="none" />
+                <circle cx="14" cy="9" r=".75" fill="currentColor" stroke="none" />
+                <circle cx="10" cy="14.5" r=".75" fill="currentColor" stroke="none" />
+                <circle cx="14.5" cy="14" r=".75" fill="currentColor" stroke="none" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.5 7.5 9 8M13 13l.5.5M8 13.5l.4.4" />
             </svg>
         </button>
     </div>

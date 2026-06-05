@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CareersController;
 
 Route::get('/', function () {
     return view('home');
@@ -26,3 +27,7 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/privacy',       fn() => view('privacy'))->name('privacy');
 Route::get('/terms',         fn() => view('terms'))->name('terms');
 Route::get('/cookie-policy', fn() => view('cookie-policy'))->name('cookie-policy');
+
+Route::get('/careers',                [CareersController::class, 'index'])->name('careers');
+Route::get('/careers/{slug}',         [CareersController::class, 'show'])->name('careers.show');
+Route::post('/careers/{slug}/apply',  [CareersController::class, 'apply'])->name('careers.apply');

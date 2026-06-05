@@ -16,7 +16,7 @@
                 From a small Nairobi office to East Africa's trusted partner.
             </h2>
             <div class="space-y-4 text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg">
-                <p>Nexus Africa was founded in 2018 by a team of engineers and financial strategists who saw a gap: businesses across East Africa were being underserved by firms that didn't understand the local market.</p>
+                <p>Rapsoltech Consulting was founded in 2018 by a team of engineers and financial strategists who saw a gap: businesses across East Africa were being underserved by firms that didn't understand the local market.</p>
                 <p>What started as three people in a co-working space has grown into a multidisciplinary firm serving 120+ clients across six countries — without ever losing our founding belief that great technology and sound strategy are inseparable.</p>
                 <p>Today, we operate at the intersection of technology and consulting, helping organisations from fast-moving startups to tier-1 banks build, transform, and grow.</p>
             </div>
@@ -41,7 +41,7 @@
                     1. Save image to: public/images/about-hq.jpg
                     2. Replace the placeholder div below with:
                        <img src="{{ asset('images/about-hq.jpg') }}"
-                            alt="Nexus Africa Nairobi HQ"
+                            alt="Rapsoltech Consulting Nairobi HQ"
                             class="absolute inset-0 w-full h-full object-cover">
                 --}}
                 <div

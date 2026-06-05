@@ -1,8 +1,4 @@
-{{-- ══════════════════════════════════════════════════════════
-     SERVICES SECTION
-     Two-pillar layout: Technology left, Consulting right
-     Unique asymmetric grid with category divider
-══════════════════════════════════════════════════════════ --}}
+{{-- SERVICES SECTION --}}
 
 <section id="services" class="relative border-t border-shark-200 dark:border-shark-800">
     {{-- Diamond corners --}}
@@ -11,7 +7,7 @@
 
     {{-- Section header --}}
     <div class="px-7 pt-16 pb-10" data-animate>
-        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-amber-600 dark:text-amber-500 mb-3">— What We Do</p>
+        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-black-pear-900 dark:text-amber-500 mb-3">— What We Do</p>
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2
                 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight"
@@ -22,21 +18,6 @@
             <p class="text-base text-shark-600 dark:text-shark-400 max-w-xs leading-relaxed md:text-right">From digital products to financial strategy one firm, complete capability.</p>
         </div>
     </div>
-
-    {{-- Category divider: TECHNOLOGY --}}
-    {{-- <div class="relative mx-7 mb-0">
-        <div class="flex items-center gap-4">
-            <div class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
-                <span
-                    class="font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-amber-600 dark:text-amber-500"
-                >
-                    Technology Services
-                </span>
-            </div>
-            <div class="flex-1 h-px bg-shark-200 dark:bg-shark-800"></div>
-        </div>
-    </div> --}}
 
     {{-- Tech services grid --}}
     <div class="px-7 pt-5 pb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -63,28 +44,28 @@
                 'title' => 'Data Analytics & AI',
                 'desc'  => 'Turn raw data into competitive intelligence. BI dashboards, machine learning, and intelligent automation.',
                 'tags'  => ['Business Intelligence', 'ML Solutions', 'Data Governance', 'RPA Automation'],
-                'featured' => false,
+                'featured' => true,
             ],
         ] as $i => $svc)
             <div
                 class="group relative border border-shark-200 dark:border-shark-800 rounded-xl p-6
-                    {{ $svc['featured'] ? 'bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-900/50' : 'bg-white dark:bg-shark-900/40' }}
+                    {{ $svc['featured'] ? 'bg-black-pearl-50 dark:bg-black-pearl-950 border-amber-200 dark:border-amber-900/50' : 'bg-white dark:bg-shark-900/40' }}
                     hover:-translate-y-1 transition-all  duration-100 cursor-pointer"
                 data-animate
                 data-delay="{{ $i + 1 }}"
             >
                 {{-- Number --}}
-                <div class="font-mono text-[12px] font-bold text-shark-300 dark:text-shark-700 mb-4">
+                <div class="font-mono text-[12px] font-bold text-shark-400 dark:text-shark-700 mb-4">
                     {{ $svc['num'] }}
                 </div>
 
                 {{-- Icon --}}
                 <div
                     class="w-10 h-10 rounded-lg mb-5 flex items-center justify-center
-                        {{ $svc['featured'] ? 'bg-amber-100 dark:bg-amber-900/40' : 'bg-shark-100 dark:bg-shark-800' }}"
+                        {{ $svc['featured'] ? 'bg-black-pearl-200 dark:bg-black-pearl-900' : 'bg-shark-100 dark:bg-shark-800' }}"
                 >
                     <svg
-                        class="w-5 h-5 {{ $svc['featured'] ? 'text-amber-600 dark:text-amber-400' : 'text-shark-500 dark:text-shark-400' }}"
+                        class="w-5 h-5 {{ $svc['featured'] ? 'text-black-pearl-800 dark:text-black-pearl-100' : 'text-shark-500 dark:text-shark-400' }}"
                         fill="none"
                         stroke="currentColor"
                         stroke-width="1.5"
@@ -110,17 +91,6 @@
                         </li>
                     @endforeach
                 </ul>
-
-                {{-- <a
-                    href="#"
-                    class="inline-flex items-center gap-1.5 text-xs font-medium transition-all duration-200
-                      {{ $svc['featured'] ? 'text-amber-600 dark:text-amber-400' : 'text-shark-400 dark:text-shark-500 group-hover:text-shark-900 dark:group-hover:text-white' }}"
-                >
-                    Learn more
-                    <svg class="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                </a> --}}
             </div>
         @endforeach
     </div>

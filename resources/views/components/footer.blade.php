@@ -1,15 +1,20 @@
-<footer class="mt-3 bg-zinc-900 dark:bg-zinc-950 text-zinc-400 transition-colors duration-300">
-    <div class="max-w-5xl mx-auto px-6">
+<footer class="bg-zinc-900 dark:bg-zinc-950 text-zinc-400 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6 border-l border-r border-dashed border-zinc-600 dark:border-zinc-800">
         {{-- border-x border-zinc-200 dark:border-zinc-800 --}}
         {{-- ── TOP GRID ── --}}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-14">
             {{-- Brand --}}
             <div class="sm:col-span-2 lg:col-span-1">
                 <div class="flex items-center gap-2.5 mb-4">
-                    <div class="w-7 h-7 rounded-lg bg-white flex items-center justify-center shrink-0">
-                        <div class="w-3.5 h-3.5 rounded-sm bg-zinc-900"></div>
+                    {{-- Logo --}}
+                    <div>
+                        <img
+                            src="{{ asset('images/logo-light.svg') }}"
+                            alt="{{ config('app.name') }}"
+                            class="h-16 w-auto dark:block"
+                            loading="eager"
+                        />
                     </div>
-                    <span class="font-display font-semibold text-[15px] text-white"> {{ config('app.name') }} </span>
                 </div>
                 <p class="text-sm leading-relaxed opacity-50 mb-6 max-w-50">Building world-class web experiences that create lasting results for people and teams.</p>
                 {{-- Social links --}}
@@ -40,13 +45,14 @@
                 >
                     Navigation
                 </h4>
-                <ul class="space-y-3">
+                <ul class="space-y-2">
                     @foreach ([
                         'Home'    => '/',
                         'About'   => '/about',
                         'Work'    => '/work',
                         'Blog'    => '/blog',
                         'Contact' => '/contact',
+                        'Careers' => '/careers',
                     ] as $label => $href)
                         <li>
                             <a
@@ -92,7 +98,7 @@
                 >
                     Stay Updated
                 </h4>
-                <p class="text-sm text-zinc-500 leading-relaxed mb-5">Get updates on new projects and articles delivered to your inbox.</p>
+                <p class="text-sm text-zinc-500 leading-relaxed mb-5">Get updates on new projects and articles delivered to your inbox.No Spam!</p>
                 <form class="space-y-2">
                     @csrf
                     <input
@@ -104,7 +110,7 @@
                     />
                     <button
                         type="submit"
-                        class="w-full py-2.5 rounded-lg text-sm font-medium bg-white text-zinc-900 hover:bg-zinc-100 transition-colors duration-200"
+                        class="w-full cursor-pointer py-2.5 rounded-lg text-sm font-medium bg-white text-zinc-900 hover:bg-zinc-100 transition-colors duration-200"
                     >
                         Subscribe →
                     </button>
@@ -114,7 +120,7 @@
 
         {{-- ── BOTTOM BAR ── --}}
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-6 border-t border-white/6">
-            <span class="font-mono text-[10px] text-zinc-700 dark:text-zinc-800">
+            <span class="font-mono text-xs text-zinc-700 dark:text-zinc-800">
                 &copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved.
             </span>
             <div class="flex items-center gap-5">

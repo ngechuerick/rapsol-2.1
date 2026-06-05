@@ -1,10 +1,8 @@
 @extends ('layouts.app')
-@section ('title', 'Gallery — Nexus Africa')
+@section ('title', 'Gallery | Rapsoltech Consulting')
 
 @section ('content')
-    {{-- ════════════════════════════════
-     HERO
-════════════════════════════════ --}}
+    {{-- HERO --}}
     <div class="relative px-7 py-20 overflow-hidden">
         <div
             class="absolute inset-0 -z-10 bg-[linear-gradient(rgba(161,161,170,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(161,161,170,0.14)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[40px_40px]"
@@ -27,7 +25,7 @@
             data-animate
             data-delay="1"
         >
-            Inside <span class="text-amber-500">Nexus Africa</span>
+            Inside <span class="text-amber-500">Rapsoltech Consulting</span>
         </h1>
 
         <p
@@ -36,9 +34,7 @@
             data-delay="2"
         >A look at our people, workspaces, events, and the projects we're proud to have delivered.</p>
     </div>
-    {{-- ════════════════════════════════
-     GALLERY WITH FILTERS + LIGHTBOX
-════════════════════════════════ --}}
+    {{-- GALLERY WITH FILTERS + LIGHTBOX --}}
     <div class="relative border-t border-zinc-200 dark:border-zinc-800" x-data="gallery()">
         <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
         <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
@@ -329,16 +325,6 @@
      BOTTOM CTA
 ════════════════════════════════ --}}
     <div class="relative border-t border-zinc-200 dark:border-zinc-800 overflow-hidden bg-zinc-900 dark:bg-zinc-950">
-        <div
-            class="absolute inset-0 opacity-[0.04]"
-            style="
-                background-image:
-                    linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
-                background-size: 40px 40px;
-            "
-            aria-hidden="true"
-        ></div>
         <div class="relative px-7 py-16 flex flex-col md:flex-row items-center justify-between gap-6" data-animate>
             <div>
                 <div class="flex items-center gap-3 mb-4">

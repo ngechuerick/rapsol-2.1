@@ -6,7 +6,6 @@
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10" data-animate>
             <div>
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-8 h-px bg-amber-500"></div>
                     <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
                         >Leadership</span
                     >

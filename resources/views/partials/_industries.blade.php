@@ -79,7 +79,7 @@
                     ['id' => 'realestate', 'title' => 'Real Estate & PropTech',
                      'desc' => 'Property management systems, estate portals, asset valuation models, and investor reporting dashboards. We\'ve digitised portfolios ranging from 12 to 300+ properties for developers, REITs, and family offices.',
                      'highlights' => ['Property management systems', 'Investor reporting portals', 'Asset valuation models', 'Tenant management platforms']],
-                    ['id' => 'government', 'title' => 'Government & Public Sector',
+                    ['id' => 'Logistics', 'title' => 'Logistics',
                      'desc' => 'Revenue collection systems, citizen-facing portals, and inter-agency integration platforms. All built to meet Kenya\'s government ICT standards with security-first architecture.',
                      'highlights' => ['Revenue collection systems', 'Citizen service portals', 'Data interoperability', 'Compliance & audit trails']],
                     ['id' => 'sme',        'title' => 'Small & Medium Enterprises',

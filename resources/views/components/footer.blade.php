@@ -1,5 +1,5 @@
 <footer class="bg-zinc-900 dark:bg-zinc-950 text-zinc-400 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-6 border-l border-r border-dashed border-zinc-600 dark:border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 border-l border-r border-dashed border-zinc-600 dark:border-zinc-800">
         {{-- border-x border-zinc-200 dark:border-zinc-800 --}}
         {{-- ── TOP GRID ── --}}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-14">

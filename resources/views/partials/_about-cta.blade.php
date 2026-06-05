@@ -8,9 +8,7 @@
 
     <div class="relative px-7 py-20 text-center" data-animate>
         <div class="flex items-center justify-center gap-3 mb-7">
-            <div class="w-8 h-px bg-amber-500"></div>
             <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400">Careers at Rapsoltech</span>
-            <div class="w-8 h-px bg-amber-500"></div>
         </div>
 
         <h2

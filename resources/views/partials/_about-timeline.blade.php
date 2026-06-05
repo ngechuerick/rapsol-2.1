@@ -5,7 +5,6 @@
     <div class="px-7 py-16">
         <div class="mb-10" data-animate>
             <div class="flex items-center gap-3 mb-4">
-                <div class="w-8 h-px bg-amber-500"></div>
                 <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
                     >Our Journey</span
                 >

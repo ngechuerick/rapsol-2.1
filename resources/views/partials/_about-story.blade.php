@@ -5,7 +5,6 @@
     <div class="px-7 py-16 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-center">
         <div data-animate="left">
             <div class="flex items-center gap-3 mb-5">
-                <div class="w-8 h-px bg-amber-500"></div>
                 <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
                     >Our Story</span
                 >

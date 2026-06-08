@@ -77,7 +77,7 @@
                     @foreach ([
                         'Privacy Policy'   => '/privacy',
                         'Terms of Service' => '/terms',
-                        'Cookie Policy'    => '/cookies',
+                        'Cookie Policy'    => '/cookie-policy',
                     ] as $label => $href)
                         <li>
                             <a

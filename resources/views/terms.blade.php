@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', 'Terms of Service — Nexus Africa')
+@section ('title', 'Terms of Service | Rapsoltech consulting')
 
 @section ('content')
     {{-- HERO --}}
@@ -13,7 +13,7 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            <div class="w-8 h-px bg-amber-500"></div>
+            {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
             <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">Legal</span>
         </div>
         <h1
@@ -69,10 +69,10 @@
                 >
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mb-2">Legal queries?</p>
                     <a
-                        href="mailto:legal@nexusafrica.co.ke"
+                        href="mailto:info@rapsoltechconsulting.co.ke"
                         class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline"
                     >
-                        legal@nexusafrica.co.ke
+                        info@rapsoltechconsulting.co.ke
                     </a>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                 <div
                     class="prose prose-zinc dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-3 prose-h2:scroll-mt-24 prose-p:text-zinc-600 dark:prose-p:text-zinc-400 prose-p:leading-relaxed prose-p:text-[15px] prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-zinc-900 dark:prose-strong:text-white prose-ul:text-zinc-600 dark:prose-ul:text-zinc-400 prose-li:text-[15px] prose-hr:border-zinc-200 dark:prose-hr:border-zinc-800"
                 >
-                    <p>These Terms of Service ("Terms") govern your access to and use of the website at <strong>nexusafrica.co.ke</strong> and any services provided by <strong>Nexus Africa Limited</strong> ("Nexus Africa", "we", "us", or "our"), a company incorporated in Kenya. By accessing our website or engaging our services, you agree to be bound by these Terms.</p>
+                    <p>These Terms of Service ("Terms") govern your access to and use of the website at <strong>rapsoltechconsulting.co.ke</strong> and any services provided by <strong>Rapsoltech Consulting</strong> ("Rapsoltech consulting", "we", "us", or "our"), a company incorporated in Kenya. By accessing our website or engaging our services, you agree to be bound by these Terms.</p>
 
                     <hr />
 
@@ -90,7 +90,7 @@
                     <p>By using our website or engaging our services, you confirm that you have read, understood, and agree to these Terms. If you are entering into these Terms on behalf of an organisation, you represent that you have the authority to do so. If you do not agree, please do not use our website or services.</p>
 
                     <h2 id="our-services">2. Our services</h2>
-                    <p>Nexus Africa provides technology development, digital consulting, financial advisory, asset management, and related professional services to business clients across East Africa. The specific scope, deliverables, timelines, and fees applicable to any engagement are set out in a separate Statement of Work or Service Agreement ("Engagement Agreement") entered into between Nexus Africa and the client. These Terms apply in addition to any Engagement Agreement. In the event of a conflict, the Engagement Agreement shall prevail.</p>
+                    <p>Rapsoltech Consulting provides technology development, digital consulting, financial advisory, asset management, and related professional services to business clients across East Africa. The specific scope, deliverables, timelines, and fees applicable to any engagement are set out in a separate Statement of Work or Service Agreement ("Engagement Agreement") entered into between Rapsoltech Consulting and the client. These Terms apply in addition to any Engagement Agreement. In the event of a conflict, the Engagement Agreement shall prevail.</p>
 
                     <h2 id="eligibility">3. Eligibility</h2>
                     <p>Our services are intended for business use only. By engaging our services, you represent that you are a legal entity or an individual acting in a professional or business capacity, and that you are at least 18 years of age.</p>
@@ -106,7 +106,7 @@
                         </li>
                         <li>Ensure that any data or materials provided to us do not infringe third-party rights</li>
                     </ul>
-                    <p>Delays or failures caused by your non-compliance with these obligations shall not constitute a breach by Nexus Africa and may result in revised timelines or additional fees.</p>
+                    <p>Delays or failures caused by your non-compliance with these obligations shall not constitute a breach by Rapsoltech Consulting and may result in revised timelines or additional fees.</p>
 
                     <h2 id="fees-and-payment">5. Fees and payment</h2>
                     <p>Fees for services are as set out in the applicable Engagement Agreement. Unless otherwise agreed:</p>
@@ -125,8 +125,8 @@
 
                     <h2 id="intellectual-property">6. Intellectual property</h2>
                     <p><strong>Your materials:</strong> You retain all intellectual property rights in materials, data, and information you provide to us ("Client Materials"). You grant us a licence to use Client Materials solely to deliver the services.</p>
-                    <p><strong>Deliverables:</strong> Upon receipt of full payment, and unless otherwise agreed in the Engagement Agreement, ownership of bespoke deliverables created specifically for you transfers to you. Nexus Africa retains ownership of all pre-existing intellectual property, tools, frameworks, methodologies, and general know-how, including any improvements thereto developed during the engagement.</p>
-                    <p><strong>Website content:</strong> All content on this website — including text, graphics, logos, and design — is the property of Nexus Africa and is protected by applicable intellectual property law. You may not reproduce, distribute, or create derivative works without our prior written consent.</p>
+                    <p><strong>Deliverables:</strong> Upon receipt of full payment, and unless otherwise agreed in the Engagement Agreement, ownership of bespoke deliverables created specifically for you transfers to you. Rapsoltech Consulting retains ownership of all pre-existing intellectual property, tools, frameworks, methodologies, and general know-how, including any improvements thereto developed during the engagement.</p>
+                    <p><strong>Website content:</strong> All content on this website — including text, graphics, logos, and design — is the property of Rapsoltech Consulting and is protected by applicable intellectual property law. You may not reproduce, distribute, or create derivative works without our prior written consent.</p>
 
                     <h2 id="confidentiality">7. Confidentiality</h2>
                     <p>Each party agrees to keep confidential any non-public information disclosed by the other party in the course of an engagement ("Confidential Information") and to use it solely for the purpose of the engagement. This obligation does not apply to information that is publicly available, independently developed, or required to be disclosed by law. Confidentiality obligations survive termination of the engagement for a period of <strong>3 years</strong>.</p>
@@ -154,7 +154,7 @@
                     <p>We warrant that our services will be provided with reasonable skill and care, consistent with professional standards applicable in Kenya. We do not warrant that deliverables will be error-free or uninterrupted, or that specific business outcomes will be achieved. The website is provided on an "as is" basis without warranty of any kind.</p>
 
                     <h2 id="indemnification">10. Indemnification</h2>
-                    <p>You agree to indemnify, defend, and hold harmless Nexus Africa and its directors, employees, and agents from any claims, losses, liabilities, damages, and expenses (including reasonable legal fees) arising from: your use of our services in violation of these Terms; your breach of applicable law; or any claim that Client Materials infringe third-party intellectual property rights.</p>
+                    <p>You agree to indemnify, defend, and hold harmless Rapsoltech Consulting and its directors, employees, and agents from any claims, losses, liabilities, damages, and expenses (including reasonable legal fees) arising from: your use of our services in violation of these Terms; your breach of applicable law; or any claim that Client Materials infringe third-party intellectual property rights.</p>
 
                     <h2 id="term-and-termination">11. Term and termination</h2>
                     <p>These Terms apply from the date you first use our website or engage our services and continue until terminated. Either party may terminate an engagement as set out in the Engagement Agreement. We may suspend or terminate your access to our website or services immediately if you breach these Terms or applicable law. On termination, any provisions that by their nature should survive (including payment obligations, confidentiality, and intellectual property) will continue to apply.</p>
@@ -194,10 +194,11 @@
                     <p>For legal enquiries relating to these Terms, please contact:</p>
                     <ul>
                         <li>
-                            <strong>Email:</strong> <a href="mailto:legal@nexusafrica.co.ke">legal@nexusafrica.co.ke</a>
+                            <strong>Email:</strong>
+                            <a href="mailto:info@rapsoltechconsulting.co.ke">linfo@rapsoltechconsulting.co.ke</a>
                         </li>
                         <li>
-                            <strong>Post:</strong> Legal Department, Nexus Africa Limited, Westlands, Nairobi, Kenya
+                            <strong>Post:</strong> Legal Department, Rapsoltech Consulting, Westlands, Nairobi, Kenya
                         </li>
                     </ul>
                 </div>

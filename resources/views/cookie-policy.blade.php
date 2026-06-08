@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', 'Cookie Policy — Nexus Africa')
+@section ('title', 'Cookie Policy | Rapsoltech consulting')
 
 @section ('content')
     {{-- HERO --}}
@@ -13,7 +13,7 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            <div class="w-8 h-px bg-amber-500"></div>
+            {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
             <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">Legal</span>
         </div>
         <h1
@@ -61,10 +61,10 @@
                 >
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mb-2">Questions?</p>
                     <a
-                        href="mailto:privacy@nexusafrica.co.ke"
+                        href="mailto:info@rapsoltechconsulting.co.ke"
                         class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline"
                     >
-                        privacy@nexusafrica.co.ke
+                        info@rapsoltechconsulting.co.ke
                     </a>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <div
                     class="prose prose-zinc dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-3 prose-h2:scroll-mt-24 prose-p:text-zinc-600 dark:prose-p:text-zinc-400 prose-p:leading-relaxed prose-p:text-[15px] prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-zinc-900 dark:prose-strong:text-white prose-ul:text-zinc-600 dark:prose-ul:text-zinc-400 prose-li:text-[15px] prose-table:text-[14px] prose-th:text-zinc-700 dark:prose-th:text-zinc-300 prose-th:bg-zinc-50 dark:prose-th:bg-zinc-900/60 prose-hr:border-zinc-200 dark:prose-hr:border-zinc-800"
                 >
-                    <p>This Cookie Policy explains how <strong>Nexus Africa Limited</strong> ("we", "us", or "our") uses cookies and similar tracking technologies on our website at <strong>nexusafrica.co.ke</strong>. It should be read alongside our <a href="/privacy">Privacy Policy</a>.</p>
+                    <p>This Cookie Policy explains how <strong>Rapsoltech consulting</strong> ("we", "us", or "our") uses cookies and similar tracking technologies on our website at <strong>rapsoltechconsulting.co.ke</strong>. It should be read alongside our <a href="/privacy">Privacy Policy</a>.</p>
 
                     <hr />
 
@@ -103,7 +103,7 @@
                                 <td>Session</td>
                             </tr>
                             <tr>
-                                <td><code>nexusafrica_session</code></td>
+                                <td><code>rapsoltechconsulting_session</code></td>
                                 <td>Maintains your session state across pages</td>
                                 <td>2 hours</td>
                             </tr>
@@ -250,10 +250,10 @@
                     <ul>
                         <li>
                             <strong>Email:</strong>
-                            <a href="mailto:privacy@nexusafrica.co.ke">privacy@nexusafrica.co.ke</a>
+                            <a href="mailto:info@rapsoltechconsulting.co.ke">info@rapsoltechconsulting.co.ke</a>
                         </li>
                         <li>
-                            <strong>Post:</strong> Data Protection Officer, Nexus Africa Limited, Westlands, Nairobi,
+                            <strong>Post:</strong> Data Protection Officer, Rapsoltech consulting, Westlands, Nairobi,
                             Kenya
                         </li>
                     </ul>

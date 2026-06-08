@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', 'Privacy Policy — Nexus Africa')
+@section ('title', 'Privacy Policy | Rapsoltech Consulting')
 
 @section ('content')
     {{-- ════════════════════════════
@@ -15,7 +15,7 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            <div class="w-8 h-px bg-amber-500"></div>
+            {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
             <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                 Legal
             </span>
@@ -75,10 +75,10 @@
                 >
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mb-2">Questions about this policy?</p>
                     <a
-                        href="mailto:privacy@nexusafrica.co.ke"
+                        href="mailto:info@rapsoltechconsulting.co.ke"
                         class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline"
                     >
-                        privacy@nexusafrica.co.ke
+                        info@rapsoltechconsulting.co.ke
                     </a>
                 </div>
             </div>
@@ -88,12 +88,12 @@
                 <div
                     class="prose prose-zinc dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-3 prose-h2:scroll-mt-24 prose-p:text-zinc-600 dark:prose-p:text-zinc-400 prose-p:leading-relaxed prose-p:text-[15px] prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-zinc-900 dark:prose-strong:text-white prose-ul:text-zinc-600 dark:prose-ul:text-zinc-400 prose-li:text-[15px] prose-hr:border-zinc-200 dark:prose-hr:border-zinc-800"
                 >
-                    <p>Nexus Africa Limited ("Nexus Africa", "we", "us", or "our") is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect information about you when you use our website at <strong>nexusafrica.co.ke</strong>, engage our services, or contact us. It is written in compliance with Kenya's <strong>Data Protection Act, 2019</strong> and applicable regulations.</p>
+                    <p>Rapsoltech Consulting ("Rapsoltech Consulting", "we", "us", or "our") is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect information about you when you use our website at <strong>info@rapsoltechconsulting.co.ke</strong>, engage our services, or contact us. It is written in compliance with Kenya's <strong>Data Protection Act, 2019</strong> and applicable regulations.</p>
 
                     <hr />
 
                     <h2 id="who-we-are">Who we are</h2>
-                    <p>Nexus Africa Limited is a technology and consulting firm registered in Kenya. Our registered office is located at Westlands, Nairobi, Kenya. We are the data controller for personal data collected through this website and our client engagements.</p>
+                    <p>Rapsoltech Consulting is a technology and consulting firm registered in Kenya. Our registered office is located at Westlands, Nairobi, Kenya. We are the data controller for personal data collected through this website and our client engagements.</p>
 
                     <h2 id="information-we-collect">Information we collect</h2>
                     <p>We collect information in the following ways:</p>
@@ -218,7 +218,7 @@
                             withdraw it at any time
                         </li>
                     </ul>
-                    <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@nexusafrica.co.ke">privacy@nexusafrica.co.ke</a>. We will respond within 30 days. You also have the right to lodge a complaint with the <strong>Office of the Data Protection Commissioner of Kenya</strong>.</p>
+                    <p>To exercise any of these rights, please contact us at <a href="mailto:rapsoltechconsulting.co.ke">rapsoltechconsulting.co.ke</a>. We will respond within 30 days. You also have the right to lodge a complaint with the <strong>Office of the Data Protection Commissioner of Kenya</strong>.</p>
 
                     <h2 id="cookies">Cookies</h2>
                     <p>Our website uses cookies and similar tracking technologies. For full details of the cookies we use and how to manage them, please see our <a href="/cookie-policy">Cookie Policy</a>.</p>
@@ -237,11 +237,10 @@
                     <ul>
                         <li>
                             <strong>Email:</strong>
-                            <a href="mailto:privacy@nexusafrica.co.ke">privacy@nexusafrica.co.ke</a>
+                            <a href="mailto:rapsoltechconsulting.co.ke">rapsoltechconsulting.co.ke</a>
                         </li>
                         <li>
-                            <strong>Post:</strong> Data Protection Officer, Nexus Africa Limited, Westlands, Nairobi,
-                            Kenya
+                            <strong>Post:</strong> Data Protection Officer, Rapsoltech consulting, Ruiru Lelani, Kenya
                         </li>
                         <li><strong>Phone:</strong> +254 700 000 000</li>
                     </ul>

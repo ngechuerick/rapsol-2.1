@@ -64,16 +64,16 @@
             {{-- Headline --}}
             <div class="mb-5" data-animate data-delay="1">
                 <span
-                    class="block font-display font-light leading-[1.0] tracking-tight text-bp-500/40 dark:text-bp-300/40 transition-colors duration-300"
+                    class="block font-display font-light leading-none tracking-tight text-bp-500/40 dark:text-bp-300/40 transition-colors duration-300"
                     style="font-size: clamp(44px, 6vw, 72px)"
                 >
                     Where strategy
                 </span>
                 <span
-                    class="block font-display font-black leading-[1.0] tracking-tight text-zinc-900 dark:text-white transition-colors duration-300"
+                    class="block font-display font-black leading-none tracking-tight text-zinc-900 dark:text-white transition-colors duration-300"
                     style="font-size: clamp(44px, 6vw, 72px)"
                 >
-                    meets <span class="text-amber-500">execution.</span>
+                    meets <span class="text-black-pearl-900 dark:text-amber-500">execution.</span>
                 </span>
             </div>
 
@@ -83,7 +83,7 @@
                 data-animate
                 data-delay="2"
             >We build <span class="font-medium text-zinc-700 dark:text-bp-200 transition-colors duration-300">digital products</span>, transform organisations, and deliver
-            <span class="font-medium text-zinc-700 dark:text-bp-200 transition-colors duration-300">financial advisory</span>
+            <span class="font-medium text-zinc-700 dark:text-bp-200 transition-colors duration-300">Technology advisory</span>
             across East Africa.</p>
 
             {{-- CTAs --}}

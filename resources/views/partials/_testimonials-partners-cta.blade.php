@@ -17,18 +17,18 @@
 
         {{-- Logo grid --}}
         <div
-            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-px bg-shark-200 dark:bg-shark-800 border border-shark-200 dark:border-shark-800 rounded-xl overflow-hidden"
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-px bg-white dark:bg-shark-950 border border-shark-200 dark:border-shark-800 rounded-xl overflow-hidden"
             data-animate
             data-delay="1"
         >
             @foreach ([
         ['Westkate',     'westkate.svg'],
-        ['SmartiCleaning',          'aws.svg'],
-        ['SmartEdge', 'google-cloud.svg'],
-        ['HDF',   'salesforce.svg'],
-        ['Apptech',          'sap.svg'],
-        ['ThinkReal',       'oracle.svg'],
-        ['Siaya',        'cisco.svg'],
+        ['SmartiCleaning',          'smarti.svg'],
+        // ['SmartEdge', 'google-cloud.svg'],
+        ['HDF',   'hdf.svg'],
+        ['Siaya',          'siaya.svg'],
+        // ['ThinkReal',       'oracle.svg'],
+        // ['Siaya',        'cisco.svg'],
     ] as $p)
                 <div
                     class="bg-white dark:bg-shark-950 flex items-center justify-center py-6 px-4 group cursor-default transition-colors duration-200 hover:bg-shark-50 dark:hover:bg-shark-900"
@@ -36,7 +36,7 @@
                     <img
                         src="{{ asset('images/logos/' . $p[1]) }}"
                         alt="{{ $p[0] }}"
-                        class="h-7 w-auto object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200"
+                        class="h-10 w-auto object-contain opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200"
                     />
                 </div>
             @endforeach
@@ -118,7 +118,7 @@
                     'initials' => 'SK',
                     'grad' => 'from-black-pearl-200 to-black-pearl-800',
                     'name' => 'Sarah Kamau',
-                    'role' => 'Head of Digital · Kenya Pipeline Company',
+                    'role' => 'Head of Digital ',
                     'stars' => 5,
                     'quote' => 'The revenue system they built for us eliminated years of manual reconciliation. In 6 months, our digital collection tripled. Worth every shilling.',
                 ],
@@ -126,7 +126,7 @@
                     'initials' => 'DO',
                     'grad' => 'from-black-pearl-200 to-black-pearl-800',
                     'name' => 'David Ochieng',
-                    'role' => 'CEO · Actis Real Estate Kenya',
+                    'role' => 'CEO ',
                     'stars' => 5,
                     'quote' => 'We\'ve digitised our entire property portfolio and our investors now have real-time visibility. It completely transformed how we present ourselves to international LPs.',
                 ],
@@ -134,9 +134,9 @@
                     'initials' => 'AW',
                     'grad' => 'from-black-pearl-200 to-black-pearl-800',
                     'name' => 'Amina Wanjiru',
-                    'role' => 'Founder · TurboSave FinTech',
+                    'role' => 'Founder ',
                     'stars' => 5,
-                    'quote' => 'As an early-stage startup, I was worried about working with a "big firm". Nexus Africa met us where we were — pragmatic, affordable, and genuinely invested in our success.',
+                    'quote' => 'As an early-stage startup, I was worried about working with a "big firm". Nexus Africa met us where we were  pragmatic, affordable, and genuinely invested in our success.',
                 ],
             ] as $i => $t)
                 <div
@@ -222,7 +222,7 @@
                 href="/services"
                 class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-display font-semibold text-sm border border-shark-700 hover:border-shark-500 text-shark-300 hover:text-white transition-all duration-200 hover:-translate-y-0.5"
             >
-                See our work
+                What we offer
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>

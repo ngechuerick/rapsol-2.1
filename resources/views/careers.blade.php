@@ -13,7 +13,6 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         <div class="flex items-center gap-3 mb-6" data-animate>
-            <div class="w-8 h-px bg-amber-500"></div>
             <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                 Careers at Rapsoltech Consulting
             </span>
@@ -25,7 +24,7 @@
             data-delay="1"
         >
             Build the future of<br />
-            East Afrika <span class="text-amber-500">with us.</span>
+            East Africa <span class="text-black-pearl-900 dark:text-amber-500">with us.</span>
         </h1>
 
         <p
@@ -75,7 +74,7 @@
 
         <div class="px-7 py-16">
             <div class="flex items-center gap-3 mb-3" data-animate>
-                <div class="w-8 h-px bg-amber-500"></div>
+                {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
                 <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                     Why join us
                 </span>
@@ -101,7 +100,7 @@
         [
             '<path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 3.741-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/>',
             'Senior-level learning',
-            'You work directly with experienced principals from day one — never siloed in a junior team doing busywork.',
+            'You work directly with experienced principals from day one  never siloed in a junior team doing busywork.',
         ],
         [
             '<path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/>',
@@ -130,10 +129,10 @@
                         data-delay="{{ ($i % 3) + 1 }}"
                     >
                         <div
-                            class="w-9 h-9 rounded-lg bg-amber-50 dark:bg-amber-950/30 flex items-center justify-center mb-4 group-hover:bg-amber-100 dark:group-hover:bg-amber-900/40 transition-colors duration-300"
+                            class="w-9 h-9 rounded-lg bg-black-pearl-100 dark:bg-amber-950/30 flex items-center justify-center mb-4 group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-900/40 transition-colors duration-300"
                         >
                             <svg
-                                class="w-8 h-8 text-amber-600 dark:text-amber-400"
+                                class="w-8 h-8 text-black-pearl-950 dark:text-amber-400"
                                 fill="none"
                                 stroke="currentColor"
                                 stroke-width="1.5"
@@ -145,7 +144,7 @@
                         <h3 class="font-display font-semibold text-sm text-zinc-900 dark:text-white mb-2">
                             {{ $title }}
                         </h3>
-                        <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ $desc }}</p>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ $desc }}</p>
                     </div>
                 @endforeach
             </div>
@@ -158,7 +157,7 @@
 
         <div class="px-7 py-14">
             <div class="flex items-center gap-3 mb-3" data-animate>
-                <div class="w-8 h-px bg-amber-500"></div>
+                {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
                 <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                     How we hire
                 </span>
@@ -185,9 +184,11 @@
             ] as $i => [$step, $desc])
                     <div class="relative pl-9 pb-8 last:pb-0" data-animate data-delay="{{ min($i + 1, 5) }}">
                         <div
-                            class="absolute -left-2 right top-1 w-4.5 h-4.5 rounded-full border-4 border-zinc-50 dark:border-zinc-950 bg-amber-500 z-10"
+                            class="absolute -left-2 right top-1 w-4.5 h-4.5 rounded-full border-4 border-zinc-50 bg-black-pearl-950 dark:border-zinc-950 dark:bg-amber-500 z-10"
                         ></div>
-                        <div class="text-xs font-bold text-amber-600 dark:text-amber-500 mb-1 uppercase tracking-wider">
+                        <div
+                            class="text-xs font-bold text-dark-pearl-950 dark:text-amber-500 mb-1 uppercase tracking-wider"
+                        >
                             Step {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}
                         </div>
                         <h3 class="font-display font-semibold text-base text-zinc-900 dark:text-white mb-1">
@@ -385,7 +386,7 @@
             <p class="text-base text-zinc-400 leading-relaxed mb-8 max-w-md mx-auto">We hire talent first, roles second. If you're exceptional at what you do and believe in what we're building, tell us about yourself.</p>
             <a
                 href="/contact?type=career"
-                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm bg-amber-500 hover:bg-amber-400 text-zinc-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-amber-500/25"
+                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-display font-semibold text-sm bg-black-pearl-300 hover:bg-black-pearl-400 text-shark-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black-pearl-300"
             >
                 Send open application
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">

@@ -15,9 +15,8 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            <div class="w-8 h-px bg-amber-500"></div>
             <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
-                Nexus Africa Insights
+                Rapsoltech Consulting Insights
             </span>
         </div>
 
@@ -28,7 +27,8 @@
                     data-animate
                     data-delay="1"
                 >
-                    Ideas, perspectives,<br />and <span class="text-amber-500">field notes.</span>
+                    Ideas, perspectives,<br />and
+                    <span class="text-black-pearl-900 dark:text-amber-500">field notes.</span>
                 </h1>
                 <p
                     class="text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed"

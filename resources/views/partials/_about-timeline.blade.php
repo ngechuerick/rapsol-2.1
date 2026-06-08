@@ -1,16 +1,16 @@
-<section class="relative border-t border-zinc-200 dark:border-zinc-800">
-    <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-    <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+<section class="relative border-t border-shark-200 dark:border-shark-800">
+    <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+    <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
     <div class="px-7 py-16">
         <div class="mb-10" data-animate>
             <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400"
                     >Our Journey</span
                 >
             </div>
             <h2
-                class="font-display text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white leading-tight"
+                class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight"
             >
                 Seven years of growth
             </h2>
@@ -31,25 +31,25 @@
             ] as $i => [$year, $title, $desc, $current])
                 <div class="relative pl-9 pb-8 last:pb-0" data-animate data-delay="{{ min($i + 1, 5) }}">
                     <div
-                        class="absolute -left-2 top-0.5 w-4.5 h-4.5 rounded-full border-4 border-zinc-50 dark:border-zinc-950 bg-amber-500 z-10"
+                        class="absolute -left-2 top-0.5 w-4.5 h-4.5 rounded-full border-4 border-shark-50 dark:border-shark-950 dark:bg-amber-500 z-10 bg-black-pearl-950"
                     >
-                        @if ($current)
+                        {{-- @if ($current)
                             <div class="absolute inset-0 rounded-full bg-amber-500 animate-ping opacity-40"></div>
-                        @endif
+                        @endif --}}
                     </div>
-                    <div class="text-sm font-bold text-amber-600 dark:text-amber-500 mb-1">
+                    <div class="text-sm font-bold text-black-pearl-950 dark:text-amber-500 mb-1">
                         {{ $year }}
                         @if ($current)
                             <span
-                                class="ml-2 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400"
+                                class="ml-2 px-2 py-0.5 rounded-full text-xs font-semibold bg-black-pearl-200 dark:bg-amber-950/40 text-black-pearl-950 dark:text-amber-400"
                                 >Today</span
                             >
                         @endif
                     </div>
-                    <h3 class="font-display font-semibold text-base text-zinc-900 dark:text-white mb-1.5">
+                    <h3 class="font-display font-semibold text-base text-shark-900 dark:text-white mb-1.5">
                         {{ $title }}
                     </h3>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg">{{ $desc }}</p>
+                    <p class="text-xs text-shark-500 dark:text-shark-400 leading-relaxed max-w-lg">{{ $desc }}</p>
                 </div>
             @endforeach
         </div>

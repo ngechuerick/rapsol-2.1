@@ -14,7 +14,6 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            <div class="w-8 h-px bg-amber-500"></div>
             <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                 Our Gallery
             </span>
@@ -25,7 +24,7 @@
             data-animate
             data-delay="1"
         >
-            Inside <span class="text-amber-500">Rapsoltech Consulting</span>
+            Inside <span class="text-black-pearl-900 dark:text-amber-500">Rapsoltech Consulting</span>
         </h1>
 
         <p
@@ -45,7 +44,7 @@
                 @foreach (['All', 'Office & Team', 'Projects', 'Events', 'Culture'] as $tab)
                     <button
                         @click="setFilter('{{ $tab }}')"
-                        class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                        class="px-4 py-2 rounded-lg cursor-pointer text-sm font-medium transition-all duration-200"
                         :class="filter === '{{ $tab }}'
                         ? 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900'
                         : 'border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-600 hover:text-zinc-900 dark:hover:text-white bg-white dark:bg-zinc-900/40'"
@@ -328,7 +327,6 @@
         <div class="relative px-7 py-16 flex flex-col md:flex-row items-center justify-between gap-6" data-animate>
             <div>
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-8 h-px bg-amber-500"></div>
                     <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400"
                         >Want to work here?</span
                     >
@@ -341,7 +339,7 @@
             <div class="flex flex-col sm:flex-row gap-3 shrink-0">
                 <a
                     href="/careers"
-                    class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-display font-semibold text-sm bg-amber-500 hover:bg-amber-400 text-zinc-900 transition-all duration-200 hover:-translate-y-0.5"
+                    class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-display font-semibold text-sm bg-black-pearl-300 hover:bg-black-pearl-400 text-shark-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black-pearl-300"
                 >
                     View open roles
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">

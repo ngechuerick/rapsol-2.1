@@ -4,7 +4,7 @@
         ['label' => 'About',   'route' => '/about'],
         ['label' => 'Services',    'route' => '/services'],
         ['label' => 'Gallery',    'route' => '/gallery'],
-        ['label' => 'Blog',    'route' => '/blog'],
+        // ['label' => 'Blog',    'route' => '/blog'],
         ['label' => 'Contact', 'route' => '/contact'],
     ];
 @endphp

@@ -16,7 +16,7 @@
                         />
                     </div>
                 </div>
-                <p class="text-sm leading-relaxed opacity-50 mb-6 max-w-50">Building world-class web experiences that create lasting results for people and teams.</p>
+                <p class="text-sm leading-relaxed opacity-50 mb-6 max-w-50">Building world-class consulting services that create lasting results for people and teams.</p>
                 {{-- Social links --}}
                 <div class="flex items-center gap-2.5">
                     @foreach ([

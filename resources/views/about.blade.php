@@ -22,7 +22,8 @@
             data-animate
             data-delay="1"
         >
-            We're building<br />Africa's <em class="not-italic text-amber-500">digital</em> future.
+            We're building<br />Africa's
+            <em class="not-italic text-black-pearl-900 dark:text-amber-500">digital</em> future.
         </h1>
 
         <p

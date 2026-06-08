@@ -9,14 +9,14 @@
         <div
             class="absolute inset-0 -z-10 bg-[linear-gradient(rgba(161,161,170,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(161,161,170,0.14)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[40px_40px]"
         ></div>
-        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -bottom-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+        <div class="absolute -bottom-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+        <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            <div class="w-8 h-px bg-amber-500"></div>
-            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+            {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
                 What We Do
             </span>
         </div>
@@ -24,14 +24,14 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
             <div>
                 <h1
-                    class="font-display text-5xl md:text-6xl font-black leading-[1.05] tracking-tight text-zinc-900 dark:text-white mb-6"
+                    class="font-display text-5xl md:text-6xl font-black leading-[1.05] tracking-tight text-shark-900 dark:text-white mb-6"
                     data-animate
                     data-delay="1"
                 >
-                    Services built<br />for <span class="text-amber-500">real outcomes.</span>
+                    Services built<br />for <span class="text-black-pearl-900 dark:text-amber-500">real outcomes.</span>
                 </h1>
                 <p
-                    class="text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed"
+                    class="text-lg text-shark-500 dark:text-shark-400 leading-relaxed"
                     data-animate
                     data-delay="2"
                 >We offer a focused set of technology and consulting services designed to work together. Every engagement is structured around outcomes, scalability, and long-term impact.</p>
@@ -39,12 +39,12 @@
             {{-- <div class="grid grid-cols-2 gap-3 lg:justify-self-end" data-animate data-delay="3">
                 @foreach ([['340+','Projects delivered'],['8','Core services'],['7+','Years experience'],['98%','Client retention']] as $s)
                     <div
-                        class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40"
+                        class="p-4 rounded-xl border border-shark-200 dark:border-shark-800 bg-white dark:bg-shark-900/40"
                     >
-                        <div class="font-display font-black text-2xl text-zinc-900 dark:text-white mb-0.5">
+                        <div class="font-display font-black text-2xl text-shark-900 dark:text-white mb-0.5">
                             {{ $s[0] }}
                         </div>
-                        <div class="text-xs text-zinc-500 dark:text-zinc-400">{{ $s[1] }}</div>
+                        <div class="text-xs text-shark-500 dark:text-shark-400">{{ $s[1] }}</div>
                     </div>
                 @endforeach
             </div> --}}
@@ -55,9 +55,9 @@
      Inflection-style: numbered,
      full-width rows, generous space
 ════════════════════════════ --}}
-    <div class="relative border-t border-zinc-200 dark:border-zinc-800">
-        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
-        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
+    <div class="relative border-t border-shark-200 dark:border-shark-800">
+        <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
+        <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
         @php
     $services = [
@@ -97,7 +97,7 @@
             'num'   => '05',
             'slug'  => 'asset-management',
             'title' => 'Asset Management',
-            'short' => 'Disciplined, data-driven portfolio management to grow and protect your wealth across East Africa — from real estate and equities to alternative investments.',
+            'short' => 'Disciplined, data-driven portfolio management to grow and protect your wealth across East Africa  from real estate and equities to alternative investments.',
             'tags'  => ['Portfolio Management', 'Real Estate', 'Risk Advisory', 'Alternatives'],
             'icon'  => '<path d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75"/>',
         ],
@@ -105,7 +105,7 @@
             'num'   => '06',
             'slug'  => 'tech-consulting',
             'title' => 'Technology Consulting',
-            'short' => 'Strategic technology advisory to navigate digital transformation with confidence — cloud architecture, cybersecurity, systems integration, and IT governance.',
+            'short' => 'Strategic technology advisory to navigate digital transformation with confidence  cloud architecture, cybersecurity, systems integration, and IT governance.',
             'tags'  => ['Digital Transformation', 'Cloud', 'Cybersecurity', 'IT Governance'],
             'icon'  => '<path d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"/>',
         ],
@@ -113,7 +113,7 @@
             'num'   => '07',
             'slug'  => 'business-consulting',
             'title' => 'Business Consulting',
-            'short' => 'Strategic business guidance to unlock growth, improve operations, and make better decisions — from financial modelling and M&A to market entry and SME scale-up.',
+            'short' => 'Strategic business guidance to unlock growth, improve operations, and make better decisions  from financial modelling and M&A to market entry and SME scale-up.',
             'tags'  => ['Strategy', 'Financial Advisory', 'M&A', 'SME Growth'],
             'icon'  => '<path d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5"/>',
         ],
@@ -131,14 +131,14 @@
         @foreach ($services as $i => $service)
             <a
                 href="{{ route('services.show', $service['slug']) }}"
-                class="group block border-b border-zinc-200 dark:border-zinc-800 last:border-b-0 transition-colors duration-200 hover:bg-zinc-50 dark:hover:bg-zinc-900/40"
+                class="group block border-b border-shark-200 dark:border-shark-800 last:border-b-0 transition-colors duration-200 hover:bg-shark-50 dark:hover:bg-shark-900/40"
                 data-animate
                 data-delay="{{ min($i + 1, 5) }}"
             >
                 <div class="px-7 py-10 grid grid-cols-1 md:grid-cols-[80px_1fr_auto] gap-6 items-start md:items-center">
                     {{-- Number --}}
                     <div
-                        class="font-display font-black text-4xl text-zinc-200 dark:text-zinc-800 group-hover:text-amber-200 dark:group-hover:text-amber-900 transition-colors duration-300 leading-none"
+                        class="font-display font-black text-4xl text-shark-200 dark:text-shark-800 group-hover:text-black-pearl-950 dark:group-hover:text-amber-900 transition-colors duration-300 leading-none"
                     >
                         {{ $service['num'] }}
                     </div>
@@ -147,10 +147,10 @@
                     <div>
                         <div class="flex flex-wrap items-center gap-3 mb-3">
                             <div
-                                class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-amber-100 dark:group-hover:bg-amber-950/40 transition-colors duration-300"
+                                class="w-8 h-8 rounded-lg bg-black-pearl-100 dark:bg-shark-800 flex items-center justify-center group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-950/40 transition-colors duration-300"
                             >
                                 <svg
-                                    class="w-4 h-4 text-zinc-500 dark:text-zinc-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300"
+                                    class="w-4 h-4 text-black-pearl-950 dark:text-shark-400 group-hover:text-black-pearl-950 dark:group-hover:text-amber-400 transition-colors duration-300"
                                     fill="none"
                                     stroke="currentColor"
                                     stroke-width="1.5"
@@ -160,18 +160,18 @@
                                 </svg>
                             </div>
                             <h2
-                                class="font-display font-bold text-xl text-zinc-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300"
+                                class="font-display font-bold text-xl text-black-pearl-900 dark:text-white group-hover:text-black-pearl-950 dark:group-hover:text-amber-400 transition-colors duration-300"
                             >
                                 {{ $service['title'] }}
                             </h2>
                         </div>
-                        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-2xl mb-4">
+                        <p class="text-sm text-shark-500 dark:text-shark-400 leading-relaxed max-w-2xl mb-4">
                             {{ $service['short'] }}
                         </p>
                         <div class="flex flex-wrap gap-2">
                             @foreach ($service['tags'] as $tag)
                                 <span
-                                    class="px-2.5 py-1 rounded-md text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 group-hover:bg-amber-50 dark:group-hover:bg-amber-950/30 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors duration-300"
+                                    class="px-2.5 py-1 rounded-md text-xs font-medium bg-black-pearl-100 dark:bg-shark-800 text-shark-500 dark:text-shark-400 group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-950/30 group-hover:text-black-pearl-950 dark:group-hover:text-black-pearl-950 transition-colors duration-300"
                                 >
                                     {{ $tag }}
                                 </span>
@@ -181,10 +181,10 @@
 
                     {{-- Arrow --}}
                     <div
-                        class="hidden md:flex w-10 h-10 rounded-full border border-zinc-200 dark:border-zinc-800 items-center justify-center group-hover:border-amber-300 dark:group-hover:border-amber-700 group-hover:bg-amber-50 dark:group-hover:bg-amber-950/30 transition-all duration-300 shrink-0"
+                        class="hidden md:flex w-10 h-10 rounded-full border border-black-pearl-300 dark:border-shark-800 items-center justify-center group-hover:border-black-pearl-500 dark:group-hover:border-amber-700 group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-950/30 transition-all duration-300 shrink-0"
                     >
                         <svg
-                            class="w-4 h-4 text-zinc-400 dark:text-zinc-600 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300"
+                            class="w-4 h-4 text-shark-400 dark:text-shark-600 group-hover:text-black-pearl-950 dark:group-hover:text-amber-400 transition-colors duration-300"
                             fill="none"
                             stroke="currentColor"
                             stroke-width="2"
@@ -200,7 +200,9 @@
     {{-- ════════════════════════════
      BOTTOM CTA
 ════════════════════════════ --}}
-    <div class="relative border-t border-zinc-200 dark:border-zinc-800 overflow-hidden bg-zinc-900 dark:bg-zinc-950">
+    <div
+        class="relative border-t border-shark-200 dark:border-shark-800 overflow-hidden bg-shark-900 dark:bg-shark-950"
+    >
         <div
             class="absolute -right-8 -bottom-6 font-display font-black text-[180px] leading-none text-white/3 select-none"
             aria-hidden="true"
@@ -211,7 +213,7 @@
         <div class="relative px-7 py-20 text-center" data-animate>
             <div class="flex items-center justify-center gap-3 mb-7">
                 <div class="w-8 h-px bg-amber-500"></div>
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400"
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-400"
                     >Not sure where to start?</span
                 >
                 <div class="w-8 h-px bg-amber-500"></div>
@@ -221,16 +223,25 @@
             >
                 Let's figure it out <span class="text-amber-400">together.</span>
             </h2>
-            <p class="text-base text-zinc-400 leading-relaxed mb-10 max-w-lg mx-auto">Book a free 30-minute discovery call. No commitment, no sales pitch just an honest conversation about what your business needs.</p>
+            <p class="text-base text-shark-400 leading-relaxed mb-10 max-w-lg mx-auto">Book a free 30-minute discovery call. No commitment, no sales pitch just an honest conversation about what your business needs.</p>
             <a
                 href="/contact"
-                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm bg-amber-500 hover:bg-amber-400 text-zinc-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-amber-500/25"
+                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-display font-semibold text-sm bg-black-pearl-300 hover:bg-black-pearl-400 text-shark-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black-pearl-300"
             >
                 Book a free consultation
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
             </a>
+            {{-- <a
+                href="/contact"
+                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm bg-amber-500 hover:bg-amber-400 text-shark-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-amber-500/25"
+            >
+                Book a free consultation
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a> --}}
         </div>
     </div>
 

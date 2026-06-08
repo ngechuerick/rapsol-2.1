@@ -14,7 +14,7 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            <div class="w-8 h-px bg-amber-500"></div>
+            {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
             <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
                 Get In Touch
             </span>
@@ -26,7 +26,7 @@
             data-delay="1"
         >
             Let's build something<br />
-            <span class="text-amber-500">great together.</span>
+            <span class="text-black-pearl-900 dark:text-amber-500">great together.</span>
         </h1>
 
         <p
@@ -58,9 +58,12 @@
                     ] as [$num, $title, $desc])
                             <div class="flex gap-4">
                                 <div
-                                    class="w-7 h-7 rounded-full border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/30 flex items-center justify-center shrink-0 mt-0.5"
+                                    class="w-7 h-7 rounded-full border border-black-pearl-800 dark:border-amber-700 bg-black-pearl-200 dark:bg-amber-950/30 flex items-center justify-center shrink-0 mt-0.5"
                                 >
-                                    <span class="text-xs font-bold text-amber-600 dark:text-amber-400">{{ $num }}</span>
+                                    <span
+                                        class="text-xs font-bold text-black-pearl-950 dark:text-amber-400"
+                                        >{{ $num }}</span
+                                    >
                                 </div>
                                 <div>
                                     <div
@@ -411,7 +414,7 @@
             <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10">
                 <div data-animate>
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-px bg-amber-500"></div>
+                        {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
                         <span
                             class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400"
                             >FAQ</span

@@ -22,9 +22,9 @@
             {{-- Sector list (left 2/3) --}}
             <div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-3" data-animate data-delay="1">
                 @foreach ([
-                    ['id' => 'fintech',    'label' => 'FinTech',           'clients' => '42 clients',  'icon' => '<path d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"/>'],
+                    ['id' => 'consulting',    'label' => 'Consulting',           'clients' => '42 clients',  'icon' => '<path d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"/>'],
                     ['id' => 'realestate', 'label' => 'Real Estate',       'clients' => '28 clients',  'icon' => '<path d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"/>'],
-                    ['id' => 'Logistics', 'label' => 'Logistics',        'clients' => '15 clients',  'icon' => '<path d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"/>'],
+                    ['id' => 'logistics', 'label' => 'Logistics',        'clients' => '15 clients',  'icon' => '<path d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"/>'],
                     ['id' => 'sme',        'label' => 'SMEs',              'clients' => '95 clients',  'icon' => '<path d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016 2.993 2.993 0 0 0 2.25-1.016 3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"/>'],
                     ['id' => 'healthcare', 'label' => 'Healthcare',        'clients' => '19 clients',  'icon' => '<path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/>'],
                     ['id' => 'agritech',   'label' => 'AgriTech',          'clients' => '12 clients',  'icon' => '<path d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>'],
@@ -60,12 +60,12 @@
                         >
                             {{ $sector['label'] }}
                         </div>
-                        <div
+                        {{-- <div
                             class="font-mono text-xs mt-1 transition-colors duration-300"
                             :class="active === '{{ $sector['id'] }}' ? 'text-black-pearl-800 dark:text-amber-500/70' : 'text-zinc-400 dark:text-zinc-600'"
                         >
                             {{ $sector['clients'] }}
-                        </div>
+                        </div> --}}
                     </button>
                 @endforeach
             </div>
@@ -73,25 +73,30 @@
             {{-- Detail panel (right 1/3) --}}
             <div class="sticky top-20" data-animate data-delay="2">
                 @foreach ([
-                    ['id' => 'fintech',    'title' => 'Financial Technology',
-                     'desc' => 'We\'ve powered core banking upgrades, mobile money platforms, and digital lending solutions across Kenya and East Africa. From CBK compliance frameworks to API integrations with M-Pesa and Airtel Money we understand the nuances of African fintech.',
-                     'highlights' => ['Mobile money integrations', 'Core banking modernisation', 'Regulatory compliance (CBK)', 'Digital lending platforms']],
-                    ['id' => 'realestate', 'title' => 'Real Estate & PropTech',
-                     'desc' => 'Property management systems, estate portals, asset valuation models, and investor reporting dashboards. We\'ve digitised portfolios ranging from 12 to 300+ properties for developers, REITs, and family offices.',
-                     'highlights' => ['Property management systems', 'Investor reporting portals', 'Asset valuation models', 'Tenant management platforms']],
-                    ['id' => 'Logistics', 'title' => 'Logistics',
-                     'desc' => 'Revenue collection systems, citizen-facing portals, and inter-agency integration platforms. All built to meet Kenya\'s government ICT standards with security-first architecture.',
-                     'highlights' => ['Revenue collection systems', 'Citizen service portals', 'Data interoperability', 'Compliance & audit trails']],
-                    ['id' => 'sme',        'title' => 'Small & Medium Enterprises',
-                     'desc' => 'Our largest client segment. From first website to ERP implementation  we scale with SMEs at every stage, combining affordable tech with strategic financial guidance.',
-                     'highlights' => ['Digital presence setup', 'ERP & CRM implementation', 'Access to finance', 'Growth strategy workshops']],
-                    ['id' => 'healthcare', 'title' => 'Healthcare & MedTech',
-                     'desc' => 'Hospital management systems, telemedicine platforms, medical supply chain solutions, and patient data management  all built to international health data standards.',
-                     'highlights' => ['Hospital management systems', 'Telemedicine platforms', 'Supply chain solutions', 'Patient data management']],
-                    ['id' => 'agritech',   'title' => 'Agriculture & AgriTech',
-                     'desc' => 'Farm management tools, commodity trading platforms, smallholder finance solutions, and supply chain traceability systems connecting Kenya\'s agricultural economy.',
-                     'highlights' => ['Farm management tools', 'Commodity trading platforms', 'Smallholder finance', 'Supply chain traceability']],
-                ] as $detail)
+    ['id' => 'consulting', 'title' => 'Consulting',
+     'desc' => 'Strategic technology and business advisory for organisations navigating growth and change. We guide leadership teams through digital transformation, operational improvement, and the technology decisions that shape their next chapter  combining analytical rigour with on-the-ground East African experience.',
+     'highlights' => ['Digital transformation strategy', 'Technology roadmaps', 'Operational improvement', 'Financial & business advisory']],
+
+    ['id' => 'realestate', 'title' => 'Real Estate & PropTech',
+     'desc' => 'Property management systems, estate portals, asset valuation models, and investor reporting dashboards. We\'ve digitised portfolios ranging from 12 to 300+ properties for developers, REITs, and family offices.',
+     'highlights' => ['Property management systems', 'Investor reporting portals', 'Asset valuation models', 'Tenant management platforms']],
+
+    ['id' => 'logistics', 'title' => 'Logistics & Supply Chain',
+     'desc' => 'Fleet management systems, route optimisation engines, warehouse management platforms, and real-time shipment tracking. We help transport and distribution businesses cut costs and move goods faster across East Africa\'s complex corridors.',
+     'highlights' => ['Fleet & route optimisation', 'Warehouse management systems', 'Real-time shipment tracking', 'Last-mile delivery platforms']],
+
+    ['id' => 'sme', 'title' => 'Small & Medium Enterprises',
+     'desc' => 'Our largest client segment. From first website to ERP implementation, we scale with SMEs at every stage, combining affordable tech with strategic financial guidance.',
+     'highlights' => ['Digital presence setup', 'ERP & CRM implementation', 'Access to finance', 'Growth strategy workshops']],
+
+    ['id' => 'healthcare', 'title' => 'Healthcare & MedTech',
+     'desc' => 'Hospital management systems, telemedicine platforms, medical supply chain solutions, and patient data management  all built to international health data standards.',
+     'highlights' => ['Hospital management systems', 'Telemedicine platforms', 'Supply chain solutions', 'Patient data management']],
+
+    ['id' => 'agritech', 'title' => 'Agriculture & AgriTech',
+     'desc' => 'Farm management tools, commodity trading platforms, smallholder finance solutions, and supply chain traceability systems connecting Kenya\'s agricultural economy.',
+     'highlights' => ['Farm management tools', 'Commodity trading platforms', 'Smallholder finance', 'Supply chain traceability']],
+] as $detail)
                     <div
                         x-show="active === '{{ $detail['id'] }}'"
                         x-transition:enter="transition ease-out duration-200"

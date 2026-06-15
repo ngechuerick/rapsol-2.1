@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', $service['title'] . ' — Nexus Africa')
+@section ('title', $service['title'] . ' | Rapsoltech Consulting')
 
 @section ('content')
     {{-- ════════════════════════════

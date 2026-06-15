@@ -136,7 +136,7 @@
                     'name' => 'Amina Wanjiru',
                     'role' => 'Founder ',
                     'stars' => 5,
-                    'quote' => 'As an early-stage startup, I was worried about working with a "big firm". Nexus Africa met us where we were  pragmatic, affordable, and genuinely invested in our success.',
+                    'quote' => 'As an early-stage startup, I was worried about working with a "big firm". Rapsoltech Consulting met us where we were  pragmatic, affordable, and genuinely invested in our success.',
                 ],
             ] as $i => $t)
                 <div

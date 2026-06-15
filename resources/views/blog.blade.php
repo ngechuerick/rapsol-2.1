@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', 'Insights — Nexus Africa')
+@section ('title', 'Insights | Rapsoltech Consulting')
 
 @section ('content')
     {{-- ════════════════════════════
@@ -34,7 +34,7 @@
                     class="text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed"
                     data-animate
                     data-delay="2"
-                >Practical thinking on technology, consulting, and business from the Nexus Africa team.</p>
+                >Practical thinking on technology, consulting, and business from the Rapsoltech Consulting team.</p>
             </div>
             <div class="flex flex-col gap-3 lg:items-end" data-animate data-delay="3">
                 <p class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-600">Browse by topic</p>

@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', '404 — Page Not Found · Nexus Africa')
+@section ('title', '404 — Page Not Found | Rapsoltech Consulting')
 
 @section ('content')
     <div class="relative min-h-[70vh] flex flex-col items-center justify-center px-7 py-24 overflow-hidden text-center">

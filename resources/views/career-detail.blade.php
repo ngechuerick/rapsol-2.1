@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', $job['title'] . ' — Careers · Nexus Africa')
+@section ('title', $job['title'] . ' | Rapsoltech Consulting')
 
 @section ('content')
     {{-- ════════════════════════════
@@ -346,7 +346,7 @@
                         class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
                         for="cover"
                     >
-                        Why Nexus Africa? <span class="text-amber-500">*</span>
+                        Why Rapsoltech Consulting? <span class="text-amber-500">*</span>
                     </label>
                     <textarea
                         id="cover"
@@ -368,8 +368,7 @@
 
                 {{-- Submit --}}
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
-                    <p class="text-xs text-zinc-400 dark:text-zinc-600 leading-relaxed max-w-xs">Your data is handled in accordance with our
-                    <a href="/privacy" class="text-amber-600 dark:text-amber-400 hover:underline">Privacy Policy</a>. We never share applications with third parties.</p>
+                    <p class="text-xs text-zinc-400 dark:text-zinc-600 leading-relaxed max-w-xs">Your data is handled in accordance with our <a href="/privacy" class="text-amber-600 dark:text-amber-400 hover:underline">Privacy Policy</a>. We never share applications with third parties.</p>
                     <button
                         type="submit"
                         class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm shrink-0 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:opacity-85 hover:-translate-y-0.5 transition-all duration-200"

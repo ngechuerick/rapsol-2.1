@@ -6,7 +6,7 @@
     - "Accept all"  → sets all cookie categories
     - "Reject all"  → sets only strictly necessary
     - "Manage preferences" → opens a modal with granular toggles
-    - Preferences stored in localStorage (nexus_cookie_consent)
+    - Preferences stored in localStorage (rapsoltech_cookie_consent)
     - Google Analytics only loads if analytics cookies are accepted
     - Banner never shows again once a choice is made
     - Dark/light mode aware
@@ -272,7 +272,7 @@
                     functional: false,
                 },
 
-                STORAGE_KEY: "nexus_cookie_consent",
+                STORAGE_KEY: "rapsoltech_cookie_consent",
 
                 init() {
                     const saved = this.getSaved();

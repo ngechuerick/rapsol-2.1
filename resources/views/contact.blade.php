@@ -53,7 +53,7 @@
                     <div class="space-y-5">
                         @foreach ([
                         ['01', 'We review your inquiry', 'Your message goes directly to our team. We read every submission carefully before responding.'],
-                        ['02', 'We reach out within 24h', 'A senior Nexus Africa team member will contact you within one business day to discuss your needs.'],
+                        ['02', 'We reach out within 24h', 'A senior Rapsoltech   team member will contact you within one business day to discuss your needs.'],
                         ['03', 'We schedule a call', 'If there\'s a fit, we set up a 30-minute discovery call  free, no obligation, no sales pressure.'],
                     ] as [$num, $title, $desc])
                             <div class="flex gap-4">
@@ -88,7 +88,7 @@
                     </h2>
                     <div class="space-y-4">
                         @foreach ([
-                        ['Email', 'hello@nexusafrica.co.ke',
+                        ['Email', 'info@rapsoltechconsulting.co.ke',
                          '<path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>',
                          'mailto:info@rapsoltechconsulting.co.ke'],
                         ['Phone', '+254 103184092',

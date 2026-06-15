@@ -1,5 +1,5 @@
 @extends ('layouts.app')
-@section ('title', $post['title'] . ' — Nexus Africa')
+@section ('title', $post['title'] . ' | Rapsoltech Consulting')
 
 @section ('content')
     {{-- ════════════════════════════
@@ -181,7 +181,7 @@
                     class="p-5 rounded-xl border border-amber-200 dark:border-amber-800/40 bg-amber-50 dark:bg-amber-950/20"
                 >
                     <h4 class="font-display font-bold text-sm text-zinc-900 dark:text-white mb-2">
-                        Work with Nexus Africa
+                        Work with Rapsoltech Consulting
                     </h4>
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Need help with {{ Str::lower($post['category']) }}? Let's talk about your project.</p>
                     <a
@@ -241,7 +241,7 @@
                     <div class="flex items-center gap-3">
                         <div class="w-8 h-px bg-amber-500"></div>
                         <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
-                            More from Nexus Africa
+                            More from Rapsoltech Consulting
                         </span>
                     </div>
                     <a

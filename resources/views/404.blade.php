@@ -20,7 +20,7 @@
             aria-hidden="true"
         >
             <span
-                class="font-display font-black text-[200px] md:text-[280px] leading-none text-zinc-100 dark:text-zinc-900 transition-colors duration-300"
+                class="font-display font-black text-[12.5rem] md:text-[17.5rem] leading-none text-zinc-100 dark:text-zinc-900 transition-colors duration-300"
             >
                 404
             </span>
@@ -29,11 +29,11 @@
         {{-- Content --}}
         <div class="relative z-10" data-animate>
             <div class="flex items-center justify-center gap-3 mb-8">
-                <div class="w-8 h-px bg-amber-500"></div>
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                <div class="w-8 h-px bg-gold-400"></div>
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                     Page not found
                 </span>
-                <div class="w-8 h-px bg-amber-500"></div>
+                <div class="w-8 h-px bg-gold-400"></div>
             </div>
 
             <h1 class="font-display text-3xl md:text-4xl font-black tracking-tight text-zinc-900 dark:text-white mb-4">
@@ -71,12 +71,12 @@
             ] as [$label, $href, $icon])
                     <a
                         href="{{ $href }}"
-                        class="group flex flex-col items-center gap-2 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 text-zinc-500 dark:text-zinc-400 hover:border-amber-300 dark:hover:border-amber-700 hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-300 hover:-translate-y-0.5"
+                        class="group flex flex-col items-center gap-2 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 text-zinc-500 dark:text-zinc-400 hover:border-gold-300 dark:hover:border-gold-700 hover:text-gold-800 dark:hover:text-gold-400 dark:hover:text-gold-400 transition-all duration-300 hover:-translate-y-0.5"
                     >
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                             {!! $icon !!}
                         </svg>
-                        <span class="text-xs font-semibold">{{ $label }}</span>
+                        <span class="text-sm font-semibold">{{ $label }}</span>
                     </a>
                 @endforeach
             </div>

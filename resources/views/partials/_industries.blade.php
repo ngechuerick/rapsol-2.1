@@ -10,7 +10,7 @@
 
     <div class="px-7 pt-16 pb-16">
         <div class="mb-10" data-animate>
-            <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-black-pearl-950 dark:text-amber-500 mb-3">— Industries</p>
+            <p class="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-black-pearl-950 dark:text-gold-400 mb-3">— Industries</p>
             <h2
                 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white leading-tight"
             >
@@ -33,18 +33,18 @@
                         @click="active = '{{ $sector['id'] }}'"
                         class="group text-left p-4 rounded-xl border transition-all duration-300 cursor-pointer"
                         :class="active === '{{ $sector['id'] }}'
-                            ? 'border-black-pearl-300 dark:border-amber-700 bg-black-pearl-50 dark:bg-amber-950/30'
+                            ? 'border-black-pearl-300 dark:border-gold-400 bg-black-pearl-50 dark:bg-gold-950/30'
                             : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 hover:border-zinc-300 dark:hover:border-zinc-700'"
                     >
                         <div
                             class="w-8 h-8 rounded-lg flex items-center justify-center mb-3 transition-colors duration-300"
                             :class="active === '{{ $sector['id'] }}'
-                             ? 'bg-black-pearl-200 dark:bg-amber-900/40'
+                             ? 'bg-black-pearl-200 dark:bg-gold-900/40'
                              : 'bg-zinc-100 dark:bg-zinc-800 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700'"
                         >
                             <svg
                                 class="w-4 h-4 transition-colors duration-300"
-                                :class="active === '{{ $sector['id'] }}' ? 'text-black-pearl-950 dark:text-amber-400' : 'text-zinc-500 dark:text-zinc-400'"
+                                :class="active === '{{ $sector['id'] }}' ? 'text-black-pearl-950 dark:text-gold-400' : 'text-zinc-500 dark:text-zinc-400'"
                                 fill="none"
                                 stroke="currentColor"
                                 stroke-width="1.5"
@@ -56,13 +56,13 @@
 
                         <div
                             class="font-display font-semibold text-lg transition-colors duration-300"
-                            :class="active === '{{ $sector['id'] }}' ? 'text-black-pearl-950 dark:text-amber-400' : 'text-zinc-900 dark:text-white'"
+                            :class="active === '{{ $sector['id'] }}' ? 'text-black-pearl-950 dark:text-gold-400' : 'text-zinc-900 dark:text-white'"
                         >
                             {{ $sector['label'] }}
                         </div>
                         {{-- <div
-                            class="font-mono text-xs mt-1 transition-colors duration-300"
-                            :class="active === '{{ $sector['id'] }}' ? 'text-black-pearl-800 dark:text-amber-500/70' : 'text-zinc-400 dark:text-zinc-600'"
+                            class="font-mono text-sm mt-1 transition-colors duration-300"
+                            :class="active === '{{ $sector['id'] }}' ? 'text-black-pearl-800 dark:text-gold-400/70' : 'text-zinc-500 dark:text-zinc-400'"
                         >
                             {{ $sector['clients'] }}
                         </div> --}}
@@ -111,8 +111,8 @@
                         <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5">{{ $detail['desc'] }}</p>
                         <div class="space-y-2">
                             @foreach ($detail['highlights'] as $h)
-                                <div class="flex items-center gap-2 text-xs text-zinc-600 dark:text-zinc-400">
-                                    <div class="w-1 h-1 rounded-full bg-amber-500 shrink-0"></div>
+                                <div class="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                                    <div class="w-1 h-1 rounded-full bg-gold-400 shrink-0"></div>
                                     {{ $h }}
                                 </div>
                             @endforeach

@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+    /*
+    | WhatsApp enquiry line used by the floating button.
+    | `number` is digits only, international format, no + or spaces.
+    */
+    'whatsapp' => [
+        'number' => env('WHATSAPP_NUMBER', '254103184092'),
+        'message' => env('WHATSAPP_MESSAGE', 'Hello Rapsoltech, I would like to make an enquiry.'),
+    ],
+
 ];

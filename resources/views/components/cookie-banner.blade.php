@@ -39,7 +39,7 @@
                     {{-- Text --}}
                     <div class="flex-1">
                         <p class="font-display font-bold text-sm text-zinc-900 dark:text-white mb-1">We use cookies on this site</p>
-                        <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">We use strictly necessary cookies to keep the site working, and optional analytics cookies to understand how you use it. Read our <a href="/cookie-policy" class="text-amber-600 dark:text-amber-400 hover:underline font-medium">Cookie Policy</a> and <a href="/privacy" class="text-amber-600 dark:text-amber-400 hover:underline font-medium">Privacy Policy</a> to learn more.</p>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">We use strictly necessary cookies to keep the site working, and optional analytics cookies to understand how you use it. Read our <a href="/cookie-policy" class="text-gold-800 dark:text-gold-400 dark:text-gold-400 hover:underline font-medium">Cookie Policy</a> and <a href="/privacy" class="text-gold-800 dark:text-gold-400 dark:text-gold-400 hover:underline font-medium">Privacy Policy</a> to learn more.</p>
                     </div>
                 </div>
 
@@ -61,7 +61,7 @@
 
                     <button
                         @click="openModal()"
-                        class="flex-1 sm:flex-none px-5 py-2.5 rounded-lg font-display font-semibold text-sm text-amber-600 dark:text-amber-400 underline underline-offset-2 hover:text-amber-700 dark:hover:text-amber-300 transition-colors duration-200"
+                        class="flex-1 sm:flex-none px-5 py-2.5 rounded-lg font-display font-semibold text-sm text-gold-800 dark:text-gold-400 dark:text-gold-400 underline underline-offset-2 hover:text-gold-800 dark:hover:text-gold-400 dark:hover:text-gold-300 transition-colors duration-200"
                     >
                         Manage preferences
                     </button>
@@ -106,7 +106,7 @@
                 <button
                     @click="showModal = false"
                     aria-label="Close"
-                    class="w-8 h-8 rounded-lg border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-zinc-400 dark:text-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors duration-200"
+                    class="w-8 h-8 rounded-lg border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors duration-200"
                 >
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M6 18 18 6M6 6l12 12" />
@@ -152,12 +152,12 @@
                             class="flex items-center justify-between px-4 py-3 bg-zinc-50 dark:bg-zinc-900/60 border-b border-zinc-200 dark:border-zinc-800"
                         >
                             <div class="flex items-center gap-3">
-                                <h3 class="font-display font-semibold text-sm text-zinc-900 dark:text-white">
+                                <h3 class="font-display font-bold text-base text-zinc-900 dark:text-white">
                                     {{ $cat['label'] }}
                                 </h3>
                                 @if ($cat['required'])
                                     <span
-                                        class="px-2 py-0.5 rounded text-xs font-medium bg-zinc-200 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"
+                                        class="px-2 py-0.5 rounded text-sm font-medium bg-zinc-200 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"
                                     >
                                         Always on
                                     </span>
@@ -167,7 +167,7 @@
                             {{-- Toggle --}}
                             @if ($cat['required'])
                                 <div
-                                    class="w-9 h-5 rounded-full bg-amber-500 flex items-center justify-end pr-0.5 opacity-60 cursor-not-allowed"
+                                    class="w-9 h-5 rounded-full bg-gold-400 flex items-center justify-end pr-0.5 opacity-60 cursor-not-allowed"
                                 >
                                     <div class="w-4 h-4 rounded-full bg-white"></div>
                                 </div>
@@ -177,9 +177,9 @@
                                     :aria-checked="preferences.{{ $cat['key'] }}.toString()"
                                     :aria-label="'Toggle ' + '{{ $cat['label'] }}' + ' cookies'"
                                     role="switch"
-                                    class="relative w-9 h-5 rounded-full border transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2"
+                                    class="relative w-9 h-5 rounded-full border transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
                                     :class="preferences.{{ $cat['key'] }}
-                                    ? 'bg-amber-500 border-amber-500'
+                                    ? 'bg-gold-400 border-gold-400'
                                     : 'bg-zinc-200 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700'"
                                 >
                                     <span
@@ -192,10 +192,10 @@
 
                         {{-- Category details --}}
                         <div class="px-4 py-3">
-                            <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mb-2">
+                            <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-2">
                                 {{ $cat['desc'] }}
                             </p>
-                            <p class="text-xs text-zinc-400 dark:text-zinc-600">
+                            <p class="text-sm text-zinc-500 dark:text-zinc-400">
                                 <span class="font-medium">Examples:</span> {{ $cat['examples'] }}
                             </p>
                         </div>
@@ -216,7 +216,7 @@
 
                 <button
                     @click="acceptAll()"
-                    class="flex-1 px-5 py-2.5 rounded-lg font-display font-semibold text-sm bg-amber-500 hover:bg-amber-400 text-zinc-900 transition-all duration-200"
+                    class="flex-1 px-5 py-2.5 rounded-lg font-display font-semibold text-sm bg-gold-400 hover:bg-gold-400 text-zinc-900 transition-all duration-200"
                 >
                     Accept all
                 </button>
@@ -241,7 +241,7 @@
             @click="openModal()"
             title="Cookie preferences"
             aria-label="Manage cookie preferences"
-            class="w-10 h-10 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-lg shadow-black/10 dark:shadow-black/30 flex items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-amber-600 dark:hover:text-amber-400 hover:border-amber-300 dark:hover:border-amber-700 transition-all duration-200 hover:scale-110"
+            class="w-10 h-10 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-lg shadow-black/10 dark:shadow-black/30 flex items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-gold-800 dark:hover:text-gold-400 dark:hover:text-gold-400 hover:border-gold-300 dark:hover:border-gold-700 transition-all duration-200 hover:scale-110"
         >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />

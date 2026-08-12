@@ -15,7 +15,7 @@
         <div class="absolute -bottom-[5px] -right-[5px] w-[10px] h-[10px] rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         {{-- Breadcrumb --}}
-        <div class="flex items-center gap-2 mb-8 text-xs text-zinc-400 dark:text-zinc-600" data-animate>
+        <div class="flex items-center gap-2 mb-8 text-sm text-zinc-500 dark:text-zinc-400" data-animate>
             <a href="/careers" class="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Careers</a>
             <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -28,11 +28,11 @@
                 {{-- Tag + dept --}}
                 <div class="flex items-center gap-3 mb-4" data-animate>
                     <span
-                        class="px-2.5 py-1 rounded-md text-xs font-semibold uppercase tracking-wide bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400"
+                        class="px-2.5 py-1 rounded-md text-sm font-semibold uppercase tracking-wide bg-gold-100 dark:bg-gold-950/40 text-gold-800 dark:text-gold-400 dark:text-gold-400"
                     >
                         {{ $job['tag'] }}
                     </span>
-                    <span class="text-xs text-zinc-400 dark:text-zinc-600">{{ $job['dept'] }}</span>
+                    <span class="text-sm text-zinc-500 dark:text-zinc-400">{{ $job['dept'] }}</span>
                 </div>
 
                 <h1
@@ -44,7 +44,7 @@
                 </h1>
 
                 <div
-                    class="flex flex-wrap items-center gap-4 text-xs text-zinc-500 dark:text-zinc-400"
+                    class="flex flex-wrap items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400"
                     data-animate
                     data-delay="2"
                 >
@@ -65,14 +65,14 @@
             <div class="lg:text-right" data-animate data-delay="3">
                 <a
                     href="#apply"
-                    class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm bg-amber-500 hover:bg-amber-400 text-zinc-900 transition-all duration-200 hover:-translate-y-0.5"
+                    class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm bg-gold-400 hover:bg-gold-400 text-zinc-900 transition-all duration-200 hover:-translate-y-0.5"
                 >
                     Apply for this role
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
-                <p class="text-xs text-zinc-400 dark:text-zinc-600 mt-2">Applications reviewed within 5 working days</p>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2">Applications reviewed within 5 working days</p>
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@
             {{-- Main content --}}
             <div class="px-7 py-12">
                 <div
-                    class="prose prose-zinc dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-zinc-600 dark:prose-p:text-zinc-400 prose-p:leading-relaxed prose-p:text-[15px] prose-li:text-zinc-600 dark:prose-li:text-zinc-400 prose-li:text-[15px] prose-strong:text-zinc-900 dark:prose-strong:text-white prose-hr:border-zinc-200 dark:prose-hr:border-zinc-800"
+                    class="prose prose-zinc dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-4 prose-p:text-zinc-600 dark:prose-p:text-zinc-500 dark:text-zinc-400 prose-p:leading-relaxed prose-p:text-[0.9375rem] prose-li:text-zinc-600 dark:prose-li:text-zinc-500 dark:text-zinc-400 prose-li:text-[0.9375rem] prose-strong:text-zinc-900 dark:prose-strong:text-white prose-hr:border-zinc-200 dark:prose-hr:border-zinc-800"
                 >
                     {!! $job['description'] !!}
                 </div>
@@ -99,7 +99,7 @@
             <div class="px-6 py-12 space-y-8">
                 {{-- Role summary --}}
                 <div>
-                    <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-600 mb-4">
+                    <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400 mb-4">
                         Role details
                     </h4>
                     <div class="space-y-3">
@@ -113,7 +113,7 @@
                     ] as [$label, $val])
                             <div>
                                 <div
-                                    class="text-xs font-semibold uppercase tracking-[0.1em] text-zinc-400 dark:text-zinc-600 mb-0.5"
+                                    class="text-sm font-semibold uppercase tracking-[0.1em] text-zinc-500 dark:text-zinc-400 mb-0.5"
                                 >
                                     {{ $label }}
                                 </div>
@@ -127,7 +127,7 @@
 
                 {{-- Benefits --}}
                 <div>
-                    <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-600 mb-4">
+                    <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400 mb-4">
                         Benefits
                     </h4>
                     <ul class="space-y-2">
@@ -139,8 +139,8 @@
                         'Annual team retreat',
                         '21 days annual leave',
                     ] as $benefit)
-                            <li class="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
-                                <svg class="w-3.5 h-3.5 text-amber-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <li class="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400">
+                                <svg class="w-3.5 h-3.5 text-gold-800 dark:text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path d="M4.5 12.75l6 6 9-13.5" />
                                 </svg>
                                 {{ $benefit }}
@@ -153,13 +153,13 @@
 
                 {{-- Share --}}
                 <div>
-                    <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-600 mb-3">
+                    <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400 mb-3">
                         Share this role
                     </h4>
                     <div class="flex gap-2">
                         @foreach (['Twitter','LinkedIn','WhatsApp'] as $platform)
                             <button
-                                class="flex-1 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-xs font-medium text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700 hover:text-zinc-900 dark:hover:text-white transition-all duration-200"
+                                class="flex-1 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700 hover:text-zinc-900 dark:hover:text-white transition-all duration-200"
                             >
                                 {{ $platform }}
                             </button>
@@ -181,8 +181,8 @@
 
         <div class="px-7 py-14">
             <div class="flex items-center gap-3 mb-3" data-animate>
-                <div class="w-8 h-px bg-amber-500"></div>
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                <div class="w-8 h-px bg-gold-400"></div>
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                     Apply
                 </span>
             </div>
@@ -201,7 +201,7 @@
                         <div class="font-semibold text-sm text-emerald-800 dark:text-emerald-300">
                             Application received
                         </div>
-                        <p class="text-xs text-emerald-700 dark:text-emerald-400 mt-0.5">Thanks for applying! We'll be in touch within 5 working days.</p>
+                        <p class="text-sm text-emerald-700 dark:text-emerald-400 mt-0.5">Thanks for applying! We'll be in touch within 5 working days.</p>
                     </div>
                 </div>
             @endif
@@ -221,10 +221,10 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                            class="block text-sm font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
                             for="name"
                         >
-                            Full name <span class="text-amber-500">*</span>
+                            Full name <span class="text-gold-800 dark:text-gold-400">*</span>
                         </label>
                         <input
                             type="text"
@@ -236,17 +236,17 @@
                             class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40
                                   border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100
                                   placeholder-zinc-400 dark:placeholder-zinc-600
-                                  focus:outline-none focus:border-amber-400 dark:focus:border-amber-600
-                                  focus:ring-2 focus:ring-amber-400/20 transition-all duration-200
+                                  focus:outline-none focus:border-gold-400 dark:focus:border-gold-600
+                                  focus:ring-2 focus:ring-gold-400/20 transition-all duration-200
                                   @error('name') border-red-400 @enderror"
                         />
                     </div>
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                            class="block text-sm font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
                             for="email"
                         >
-                            Email address <span class="text-amber-500">*</span>
+                            Email address <span class="text-gold-800 dark:text-gold-400">*</span>
                         </label>
                         <input
                             type="email"
@@ -258,8 +258,8 @@
                             class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40
                                   border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100
                                   placeholder-zinc-400 dark:placeholder-zinc-600
-                                  focus:outline-none focus:border-amber-400 dark:focus:border-amber-600
-                                  focus:ring-2 focus:ring-amber-400/20 transition-all duration-200
+                                  focus:outline-none focus:border-gold-400 dark:focus:border-gold-600
+                                  focus:ring-2 focus:ring-gold-400/20 transition-all duration-200
                                   @error('email') border-red-400 @enderror"
                         />
                     </div>
@@ -269,7 +269,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                            class="block text-sm font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
                             for="phone"
                         >
                             Phone number
@@ -280,12 +280,12 @@
                             name="phone"
                             value="{{ old('phone') }}"
                             placeholder="+254 700 000 000"
-                            class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 transition-all duration-200"
+                            class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-gold-400 dark:focus:border-gold-600 focus:ring-2 focus:ring-gold-400/20 transition-all duration-200"
                         />
                     </div>
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                            class="block text-sm font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
                             for="linkedin"
                         >
                             LinkedIn profile
@@ -296,7 +296,7 @@
                             name="linkedin"
                             value="{{ old('linkedin') }}"
                             placeholder="https://linkedin.com/in/..."
-                            class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 transition-all duration-200"
+                            class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-gold-400 dark:focus:border-gold-600 focus:ring-2 focus:ring-gold-400/20 transition-all duration-200"
                         />
                     </div>
                 </div>
@@ -304,7 +304,7 @@
                 {{-- Portfolio / website --}}
                 <div>
                     <label
-                        class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                        class="block text-sm font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
                         for="portfolio"
                     >
                         Portfolio / GitHub / Website
@@ -315,17 +315,17 @@
                         name="portfolio"
                         value="{{ old('portfolio') }}"
                         placeholder="https://..."
-                        class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 transition-all duration-200"
+                        class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-600 focus:outline-none focus:border-gold-400 dark:focus:border-gold-600 focus:ring-2 focus:ring-gold-400/20 transition-all duration-200"
                     />
                 </div>
 
                 {{-- CV Upload --}}
                 <div>
                     <label
-                        class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                        class="block text-sm font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
                         for="cv"
                     >
-                        CV / Resume <span class="text-amber-500">*</span>
+                        CV / Resume <span class="text-gold-800 dark:text-gold-400">*</span>
                     </label>
                     <div class="relative">
                         <input
@@ -334,19 +334,19 @@
                             name="cv"
                             accept=".pdf,.doc,.docx"
                             required
-                            class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 transition-all duration-200 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-zinc-100 dark:file:bg-zinc-800 file:text-zinc-600 dark:file:text-zinc-400 hover:file:bg-zinc-200 dark:hover:file:bg-zinc-700"
+                            class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 focus:outline-none focus:border-gold-400 dark:focus:border-gold-600 focus:ring-2 focus:ring-gold-400/20 transition-all duration-200 file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-zinc-100 dark:file:bg-zinc-800 file:text-zinc-600 dark:file:text-zinc-500 dark:text-zinc-400 hover:file:bg-zinc-200 dark:hover:file:bg-zinc-700"
                         />
                     </div>
-                    <p class="text-xs text-zinc-400 dark:text-zinc-600 mt-1">PDF, DOC, or DOCX · Max 5MB</p>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">PDF, DOC, or DOCX · Max 5MB</p>
                 </div>
 
                 {{-- Cover note --}}
                 <div>
                     <label
-                        class="block text-xs font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
+                        class="block text-sm font-semibold uppercase tracking-[0.15em] text-zinc-500 dark:text-zinc-400 mb-2"
                         for="cover"
                     >
-                        Why Rapsoltech Consulting? <span class="text-amber-500">*</span>
+                        Why Rapsoltech Consulting? <span class="text-gold-800 dark:text-gold-400">*</span>
                     </label>
                     <textarea
                         id="cover"
@@ -359,8 +359,8 @@
                                  border-zinc-200 dark:border-zinc-800
                                  text-zinc-900 dark:text-zinc-100
                                  placeholder-zinc-400 dark:placeholder-zinc-600
-                                 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600
-                                 focus:ring-2 focus:ring-amber-400/20 transition-all duration-200
+                                 focus:outline-none focus:border-gold-400 dark:focus:border-gold-600
+                                 focus:ring-2 focus:ring-gold-400/20 transition-all duration-200
                                  @error('cover') border-red-400 @enderror"
                         >{{ old('cover') }}</textarea
                     >
@@ -368,7 +368,7 @@
 
                 {{-- Submit --}}
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
-                    <p class="text-xs text-zinc-400 dark:text-zinc-600 leading-relaxed max-w-xs">Your data is handled in accordance with our <a href="/privacy" class="text-amber-600 dark:text-amber-400 hover:underline">Privacy Policy</a>. We never share applications with third parties.</p>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xs">Your data is handled in accordance with our <a href="/privacy" class="text-gold-800 dark:text-gold-400 dark:text-gold-400 hover:underline">Privacy Policy</a>. We never share applications with third parties.</p>
                     <button
                         type="submit"
                         class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm shrink-0 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:opacity-85 hover:-translate-y-0.5 transition-all duration-200"

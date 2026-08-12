@@ -11,7 +11,7 @@ class ServicesController extends Controller
      * Edit content here and it reflects on both
      * the index page and individual service pages.
      */
-    private function allServices(): array
+    public static function allServices(): array
     {
         return [
             'app-development' => [
@@ -261,7 +261,7 @@ class ServicesController extends Controller
      */
     public function show(string $slug)
     {
-        $all     = $this->allServices();
+        $all     = self::allServices();
         $service = $all[$slug] ?? null;
 
         if (!$service) {

@@ -1,5 +1,6 @@
 @extends ('layouts.app')
 @section ('title', 'Services | Rapsoltech Consulting')
+@section ('description', 'Application development, SEO, AI integration, UI/UX design, asset management and technology, business and hardware consulting from Rapsoltech Consulting, Nairobi.')
 
 @section ('content')
     {{-- ════════════════════════════
@@ -15,8 +16,8 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
-            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
+            {{-- <div class="w-8 h-px bg-gold-400"></div> --}}
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
                 What We Do
             </span>
         </div>
@@ -28,7 +29,7 @@
                     data-animate
                     data-delay="1"
                 >
-                    Services built<br />for <span class="text-black-pearl-900 dark:text-amber-500">real outcomes.</span>
+                    Services built<br />for <span class="text-black-pearl-900 dark:text-gold-400">real outcomes.</span>
                 </h1>
                 <p
                     class="text-lg text-shark-500 dark:text-shark-400 leading-relaxed"
@@ -44,7 +45,7 @@
                         <div class="font-display font-black text-2xl text-shark-900 dark:text-white mb-0.5">
                             {{ $s[0] }}
                         </div>
-                        <div class="text-xs text-shark-500 dark:text-shark-400">{{ $s[1] }}</div>
+                        <div class="text-sm text-shark-500 dark:text-shark-400">{{ $s[1] }}</div>
                     </div>
                 @endforeach
             </div> --}}
@@ -138,7 +139,7 @@
                 <div class="px-7 py-10 grid grid-cols-1 md:grid-cols-[80px_1fr_auto] gap-6 items-start md:items-center">
                     {{-- Number --}}
                     <div
-                        class="font-display font-black text-4xl text-shark-200 dark:text-shark-800 group-hover:text-black-pearl-950 dark:group-hover:text-amber-900 transition-colors duration-300 leading-none"
+                        class="font-display font-black text-4xl text-shark-200 dark:text-shark-800 group-hover:text-black-pearl-950 dark:group-hover:text-gold-900 transition-colors duration-300 leading-none"
                     >
                         {{ $service['num'] }}
                     </div>
@@ -147,10 +148,10 @@
                     <div>
                         <div class="flex flex-wrap items-center gap-3 mb-3">
                             <div
-                                class="w-8 h-8 rounded-lg bg-black-pearl-100 dark:bg-shark-800 flex items-center justify-center group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-950/40 transition-colors duration-300"
+                                class="w-8 h-8 rounded-lg bg-black-pearl-100 dark:bg-shark-800 flex items-center justify-center group-hover:bg-black-pearl-200 dark:group-hover:bg-gold-950/40 transition-colors duration-300"
                             >
                                 <svg
-                                    class="w-4 h-4 text-black-pearl-950 dark:text-shark-400 group-hover:text-black-pearl-950 dark:group-hover:text-amber-400 transition-colors duration-300"
+                                    class="w-4 h-4 text-black-pearl-950 dark:text-shark-400 group-hover:text-black-pearl-950 dark:group-hover:text-gold-400 transition-colors duration-300"
                                     fill="none"
                                     stroke="currentColor"
                                     stroke-width="1.5"
@@ -160,7 +161,7 @@
                                 </svg>
                             </div>
                             <h2
-                                class="font-display font-bold text-xl text-black-pearl-900 dark:text-white group-hover:text-black-pearl-950 dark:group-hover:text-amber-400 transition-colors duration-300"
+                                class="font-display font-bold text-xl text-black-pearl-900 dark:text-white group-hover:text-black-pearl-950 dark:group-hover:text-gold-400 transition-colors duration-300"
                             >
                                 {{ $service['title'] }}
                             </h2>
@@ -171,7 +172,7 @@
                         <div class="flex flex-wrap gap-2">
                             @foreach ($service['tags'] as $tag)
                                 <span
-                                    class="px-2.5 py-1 rounded-md text-xs font-medium bg-black-pearl-100 dark:bg-shark-800 text-shark-500 dark:text-shark-400 group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-950/30 group-hover:text-black-pearl-950 dark:group-hover:text-black-pearl-950 transition-colors duration-300"
+                                    class="px-2.5 py-1 rounded-md text-sm font-medium bg-black-pearl-100 dark:bg-shark-800 text-shark-500 dark:text-shark-400 group-hover:bg-black-pearl-200 dark:group-hover:bg-gold-950/30 group-hover:text-black-pearl-950 dark:group-hover:text-black-pearl-950 transition-colors duration-300"
                                 >
                                     {{ $tag }}
                                 </span>
@@ -181,10 +182,10 @@
 
                     {{-- Arrow --}}
                     <div
-                        class="hidden md:flex w-10 h-10 rounded-full border border-black-pearl-300 dark:border-shark-800 items-center justify-center group-hover:border-black-pearl-500 dark:group-hover:border-amber-700 group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-950/30 transition-all duration-300 shrink-0"
+                        class="hidden md:flex w-10 h-10 rounded-full border border-black-pearl-300 dark:border-shark-800 items-center justify-center group-hover:border-black-pearl-500 dark:group-hover:border-gold-700 group-hover:bg-black-pearl-200 dark:group-hover:bg-gold-950/30 transition-all duration-300 shrink-0"
                     >
                         <svg
-                            class="w-4 h-4 text-shark-400 dark:text-shark-600 group-hover:text-black-pearl-950 dark:group-hover:text-amber-400 transition-colors duration-300"
+                            class="w-4 h-4 text-shark-500 dark:text-shark-400 group-hover:text-black-pearl-950 dark:group-hover:text-gold-400 transition-colors duration-300"
                             fill="none"
                             stroke="currentColor"
                             stroke-width="2"
@@ -204,7 +205,7 @@
         class="relative border-t border-shark-200 dark:border-shark-800 overflow-hidden bg-shark-900 dark:bg-shark-950"
     >
         <div
-            class="absolute -right-8 -bottom-6 font-display font-black text-[180px] leading-none text-white/3 select-none"
+            class="absolute -right-8 -bottom-6 font-display font-black text-[11.25rem] leading-none text-white/3 select-none"
             aria-hidden="true"
         >
             RTC
@@ -212,18 +213,18 @@
 
         <div class="relative px-7 py-20 text-center" data-animate>
             <div class="flex items-center justify-center gap-3 mb-7">
-                <div class="w-8 h-px bg-amber-500"></div>
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-400"
+                <div class="w-8 h-px bg-gold-400"></div>
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400"
                     >Not sure where to start?</span
                 >
-                <div class="w-8 h-px bg-amber-500"></div>
+                <div class="w-8 h-px bg-gold-400"></div>
             </div>
             <h2
                 class="font-display text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-5 max-w-xl mx-auto"
             >
-                Let's figure it out <span class="text-amber-400">together.</span>
+                Let's figure it out <span class="text-gold-400">together.</span>
             </h2>
-            <p class="text-base text-shark-400 leading-relaxed mb-10 max-w-lg mx-auto">Book a free 30-minute discovery call. No commitment, no sales pitch just an honest conversation about what your business needs.</p>
+            <p class="text-base text-shark-500 dark:text-shark-400 leading-relaxed mb-10 max-w-lg mx-auto">Book a free 30-minute discovery call. No commitment, no sales pitch just an honest conversation about what your business needs.</p>
             <a
                 href="/contact"
                 class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-display font-semibold text-sm bg-black-pearl-300 hover:bg-black-pearl-400 text-shark-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black-pearl-300"
@@ -235,7 +236,7 @@
             </a>
             {{-- <a
                 href="/contact"
-                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm bg-amber-500 hover:bg-amber-400 text-shark-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-amber-500/25"
+                class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm bg-gold-400 hover:bg-gold-400 text-shark-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold-500/25"
             >
                 Book a free consultation
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">

@@ -7,7 +7,7 @@
 
     {{-- Section header --}}
     <div class="px-7 pt-16 pb-10" data-animate>
-        <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-black-pear-900 dark:text-amber-500 mb-3">— What We Do</p>
+        <p class="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-black-pearl-900 dark:text-gold-400 mb-3">— What We Do</p>
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2
                 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight"
@@ -49,13 +49,13 @@
         ] as $i => $svc)
             <div
                 class="group relative border border-shark-200 dark:border-shark-800 rounded-xl p-6
-                    {{ $svc['featured'] ? 'bg-black-pearl-50 dark:bg-black-pearl-950 border-amber-200 dark:border-amber-900/50' : 'bg-white dark:bg-shark-900/40' }}
+                    {{ $svc['featured'] ? 'bg-black-pearl-50 dark:bg-black-pearl-950 border-gold-200 dark:border-gold-900/50' : 'bg-white dark:bg-shark-900/40' }}
                     hover:-translate-y-1 transition-all  duration-100 cursor-pointer"
                 data-animate
                 data-delay="{{ $i + 1 }}"
             >
                 {{-- Number --}}
-                <div class="font-mono text-[12px] font-bold text-shark-400 dark:text-shark-700 mb-4">
+                <div class="font-mono text-xs font-bold text-shark-600 dark:text-shark-400 mb-4">
                     {{ $svc['num'] }}
                 </div>
 
@@ -65,7 +65,7 @@
                         {{ $svc['featured'] ? 'bg-black-pearl-200 dark:bg-black-pearl-900' : 'bg-shark-100 dark:bg-shark-800' }}"
                 >
                     <svg
-                        class="w-5 h-5 {{ $svc['featured'] ? 'text-black-pearl-800 dark:text-black-pearl-100' : 'text-shark-500 dark:text-shark-400' }}"
+                        class="w-5 h-5 {{ $svc['featured'] ? 'text-black-pearl-800 dark:text-black-pearl-100' : 'text-shark-600 dark:text-shark-400' }}"
                         fill="none"
                         stroke="currentColor"
                         stroke-width="1.5"
@@ -78,14 +78,14 @@
                 <h3 class="font-display font-semibold text-lg text-shark-900 dark:text-white mb-2">
                     {{ $svc['title'] }}
                 </h3>
-                <p class="text-base text-shark-500 dark:text-shark-400 leading-relaxed mb-5">{{ $svc['desc'] }}</p>
+                <p class="text-base text-shark-600 dark:text-shark-400 leading-relaxed mb-5">{{ $svc['desc'] }}</p>
 
                 {{-- Tags --}}
                 <ul class="space-y-1.5 mb-5">
                     @foreach ($svc['tags'] as $tag)
-                        <li class="flex items-center gap-2 text-sm text-shark-500 dark:text-shark-400">
+                        <li class="flex items-center gap-2 text-sm text-shark-600 dark:text-shark-400">
                             <div
-                                class="w-1 h-1 rounded-full {{ $svc['featured'] ? 'bg-amber-500' : 'bg-shark-300 dark:bg-shark-600' }} shrink-0"
+                                class="w-1 h-1 rounded-full {{ $svc['featured'] ? 'bg-gold-400' : 'bg-shark-300 dark:bg-shark-600' }} shrink-0"
                             ></div>
                             {{ $tag }}
                         </li>
@@ -101,7 +101,7 @@
             <div class="flex items-center gap-2">
                 <div class="w-1.5 h-1.5 rounded-full bg-shark-400 dark:bg-shark-500"></div>
                 <span
-                    class="font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-shark-400 dark:text-shark-500"
+                    class="font-mono text-xs font-bold uppercase tracking-[0.15em] text-shark-600 dark:text-shark-400"
                 >
                     Consulting Services
                 </span>
@@ -145,12 +145,12 @@
                 data-animate
                 data-delay="{{ $i + 1 }}"
             >
-                <div class="font-mono text-[10px] font-bold text-shark-300 dark:text-shark-700 mb-4">
+                <div class="font-mono text-xs font-bold text-shark-600 dark:text-shark-400 mb-4">
                     {{ $svc['num'] }}
                 </div>
 
                 <div class="w-10 h-10 rounded-lg bg-shark-100 dark:bg-shark-800 mb-5 flex items-center justify-center">
-                    <svg class="w-5 h-5 text-shark-500 dark:text-shark-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-shark-600 dark:text-shark-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                         {!! $svc['icon'] !!}
                     </svg>
                 </div>
@@ -158,11 +158,11 @@
                 <h3 class="font-display font-semibold text-lg text-shark-900 dark:text-white mb-2">
                     {{ $svc['title'] }}
                 </h3>
-                <p class="text-base text-shark-500 dark:text-shark-400 leading-relaxed mb-5">{{ $svc['desc'] }}</p>
+                <p class="text-base text-shark-600 dark:text-shark-400 leading-relaxed mb-5">{{ $svc['desc'] }}</p>
 
                 <ul class="space-y-1.5 mb-5">
                     @foreach ($svc['tags'] as $tag)
-                        <li class="flex items-center gap-2 text-sm text-shark-500 dark:text-shark-400">
+                        <li class="flex items-center gap-2 text-sm text-shark-600 dark:text-shark-400">
                             <div class="w-1 h-1 rounded-full bg-shark-300 dark:bg-shark-600 shrink-0"></div>
                             {{ $tag }}
                         </li>
@@ -171,7 +171,7 @@
 
                 {{-- <a
                     href="#"
-                    class="inline-flex items-center gap-1.5 text-xs font-medium text-shark-400 dark:text-shark-500 group-hover:text-shark-900 dark:group-hover:text-white transition-colors duration-200"
+                    class="inline-flex items-center gap-1.5 text-sm font-medium text-shark-600 dark:text-shark-400 group-hover:text-shark-900 dark:group-hover:text-white transition-colors duration-200"
                 >
                     Learn more
                     <svg class="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">

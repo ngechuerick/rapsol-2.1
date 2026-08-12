@@ -15,7 +15,7 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
         {{-- Breadcrumb --}}
-        <div class="flex items-center gap-2 mb-8 text-xs text-shark-400 dark:text-shark-600" data-animate>
+        <div class="flex items-center gap-2 mb-8 text-sm text-shark-500 dark:text-shark-400" data-animate>
             <a href="/services" class="hover:text-shark-700 dark:hover:text-shark-300 transition-colors">Services</a>
             <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -31,10 +31,10 @@
                         {{ $service['num'] }}
                     </span>
                     <div
-                        class="w-11 h-11 rounded-xl bg-black-pearl-200 dark:bg-amber-950/40 flex items-center justify-center"
+                        class="w-11 h-11 rounded-xl bg-black-pearl-200 dark:bg-gold-950/40 flex items-center justify-center"
                     >
                         <svg
-                            class="w-5 h-5 text-black-pearl-950 dark:text-amber-400"
+                            class="w-5 h-5 text-black-pearl-950 dark:text-gold-400"
                             fill="none"
                             stroke="currentColor"
                             stroke-width="1.5"
@@ -59,7 +59,7 @@
 
             {{-- Tags --}}
             <div data-animate data-delay="3">
-                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-400 dark:text-shark-600 mb-4">What's included</p>
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400 mb-4">What's included</p>
                 <div class="flex flex-wrap gap-2">
                     @foreach ($service['tags'] as $tag)
                         <span
@@ -81,8 +81,8 @@
 
         <div class="px-7 py-16">
             <div class="flex items-center gap-3 mb-12" data-animate>
-                {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
+                {{-- <div class="w-8 h-px bg-gold-400"></div> --}}
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
                     What We Deliver
                 </span>
             </div>
@@ -97,9 +97,9 @@
                         data-delay="{{ ($i % 2) + 1 }}"
                     >
                         <div
-                            class="w-9 h-9 rounded-lg bg-black-pearl-100 dark:bg-amber-950/30 flex items-center justify-center mb-5 group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-900/40 transition-colors duration-300"
+                            class="w-9 h-9 rounded-lg bg-black-pearl-100 dark:bg-gold-950/30 flex items-center justify-center mb-5 group-hover:bg-black-pearl-200 dark:group-hover:bg-gold-900/40 transition-colors duration-300"
                         >
-                            <svg class="w-4 h-4 text-black-pearl-950 dark:text-amber-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 text-black-pearl-950 dark:text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                                 {!! $item['icon'] !!}
                             </svg>
                         </div>
@@ -121,8 +121,8 @@
 
         <div class="px-7 py-16">
             <div class="flex items-center gap-3 mb-3" data-animate>
-                {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
+                {{-- <div class="w-8 h-px bg-gold-400"></div> --}}
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
                     Our Process
                 </span>
             </div>
@@ -136,16 +136,16 @@
 
             <div class="relative pl-2">
                 <div
-                    class="absolute left-2 top-2 bottom-2 w-0.5 bg-linear-to-b from-amber-500 via-amber-500/40 to-amber-500/10"
+                    class="absolute left-2 top-2 bottom-2 w-0.5 bg-linear-to-b from-gold-400 via-gold-400/40 to-gold-400/10"
                 ></div>
 
                 @foreach ($service['process'] as $i => $step)
                     <div class="relative pl-10 pb-10 last:pb-0" data-animate data-delay="{{ min($i + 1, 5) }}">
                         <div
-                            class="absolute -left-2 top-1 w-4.5 h-4.5 rounded-full border-4 border-shark-50 dark:border-shark-950 bg-black-pearl-900 dark:bg-amber-500 z-10"
+                            class="absolute -left-2 top-1 w-4.5 h-4.5 rounded-full border-4 border-shark-50 dark:border-shark-950 bg-black-pearl-900 dark:bg-gold-400 z-10"
                         ></div>
                         <div
-                            class="text-xs font-bold text-black-pearl-950 dark:text-amber-500 mb-1 uppercase tracking-wider"
+                            class="text-sm font-bold text-black-pearl-950 dark:text-gold-400 mb-1 uppercase tracking-wider"
                         >
                             Step {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}
                         </div>
@@ -168,14 +168,14 @@
         <div class="px-7 py-14">
             <div class="flex items-center justify-between gap-4 mb-8" data-animate>
                 <div class="flex items-center gap-3">
-                    {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
-                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
+                    {{-- <div class="w-8 h-px bg-gold-400"></div> --}}
+                    <span class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
                         Explore more
                     </span>
                 </div>
                 <a
                     href="/services"
-                    class="text-xs font-semibold text-shark-500 dark:text-shark-400 hover:text-shark-900 dark:hover:text-white transition-colors"
+                    class="text-sm font-semibold text-shark-500 dark:text-shark-400 hover:text-shark-900 dark:hover:text-white transition-colors"
                 >
                     View all services →
                 </a>
@@ -185,7 +185,7 @@
                 @foreach ($related as $rel)
                     <a
                         href="{{ route('services.show', $rel['slug']) }}"
-                        class="group border border-shark-200 dark:border-shark-800 rounded-xl p-5 bg-white dark:bg-shark-900/40 dark:hover:border-amber-700 hover:-translate-y-1 transition-all duration-300"
+                        class="group border border-shark-200 dark:border-shark-800 rounded-xl p-5 bg-white dark:bg-shark-900/40 dark:hover:border-gold-700 hover:-translate-y-1 transition-all duration-300"
                         data-animate
                         data-delay="{{ $loop->index + 1 }}"
                     >
@@ -203,14 +203,14 @@
                                     {!! $rel['icon'] !!}
                                 </svg>
                             </div>
-                            <span class="text-xs font-bold text-shark-300 dark:text-shark-700">{{ $rel['num'] }}</span>
+                            <span class="text-sm font-bold text-shark-500 dark:text-shark-400">{{ $rel['num'] }}</span>
                         </div>
                         <h3
                             class="font-display font-semibold text-sm text-shark-900 dark:text-white mb-2 transition-colors duration-300"
                         >
                             {{ $rel['title'] }}
                         </h3>
-                        <p class="text-xs text-shark-500 dark:text-shark-400 leading-relaxed line-clamp-2">{{ $rel['short'] }}</p>
+                        <p class="text-sm text-shark-500 dark:text-shark-400 leading-relaxed line-clamp-2">{{ $rel['short'] }}</p>
                     </a>
                 @endforeach
             </div>
@@ -225,8 +225,8 @@
         <div class="relative px-7 py-16 flex flex-col md:flex-row items-center justify-between gap-6" data-animate>
             <div>
                 <div class="flex items-center gap-3 mb-4">
-                    {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
-                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-400">
+                    {{-- <div class="w-8 h-px bg-gold-400"></div> --}}
+                    <span class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
                         Ready to get started?
                     </span>
                 </div>

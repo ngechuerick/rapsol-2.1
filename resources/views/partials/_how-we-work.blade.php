@@ -16,7 +16,7 @@
         {{-- Header --}}
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12" data-animate>
             <div>
-                <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-dark-pearl-950 dark:text-amber-500 mb-3">— How We Work</p>
+                <p class="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-dark-pearl-950 dark:text-gold-400 mb-3">— How We Work</p>
                 <h2
                     class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight"
                 >
@@ -71,7 +71,7 @@
                 <div class="relative bg-white dark:bg-shark-950 p-7 group" data-animate data-delay="{{ $i + 1 }}">
                     {{-- Large phase number (background) --}}
                     <div
-                        class="absolute top-5 right-6 font-display font-black text-[72px] leading-none text-shark-100 dark:text-shark-900 select-none pointer-events-none"
+                        class="absolute top-5 right-6 font-display font-black text-[4.5rem] leading-none text-shark-100 dark:text-shark-900 select-none pointer-events-none"
                         aria-hidden="true"
                     >
                         {{ $step['phase'] }}
@@ -96,7 +96,7 @@
                                     {!! $step['icon'] !!}
                                 </svg>
                             </div>
-                            <span class="font-mono text-[9px] font-bold text-shark-400 dark:text-shark-300"
+                            <span class="font-mono text-xs font-bold text-shark-500 dark:text-shark-300"
                                 >PHASE {{ $step['phase'] }}</span
                             >
                         </div>
@@ -110,7 +110,7 @@
                             @foreach ($step['deliverables'] as $d)
                                 <div class="flex items-center gap-2 text-sm text-shark-500 dark:text-shark-400">
                                     <svg
-                                        class="w-3 h-3 {{ $step['color'] === 'amber' ? 'text-amber-500' : 'text-shark-400 dark:text-shark-600' }} shrink-0"
+                                        class="w-3 h-3 {{ $step['color'] === 'amber' ? 'text-gold-800 dark:text-gold-400' : 'text-shark-500 dark:text-shark-400' }} shrink-0"
                                         fill="none"
                                         stroke="currentColor"
                                         stroke-width="2"
@@ -124,9 +124,9 @@
                         </div>
 
                         <div
-                            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono font-medium
+                            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-sm font-mono font-medium
                                 {{ $step['color'] === 'amber'
-                                    ? 'bg-black-pearl-100 dark:bg-amber-950/30 text-black-pearl-950 dark:text-amber-400'
+                                    ? 'bg-black-pearl-100 dark:bg-gold-950/30 text-black-pearl-950 dark:text-gold-400'
                                     : 'bg-shark-50 dark:bg-shark-800 text-shark-500 dark:text-shark-400' }}"
                         >
                             <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -140,6 +140,6 @@
         </div>
 
         {{-- Bottom note --}}
-        <p class="mt-6 text-center text-xs text-shark-600 dark:text-shark-400" data-animate>Timelines vary by scope. All engagements include a dedicated Rapsoltech Consulting project lead.</p>
+        <p class="mt-6 text-center text-sm text-shark-600 dark:text-shark-400" data-animate>Timelines vary by scope. All engagements include a dedicated Rapsoltech Consulting project lead.</p>
     </div>
 </section>

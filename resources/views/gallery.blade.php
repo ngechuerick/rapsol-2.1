@@ -1,5 +1,6 @@
 @extends ('layouts.app')
 @section ('title', 'Gallery | Rapsoltech Consulting')
+@section ('description', 'A look at the work, the team and the projects Rapsoltech Consulting has delivered across East Africa.')
 
 @section ('content')
     {{-- HERO --}}
@@ -14,7 +15,7 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                 Our Gallery
             </span>
         </div>
@@ -24,7 +25,7 @@
             data-animate
             data-delay="1"
         >
-            Inside <span class="text-black-pearl-900 dark:text-amber-500">Rapsoltech Consulting</span>
+            Inside <span class="text-black-pearl-900 dark:text-gold-400">Rapsoltech Consulting</span>
         </h1>
 
         <p
@@ -214,7 +215,7 @@
                         >
                             <div class="translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
                                 <span
-                                    class="text-xs font-semibold uppercase tracking-[0.15em] text-amber-400 block mb-1"
+                                    class="text-sm font-semibold uppercase tracking-[0.15em] text-gold-400 block mb-1"
                                 >
                                     {{ $item['category'] }}
                                 </span>
@@ -236,7 +237,7 @@
 
             {{-- Empty state --}}
             <div x-show="isEmpty()" class="py-20 text-center">
-                <p class="text-zinc-400 dark:text-zinc-600 text-sm">No photos in this category yet.</p>
+                <p class="text-zinc-500 dark:text-zinc-400 text-sm">No photos in this category yet.</p>
             </div>
         </div>
 
@@ -285,7 +286,7 @@
                 <div class="flex items-center justify-between mt-4 px-1">
                     <div>
                         <span
-                            class="text-xs font-semibold uppercase tracking-[0.15em] text-amber-400 block mb-1"
+                            class="text-sm font-semibold uppercase tracking-[0.15em] text-gold-400 block mb-1"
                             x-text="currentItem().category"
                         ></span>
                         <p class="text-sm font-medium text-white" x-text="currentItem().caption"></p>
@@ -303,7 +304,7 @@
                             </svg>
                         </button>
                         <span
-                            class="text-xs text-white/40 w-12 text-center"
+                            class="text-sm text-white/40 w-12 text-center"
                             x-text="lightbox.index + 1 + ' / ' + visibleItems().length"
                         ></span>
                         <button
@@ -327,14 +328,14 @@
         <div class="relative px-7 py-16 flex flex-col md:flex-row items-center justify-between gap-6" data-animate>
             <div>
                 <div class="flex items-center gap-3 mb-4">
-                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400"
+                    <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
                         >Want to work here?</span
                     >
                 </div>
                 <h2 class="font-display text-2xl md:text-3xl font-black text-white leading-tight">
                     Be part of the story.
                 </h2>
-                <p class="text-sm text-zinc-400 mt-2 max-w-md leading-relaxed">We're building East Africa's most trusted technology and consulting firm. If that excites you, we want to hear from you.</p>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-2 max-w-md leading-relaxed">We're building East Africa's most trusted technology and consulting firm. If that excites you, we want to hear from you.</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-3 shrink-0">
                 <a

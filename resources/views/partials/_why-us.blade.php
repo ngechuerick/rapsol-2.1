@@ -1,51 +1,48 @@
 {{-- ══════════════════════════════════════════════════════════
      WHY US SECTION
-     Asymmetric split: bold left statement + stacked right pillars
-     Unique: large number as background design element
+     Editorial three-band layout:
+       1. Header    — statement left, lead paragraph offset right
+       2. Pillars   — 4-up hairline grid, stat promoted to a kicker
+       3. Close     — headline metric beside the client pull quote
+     Content is unchanged from the previous version; this is layout,
+     rhythm and spacing only.
 ══════════════════════════════════════════════════════════ --}}
 
 <section id="why-us" class="relative border-t border-shark-200 dark:border-shark-800 overflow-hidden">
     <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700 z-10"></div>
     <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700 z-10"></div>
 
-    {{-- Background: large ambient text --}}
+    {{-- Background: large ambient text. Tucked into the top-right corner and
+         clipped by the section edge, so it reads as texture behind the header
+         instead of sitting on top of a pillar heading. --}}
     <div
-        class="absolute top-8 right-4 font-display font-black text-[140px] leading-none text-shark-100 dark:text-shark-900 select-none pointer-events-none opacity-60 dark:opacity-100"
+        class="hidden md:block absolute -top-8 right-6 font-display font-black text-[8.75rem] leading-none text-shark-100 dark:text-shark-900 select-none pointer-events-none opacity-60 dark:opacity-100"
         aria-hidden="true"
     >
         RTC
     </div>
 
-    <div class="relative px-7 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        {{-- Left: Statement --}}
-        <div data-animate>
-            <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-black-pearl-950 dark:text-amber-500 mb-4">— Why Rapsoltech Consulting</p>
-            <h2
-                class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight mb-6"
-            >
-                Built for Africa.<br />Designed for Growth.
-            </h2>
-            <p class="text-base text-shark-500 dark:text-shark-400 leading-relaxed mb-10 max-w-sm">We're not a generic agency. We're a Kenyan-rooted firm that understands local markets while deploying world-class methodologies since 2020.</p>
-
-            {{-- Key metric --}}
-            <div
-                class="border border-shark-200 dark:border-shark-800 rounded-xl p-6 bg-white dark:bg-shark-900/40 inline-block"
-            >
-                <div class="font-display text-5xl font-black text-shark-900 dark:text-white mb-1">
-                    100<span class="text-black-pear-950 dark:text-amber-500">%</span>
-                </div>
-                <div class="text-xs text-shark-500 dark:text-shark-400 font-medium">Projects & Solution delivery</div>
+    <div class="relative px-7 md:px-12 lg:px-16 py-20 md:py-28">
+        {{-- ═══ 1. HEADER ═══ --}}
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-8 gap-x-12 mb-20 md:mb-24">
+            <div class="lg:col-span-7" data-animate>
+                <p class="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-black-pearl-950 dark:text-gold-400 mb-5">— Why Rapsoltech Consulting</p>
+                <h2
+                    class="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-shark-900 dark:text-white leading-[1.1]"
+                >
+                    Built for Africa.<br />Designed for Growth.
+                </h2>
             </div>
 
-            {{-- Quote --}}
-            <div class="mt-8 pl-4">
-                <p class="text-sm text-shark-600 dark:text-shark-400 italic leading-relaxed">"Rapsoltech Consulting doesn't just deliver projects they become strategic partners in our growth journey."</p>
-                <p class="text-xs text-shark-400 dark:text-shark-600 mt-2 font-mono">— CTO, HDF Kenya</p>
+            {{-- Lead sits bottom-aligned in the far right columns, so the
+                 heading gets the whole left field to itself. --}}
+            <div class="lg:col-span-4 lg:col-start-9 flex lg:items-end" data-animate data-delay="1">
+                <p class="text-base text-shark-600 dark:text-shark-400 leading-relaxed">We're not a generic agency. We're a Kenyan-rooted firm that understands local markets while deploying world-class methodologies since 2020.</p>
             </div>
         </div>
 
-        {{-- Right: Differentiator pillars --}}
-        <div class="space-y-3" data-animate data-delay="2">
+        {{-- ═══ 2. PILLARS ═══ --}}
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-8 lg:gap-x-12 gap-y-14">
             @foreach ([
                 [
                     'icon' => '<path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>',
@@ -73,15 +70,15 @@
                 ],
             ] as $i => $pillar)
                 <div
-                    class="group flex items-start gap-4 p-4 rounded-xl border border-transparent hover:border-shark-200 dark:hover:border-shark-800 hover:bg-white dark:hover:bg-shark-900/40 transition-all duration-300 cursor-default"
+                    class="group border-t border-shark-200 dark:border-shark-800 pt-7 hover:border-black-pearl-700 dark:hover:border-gold-400 transition-colors duration-300"
                     data-animate
-                    data-delay="{{ $i + 2 }}"
+                    data-delay="{{ $i + 1 }}"
                 >
                     <div
-                        class="w-9 h-9 rounded-lg bg-black-pearl-100 dark:bg-black-pearl-900 flex items-center justify-center shrink-0 group-hover:bg-black-pearl-200 dark:group-hover:bg-black-pearl-200 transition-colors duration-300"
+                        class="w-11 h-11 rounded-lg bg-black-pearl-100 dark:bg-black-pearl-900 flex items-center justify-center mb-6 group-hover:bg-black-pearl-200 dark:group-hover:bg-black-pearl-800 transition-colors duration-300"
                     >
                         <svg
-                            class="w-4 h-4 text-black-pearl-700 dark:text-black-pearl-50 group-hover:text-black-pearl-950 dark:group-hover:text-black-pearl-950 transition-colors duration-300"
+                            class="w-5 h-5 text-black-pearl-700 dark:text-black-pearl-50"
                             fill="none"
                             stroke="currentColor"
                             stroke-width="1.5"
@@ -91,20 +88,44 @@
                         </svg>
                     </div>
 
-                    <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between mb-1">
-                            <h3 class="font-display font-semibold text-sm text-shark-900 dark:text-white">
-                                {{ $pillar['title'] }}
-                            </h3>
-                            <span
-                                class="font-bold text-[9px] text-shark-400 dark:text-shark-600 ml-2 shrink-0"
-                                >{{ $pillar['stat'] }}</span
-                            >
-                        </div>
-                        <p class="text-xs text-shark-500 dark:text-shark-400 leading-relaxed">{{ $pillar['desc'] }}</p>
-                    </div>
+                    {{-- Stat is now the kicker rather than a cramped right-aligned aside --}}
+                    <p
+                        class="font-mono text-xs font-bold uppercase tracking-[0.15em] text-black-pearl-700 dark:text-gold-400 mb-2.5"
+                    >
+                        {{ $pillar['stat'] }}
+                    </p>
+
+                    <h3 class="font-display font-bold text-lg text-shark-900 dark:text-white leading-snug mb-3">
+                        {{ $pillar['title'] }}
+                    </h3>
+
+                    <p class="text-sm text-shark-600 dark:text-shark-400 leading-relaxed">{{ $pillar['desc'] }}</p>
                 </div>
             @endforeach
+        </div>
+
+        {{-- ═══ 3. CLOSE — metric + pull quote ═══ --}}
+        <div
+            class="mt-20 md:mt-24 pt-14 border-t border-shark-200 dark:border-shark-800 grid grid-cols-1 lg:grid-cols-12 gap-y-12 gap-x-12"
+        >
+            <div class="lg:col-span-3" data-animate>
+                <div class="font-display text-6xl font-black text-shark-900 dark:text-white leading-none mb-3">
+                    100<span class="text-black-pearl-950 dark:text-gold-400">%</span>
+                </div>
+                <div class="text-sm text-shark-600 dark:text-shark-400 font-medium">Projects &amp; Solution delivery</div>
+            </div>
+
+            {{-- The quote was a footnote under the metric; it now carries the
+                 close of the section at pull-quote scale. --}}
+            <blockquote class="lg:col-span-8 lg:col-start-5" data-animate data-delay="1">
+                <p
+                    class="font-display text-xl md:text-2xl font-medium text-shark-800 dark:text-shark-200 leading-relaxed italic"
+                >"Rapsoltech Consulting doesn't just deliver projects they become strategic partners in our growth journey."</p>
+                <footer class="mt-5 flex items-center gap-3">
+                    <span class="w-6 h-px bg-black-pearl-700 dark:bg-gold-400 shrink-0"></span>
+                    <span class="font-mono text-sm text-shark-600 dark:text-shark-400">CTO, HDF Kenya</span>
+                </footer>
+            </blockquote>
         </div>
     </div>
 </section>

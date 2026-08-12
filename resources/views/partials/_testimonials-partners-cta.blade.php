@@ -1,6 +1,9 @@
 {{-- ══════════════════════════════════════════════════════════
      PARTNERS SECTION
-     Logo grid — grayscale default, colour on hover
+     Bare logo strip — no cards, no plates, logos at full strength.
+     Previously the marks carried opacity-50 inside a white card grid,
+     which is why they read as washed out. The old `group-hover:grayscale-0`
+     was dead: there was no `grayscale` base class for it to undo.
 ══════════════════════════════════════════════════════════ --}}
 
 <section
@@ -10,37 +13,40 @@
     <div class="absolute -top-1.25 -left-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700 z-10"></div>
     <div class="absolute -top-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700 z-10"></div>
 
-    <div class="px-7 py-14">
-        <div class="text-center mb-10" data-animate>
-            <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-shark-600 dark:text-shark-400 mb-2">Trusted by Our Partners</p>
+    <div class="px-7 md:px-12 lg:px-16 py-16 md:py-20">
+        <div class="text-center mb-12 md:mb-14" data-animate>
+            <p class="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-shark-600 dark:text-shark-400">Trusted by Our Partners</p>
         </div>
 
-        {{-- Logo grid --}}
-        <div
-            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-px bg-white dark:bg-shark-950 border border-shark-200 dark:border-shark-800 rounded-xl overflow-hidden"
+        {{-- Bare logo strip. Height-constrained with w-auto so each mark keeps
+             its own aspect ratio; max-w stops the wide landscape mark from
+             dominating the square ones. --}}
+        <ul
+            class="flex flex-wrap items-center justify-center gap-x-14 gap-y-12 md:gap-x-20 lg:gap-x-24"
             data-animate
             data-delay="1"
         >
             @foreach ([
-        ['Westkate',     'westkate.svg'],
-        ['SmartiCleaning',          'smarti.svg'],
+        ['Westkate',     'westkate.svg', 1536, 1024],
+        ['SmartiCleaning',          'smarti.svg', 500, 500],
         // ['SmartEdge', 'google-cloud.svg'],
-        ['HDF',   'hdf.svg'],
-        ['Siaya',          'siaya.svg'],
+        ['HDF',   'hdf.svg', 263, 270],
+        ['Siaya',          'siaya.svg', 438, 438],
         // ['ThinkReal',       'oracle.svg'],
         // ['Siaya',        'cisco.svg'],
     ] as $p)
-                <div
-                    class="bg-white dark:bg-shark-950 flex items-center justify-center py-6 px-4 group cursor-default transition-colors duration-200 hover:bg-shark-50 dark:hover:bg-shark-900"
-                >
+                <li class="flex items-center justify-center">
                     <img
                         src="{{ asset('images/logos/' . $p[1]) }}"
                         alt="{{ $p[0] }}"
-                        class="h-10 w-auto object-contain opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200"
+                        width="{{ $p[2] }}"
+                        height="{{ $p[3] }}"
+                        loading="lazy"
+                        class="h-14 md:h-16 w-auto max-w-[11rem] object-contain"
                     />
-                </div>
+                </li>
             @endforeach
-        </div>
+        </ul>
     </div>
 </section>
 
@@ -55,7 +61,7 @@
 
     <div class="px-7 pt-16 pb-16">
         <div class="mb-10" data-animate>
-            <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-black-pearl-950 dark:text-amber-500 mb-3">Testimonials</p>
+            <p class="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-black-pearl-950 dark:text-gold-400 mb-3">Testimonials</p>
             <h2
                 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight"
             >
@@ -79,7 +85,7 @@
         {{-- <div class="relative max-w-3xl">
                 <div class="flex gap-0.5 mb-6">
                     @for ($i = 0; $i < 5; $i++)
-                        <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
                         </svg>
                     @endfor
@@ -103,7 +109,7 @@
                         <div class="font-display font-semibold text-sm text-shark-900 dark:text-white">
                             James Mwangi
                         </div>
-                        <div class="text-xs text-shark-400 dark:text-shark-600">
+                        <div class="text-sm text-shark-500 dark:text-shark-400">
                             Chief Technology Officer · Equity Bank Kenya
                         </div>
                     </div>
@@ -146,7 +152,7 @@
                 >
                     <div class="flex gap-0.5 mb-4">
                         @for ($j = 0; $j < $t['stars']; $j++)
-                            <svg class="w-3 h-3 text-black-pearl-950 dark:text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-3 h-3 text-black-pearl-950 dark:text-gold-400" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
                             </svg>
                         @endfor
@@ -158,13 +164,13 @@
 
                     <div class="flex items-center gap-3">
                         <div
-                            class="w-8 h-8 rounded-full bg-linear-to-br {{ $t['grad'] }} flex items-center justify-center text-white text-[11px] font-bold shrink-0"
+                            class="w-8 h-8 rounded-full bg-linear-to-br {{ $t['grad'] }} flex items-center justify-center text-white text-xs font-bold shrink-0"
                         >
                             {{ $t['initials'] }}
                         </div>
                         <div>
-                            <div class="text-xs font-semibold text-shark-900 dark:text-white">{{ $t['name'] }}</div>
-                            <div class="text-[10px] text-shark-400 dark:text-shark-600">{{ $t['role'] }}</div>
+                            <div class="text-sm font-semibold text-shark-900 dark:text-white">{{ $t['name'] }}</div>
+                            <div class="text-xs text-shark-500 dark:text-shark-400">{{ $t['role'] }}</div>
                         </div>
                     </div>
                 </div>
@@ -184,7 +190,7 @@
 >
     {{-- Large ambient text --}}
     <div
-        class="absolute -right-8 -bottom-6 font-display font-black text-[180px] leading-none text-white/3 select-none pointer-events-none"
+        class="absolute -right-8 -bottom-6 font-display font-black text-[11.25rem] leading-none text-white/3 select-none pointer-events-none"
         aria-hidden="true"
     >
         RTC
@@ -194,7 +200,7 @@
         <div
             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-black-pearl-400 bg-black-pearl-800 mb-6"
         >
-            <span class="font-mono text-[10px] text-shark-100 font-semibold tracking-widest uppercase">
+            <span class="font-mono text-xs text-shark-100 font-semibold tracking-widest uppercase">
                 We Are Available for new engagements
             </span>
         </div>
@@ -203,10 +209,12 @@
             class="font-display text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-5 max-w-2xl mx-auto"
         >
             Ready to build something<br />
-            <span class="text-amber-400">extraordinary</span>?
+            <span class="text-gold-400">extraordinary</span>?
         </h2>
 
-        <p class="text-base text-shark-400 leading-relaxed mb-10 max-w-lg mx-auto">Whether you need a digital product, a business consultation strategy, or a long-term technology partner let's start with a conversation.</p>
+        {{-- This band is dark in BOTH themes, so the text colour must not be
+             theme-conditional: shark-500 gave 3.47:1 against shark-900. --}}
+        <p class="text-base text-shark-300 leading-relaxed mb-10 max-w-lg mx-auto">Whether you need a digital product, a business consultation strategy, or a long-term technology partner let's start with a conversation.</p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -232,8 +240,8 @@
         {{-- Trust signals --}}
         <div class="mt-12 flex flex-wrap items-center justify-center gap-6 pt-8 border-t border-shark-800">
             @foreach (['Project delivery', 'Quality', 'GDPR compliance', 'Consulting'] as $trust)
-                <div class="flex items-center gap-2 text-xs text-shark-500">
-                    <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <div class="flex items-center gap-2 text-sm text-shark-300">
+                    <svg class="w-3.5 h-3.5 text-gold-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                     {{ $trust }}

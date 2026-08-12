@@ -5,7 +5,7 @@
     <div class="px-7 py-16">
         <div class="mb-10" data-animate>
             <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400"
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400"
                     >Our Journey</span
                 >
             </div>
@@ -18,7 +18,7 @@
 
         <div class="relative pl-2">
             <div
-                class="absolute left-2 top-2 bottom-2 w-0.5 bg-linear-to-b from-amber-500 via-amber-500/40 to-amber-500/10"
+                class="absolute left-2 top-2 bottom-2 w-0.5 bg-linear-to-b from-gold-400 via-gold-400/40 to-gold-400/10"
             ></div>
 
             @foreach ([
@@ -31,17 +31,17 @@
             ] as $i => [$year, $title, $desc, $current])
                 <div class="relative pl-9 pb-8 last:pb-0" data-animate data-delay="{{ min($i + 1, 5) }}">
                     <div
-                        class="absolute -left-2 top-0.5 w-4.5 h-4.5 rounded-full border-4 border-shark-50 dark:border-shark-950 dark:bg-amber-500 z-10 bg-black-pearl-950"
+                        class="absolute -left-2 top-0.5 w-4.5 h-4.5 rounded-full border-4 border-shark-50 dark:border-shark-950 dark:bg-gold-400 z-10 bg-black-pearl-950"
                     >
                         {{-- @if ($current)
-                            <div class="absolute inset-0 rounded-full bg-amber-500 animate-ping opacity-40"></div>
+                            <div class="absolute inset-0 rounded-full bg-gold-400 animate-ping opacity-40"></div>
                         @endif --}}
                     </div>
-                    <div class="text-sm font-bold text-black-pearl-950 dark:text-amber-500 mb-1">
+                    <div class="text-sm font-bold text-black-pearl-950 dark:text-gold-400 mb-1">
                         {{ $year }}
                         @if ($current)
                             <span
-                                class="ml-2 px-2 py-0.5 rounded-full text-xs font-semibold bg-black-pearl-200 dark:bg-amber-950/40 text-black-pearl-950 dark:text-amber-400"
+                                class="ml-2 px-2 py-0.5 rounded-full text-sm font-semibold bg-black-pearl-200 dark:bg-gold-950/40 text-black-pearl-950 dark:text-gold-400"
                                 >Today</span
                             >
                         @endif
@@ -49,7 +49,7 @@
                     <h3 class="font-display font-semibold text-base text-shark-900 dark:text-white mb-1.5">
                         {{ $title }}
                     </h3>
-                    <p class="text-xs text-shark-500 dark:text-shark-400 leading-relaxed max-w-lg">{{ $desc }}</p>
+                    <p class="text-sm text-shark-500 dark:text-shark-400 leading-relaxed max-w-lg">{{ $desc }}</p>
                 </div>
             @endforeach
         </div>

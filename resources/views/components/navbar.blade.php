@@ -1,12 +1,26 @@
 @php
+    /*
+     | Add 'children' to any link to turn it into a dropdown. The Services
+     | children come from the View composer in AppServiceProvider, which reads
+     | ServicesController::allServices() — so adding a service there is all
+     | that's needed for it to appear here.
+     |
+     | To add another dropdown later, copy the Services entry and point
+     | 'children' at an array of ['label' => ..., 'url' => ..., 'short' => ...].
+     */
     $links = [
-        ['label' => 'Home',    'route' => '/'],
-        ['label' => 'About',   'route' => '/about'],
-        ['label' => 'Services',    'route' => '/services'],
-        ['label' => 'Gallery',    'route' => '/gallery'],
-        // ['label' => 'Blog',    'route' => '/blog'],
-        ['label' => 'Contact', 'route' => '/contact'],
+        ['label' => 'Home',     'route' => '/'],
+        ['label' => 'About',    'route' => '/about'],
+        ['label' => 'Services', 'route' => '/services', 'children' => $navServices ?? [], 'match' => 'services*'],
+        ['label' => 'Gallery',  'route' => '/gallery'],
+        // ['label' => 'Blog',  'route' => '/blog'],
+        ['label' => 'Contact',  'route' => '/contact'],
     ];
+
+    $isActive = function (array $link) {
+        $pattern = $link['match'] ?? (ltrim($link['route'], '/') ?: '/');
+        return request()->is($pattern);
+    };
 @endphp
 
 {{-- ══════════════════════════════════════
@@ -26,6 +40,8 @@
                 <img
                     src="{{ asset('images/logo-dark.svg') }}"
                     alt="{{ config('app.name') }}"
+                    width="1080"
+                    height="1081"
                     class="h-12 w-auto dark:hidden"
                     loading="eager"
                 />
@@ -33,6 +49,8 @@
                 <img
                     src="{{ asset('images/logo-light.svg') }}"
                     alt="{{ config('app.name') }}"
+                    width="1081"
+                    height="1081"
                     class="h-12 w-auto hidden dark:block"
                     loading="eager"
                 />
@@ -41,15 +59,103 @@
             {{-- Desktop links --}}
             <nav class="hidden md:flex items-center gap-0.5" aria-label="Primary navigation">
                 @foreach ($links as $link)
-                    <a
-                        href="{{ $link['route'] }}"
-                        class="px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200
-                          {{ request()->is(ltrim($link['route'], '/') ?: '/')
-                              ? 'text-zinc-900 dark:text-white bg-zinc-100 dark:bg-zinc-800'
-                              : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60' }}"
-                    >
-                        {{ $link['label'] }}
-                    </a>
+                    @if (!empty($link['children']))
+                        {{-- ═══ DROPDOWN ═══ --}}
+                        <div
+                            class="relative"
+                            x-data="{ open: false }"
+                            @mouseenter="open = true"
+                            @mouseleave="open = false"
+                            @keydown.escape.window="open = false"
+                            @focusin="open = true"
+                            @focusout="if (!$el.contains($event.relatedTarget)) open = false;"
+                        >
+                            <a
+                                href="{{ $link['route'] }}"
+                                @click="open = !open"
+                                aria-haspopup="true"
+                                :aria-expanded="open ? 'true' : 'false'"
+                                class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-200
+                                  {{ $isActive($link)
+                                      ? 'text-zinc-900 dark:text-white bg-zinc-100 dark:bg-zinc-800'
+                                      : 'text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60' }}"
+                            >
+                                {{ $link['label'] }}
+                                <svg
+                                    class="w-3 h-3 transition-transform duration-200 shrink-0"
+                                    :class="open ? 'rotate-180' : ''"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </a>
+
+                            {{-- Panel --}}
+                            <div
+                                x-show="open"
+                                x-transition:enter="transition ease-out duration-200"
+                                x-transition:enter-start="opacity-0 -translate-y-1"
+                                x-transition:enter-end="opacity-100 translate-y-0"
+                                x-transition:leave="transition ease-in duration-150"
+                                x-transition:leave-start="opacity-100 translate-y-0"
+                                x-transition:leave-end="opacity-0 -translate-y-1"
+                                class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[36rem] z-50"
+                                style="display: none"
+                            >
+                                <div
+                                    class="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shadow-xl shadow-black/10 dark:shadow-black/50 p-2 grid grid-cols-2 gap-0.5"
+                                >
+                                    @foreach ($link['children'] as $child)
+                                        <a
+                                            href="{{ $child['url'] }}"
+                                            class="group flex flex-col gap-0.5 px-3 py-2.5 rounded-lg transition-colors duration-200
+                                              {{ request()->is('services/' . $child['slug'])
+                                                  ? 'bg-zinc-100 dark:bg-zinc-800'
+                                                  : 'hover:bg-zinc-100 dark:hover:bg-zinc-800/60' }}"
+                                        >
+                                            <span
+                                                class="text-sm font-semibold text-zinc-900 dark:text-white leading-snug"
+                                            >
+                                                {{ $child['label'] }}
+                                            </span>
+                                            @if (!empty($child['short']))
+                                                <span
+                                                    class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2"
+                                                >
+                                                    {{ \Illuminate\Support\Str::limit($child['short'], 72) }}
+                                                </span>
+                                            @endif
+                                        </a>
+                                    @endforeach
+
+                                    {{-- Footer link to the index --}}
+                                    <a
+                                        href="{{ $link['route'] }}"
+                                        class="col-span-2 mt-1 flex items-center justify-between px-3 py-2.5 rounded-lg border-t border-zinc-100 dark:border-zinc-900 text-sm font-semibold text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-colors duration-200"
+                                    >
+                                        View all services
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M5 12h14M12 5l7 7-7 7" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <a
+                            href="{{ $link['route'] }}"
+                            class="px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-200
+                              {{ $isActive($link)
+                                  ? 'text-zinc-900 dark:text-white bg-zinc-100 dark:bg-zinc-800'
+                                  : 'text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60' }}"
+                        >
+                            {{ $link['label'] }}
+                        </a>
+                    @endif
                 @endforeach
             </nav>
 
@@ -58,11 +164,11 @@
                 {{-- Dark/light toggle --}}
                 {{-- <div class="flex items-center gap-1.5">
                     <span
-                        class="font-mono text-[9px] text-zinc-400 dark:text-zinc-600 hidden sm:block"
+                        class="font-mono text-xs text-zinc-500 dark:text-zinc-400 hidden sm:block"
                         x-text="dark ? 'dark' : 'light'"
                     ></span>
                     <button
-                        @click="dark = !dark"
+                        @click="toggleTheme()"
                         aria-label="Toggle dark mode"
                         class="relative w-8 h-4.5 rounded-full border shrink-0 transition-all duration-300 border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800"
                     >
@@ -76,7 +182,7 @@
                 {{-- Dark/light toggle --}}
                 <div class="flex items-center gap-1.5">
                     <button
-                        @click="dark = !dark"
+                        @click="toggleTheme()"
                         aria-label="Toggle dark mode"
                         class="relative w-8 h-4.5 rounded-full border shrink-0 transition-all duration-300 border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800"
                     >
@@ -162,7 +268,7 @@
         <a
             href="/"
             @click="navOpen = false"
-            class="flex items-center gap-2.5 font-display font-semibold text-[15px] text-zinc-900 dark:text-white"
+            class="flex items-center gap-2.5 font-display font-semibold text-[0.9375rem] text-zinc-900 dark:text-white"
         >
             <div
                 class="w-6 h-6 rounded-md flex items-center justify-center bg-zinc-900 dark:bg-white transition-colors duration-300"
@@ -187,20 +293,87 @@
     {{-- Drawer links --}}
     <nav class="flex-1 px-3 py-3 overflow-y-auto" aria-label="Mobile navigation">
         @foreach ($links as $link)
-            <a
-                href="{{ $link['route'] }}"
-                @click="navOpen = false"
-                class="flex items-center justify-between px-4 py-3 rounded-lg mb-1
-                  text-sm font-medium transition-all duration-200
-                  {{ request()->is(ltrim($link['route'], '/') ?: '/')
-                      ? 'text-zinc-900 dark:text-white bg-zinc-100 dark:bg-zinc-800'
-                      : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-800/60' }}"
-            >
-                {{ $link['label'] }}
-                <svg class="w-3.5 h-3.5 opacity-25" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M9 18l6-6-6-6" />
-                </svg>
-            </a>
+            @if (!empty($link['children']))
+                {{-- ═══ ACCORDION ═══ --}}
+                <div x-data="{ expanded: {{ $isActive($link) ? 'true' : 'false' }} }" class="mb-1">
+                    <div
+                        class="flex items-stretch rounded-lg overflow-hidden
+                          {{ $isActive($link)
+                              ? 'bg-zinc-100 dark:bg-zinc-800'
+                              : 'hover:bg-zinc-50 dark:hover:bg-zinc-800/60' }}"
+                    >
+                        <a
+                            href="{{ $link['route'] }}"
+                            @click="navOpen = false"
+                            class="flex-1 px-4 py-3 text-sm font-semibold transition-all duration-200
+                              {{ $isActive($link)
+                                  ? 'text-zinc-900 dark:text-white'
+                                  : 'text-zinc-600 dark:text-zinc-300' }}"
+                        >
+                            {{ $link['label'] }}
+                        </a>
+                        <button
+                            @click="expanded = !expanded"
+                            :aria-expanded="expanded ? 'true' : 'false'"
+                            aria-label="Toggle {{ $link['label'] }} submenu"
+                            class="px-4 flex items-center justify-center text-zinc-500 dark:text-zinc-400"
+                        >
+                            <svg
+                                class="w-4 h-4 transition-transform duration-200"
+                                :class="expanded ? 'rotate-180' : ''"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div
+                        x-show="expanded"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0 -translate-y-1"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        x-transition:leave="transition ease-in duration-150"
+                        x-transition:leave-start="opacity-100 translate-y-0"
+                        x-transition:leave-end="opacity-0 -translate-y-1"
+                        style="display: none"
+                        class="mt-1 ml-3 pl-3 border-l border-zinc-200 dark:border-zinc-800"
+                    >
+                        @foreach ($link['children'] as $child)
+                            <a
+                                href="{{ $child['url'] }}"
+                                @click="navOpen = false"
+                                class="flex items-center justify-between px-3 py-2.5 rounded-lg mb-0.5
+                                  text-sm font-medium transition-all duration-200
+                                  {{ request()->is('services/' . $child['slug'])
+                                      ? 'text-zinc-900 dark:text-white bg-zinc-100 dark:bg-zinc-800'
+                                      : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-800/60' }}"
+                            >
+                                {{ $child['label'] }}
+                            </a>
+                        @endforeach
+                    </div>
+                </div>
+            @else
+                <a
+                    href="{{ $link['route'] }}"
+                    @click="navOpen = false"
+                    class="flex items-center justify-between px-4 py-3 rounded-lg mb-1
+                      text-sm font-semibold transition-all duration-200
+                      {{ $isActive($link)
+                          ? 'text-zinc-900 dark:text-white bg-zinc-100 dark:bg-zinc-800'
+                          : 'text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-800/60' }}"
+                >
+                    {{ $link['label'] }}
+                    <svg class="w-3.5 h-3.5 opacity-25" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </a>
+            @endif
         @endforeach
     </nav>
 
@@ -211,11 +384,11 @@
         {{-- Mode toggle --}}
         <div class="flex items-center justify-between">
             <span
-                class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600"
+                class="font-mono text-xs text-zinc-500 dark:text-zinc-400"
                 x-text="dark ? 'Dark mode' : 'Light mode'"
             ></span>
             <button
-                @click="dark = !dark"
+                @click="toggleTheme()"
                 class="relative w-9 h-5 rounded-full border transition-all duration-300 border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800"
             >
                 <span

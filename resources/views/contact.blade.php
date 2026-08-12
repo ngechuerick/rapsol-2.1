@@ -1,5 +1,6 @@
 @extends ('layouts.app')
 @section ('title', 'Contact | Rapsoltech Consulting')
+@section ('description', 'Talk to Rapsoltech Consulting about your project. Book a free consultation with our Nairobi team, or reach us on WhatsApp, phone or email.')
 
 @section ('content')
     {{-- HERO --}}
@@ -14,8 +15,8 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-shark-300 dark:bg-shark-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
-            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
+            {{-- <div class="w-8 h-px bg-gold-400"></div> --}}
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400">
                 Get In Touch
             </span>
         </div>
@@ -26,7 +27,7 @@
             data-delay="1"
         >
             Let's build something<br />
-            <span class="text-black-pearl-900 dark:text-amber-500">great together.</span>
+            <span class="text-black-pearl-900 dark:text-gold-400">great together.</span>
         </h1>
 
         <p
@@ -58,10 +59,10 @@
                     ] as [$num, $title, $desc])
                             <div class="flex gap-4">
                                 <div
-                                    class="w-7 h-7 rounded-full border border-black-pearl-800 dark:border-amber-700 bg-black-pearl-200 dark:bg-amber-950/30 flex items-center justify-center shrink-0 mt-0.5"
+                                    class="w-7 h-7 rounded-full border border-black-pearl-800 dark:border-gold-400 bg-black-pearl-200 dark:bg-gold-950/30 flex items-center justify-center shrink-0 mt-0.5"
                                 >
                                     <span
-                                        class="text-xs font-bold text-black-pearl-950 dark:text-amber-400"
+                                        class="text-sm font-bold text-black-pearl-950 dark:text-gold-400"
                                         >{{ $num }}</span
                                     >
                                 </div>
@@ -100,10 +101,10 @@
                     ] as [$label, $value, $icon, $href])
                             <a href="{{ $href }}" class="flex items-start gap-3 group">
                                 <div
-                                    class="w-9 h-9 rounded-lg bg-shark-100 dark:bg-shark-800 flex items-center justify-center shrink-0 group-hover:bg-amber-50 dark:group-hover:bg-amber-950/30 transition-colors duration-200"
+                                    class="w-9 h-9 rounded-lg bg-shark-100 dark:bg-shark-800 flex items-center justify-center shrink-0 group-hover:bg-gold-50 dark:group-hover:bg-gold-950/30 transition-colors duration-200"
                                 >
                                     <svg
-                                        class="w-4 h-4 text-shark-500 dark:text-shark-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-200"
+                                        class="w-4 h-4 text-shark-500 dark:text-shark-400 group-hover:text-gold-800 dark:group-hover:text-gold-400 dark:group-hover:text-gold-400 transition-colors duration-200"
                                         fill="none"
                                         stroke="currentColor"
                                         stroke-width="1.5"
@@ -114,12 +115,12 @@
                                 </div>
                                 <div>
                                     <div
-                                        class="text-xs font-semibold uppercase tracking-[0.15em] text-shark-400 dark:text-shark-600 mb-0.5"
+                                        class="text-sm font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-0.5"
                                     >
                                         {{ $label }}
                                     </div>
                                     <div
-                                        class="text-sm font-medium text-shark-700 dark:text-shark-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-200"
+                                        class="text-sm font-medium text-shark-700 dark:text-shark-300 group-hover:text-gold-800 dark:group-hover:text-gold-400 dark:group-hover:text-gold-400 transition-colors duration-200"
                                     >
                                         {{ $value }}
                                     </div>
@@ -136,11 +137,11 @@
                 <div
                     class="flex items-center gap-3 p-4 rounded-xl border border-shark-200 dark:border-shark-800 bg-shark-50 dark:bg-shark-900/40"
                 >
-                    <p class="text-xs text-shark-500 dark:text-shark-400">
+                    <p class="text-sm text-shark-500 dark:text-shark-400">
                         <span class="font-semibold text-shark-700 dark:text-shark-300"
                             >Average response time: 4 hours</span
                         >
-                        &nbsp;&mdash;&nbsp;Monday to Friday, 9am – 6pm EAT
+                        &nbsp;&nbsp;Monday to Friday, 9am – 6pm EAT
                     </p>
                 </div>
             </div>
@@ -158,7 +159,7 @@
                             <div class="font-display font-semibold text-sm text-emerald-800 dark:text-emerald-300">
                                 Message sent successfully
                             </div>
-                            <p class="text-xs text-emerald-700 dark:text-emerald-400 mt-0.5">Thank you — we'll be in touch within one business day.</p>
+                            <p class="text-sm text-emerald-700 dark:text-emerald-400 mt-0.5">Thank you — we'll be in touch within one business day.</p>
                         </div>
                     </div>
                 @endif
@@ -174,7 +175,7 @@
                             <div class="font-display font-semibold text-sm text-red-800 dark:text-red-300">
                                 Please fix the following
                             </div>
-                            <ul class="text-xs text-red-700 dark:text-red-400 mt-1 space-y-0.5">
+                            <ul class="text-sm text-red-700 dark:text-red-400 mt-1 space-y-0.5">
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
                                 @endforeach
@@ -190,10 +191,10 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label
-                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
+                                class="block text-sm font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                                 for="name"
                             >
-                                Full Name <span class="text-amber-500">*</span>
+                                Full Name <span class="text-gold-800 dark:text-gold-400">*</span>
                             </label>
                             <input
                                 type="text"
@@ -207,18 +208,18 @@
                                       border-shark-200 dark:border-shark-800
                                       text-shark-900 dark:text-shark-100
                                       placeholder-shark-400 dark:placeholder-shark-600
-                                      focus:outline-none focus:border-amber-400 dark:focus:border-amber-600
-                                      focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20
+                                      focus:outline-none focus:border-gold-400 dark:focus:border-gold-600
+                                      focus:ring-2 focus:ring-gold-400/20 dark:focus:ring-gold-600/20
                                       transition-all duration-200
                                       @error('name') @enderror"
                             />
                         </div>
                         <div>
                             <label
-                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
+                                class="block text-sm font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                                 for="email"
                             >
-                                Email Address <span class="text-amber-500">*</span>
+                                Email Address <span class="text-gold-800 dark:text-gold-400">*</span>
                             </label>
                             <input
                                 type="email"
@@ -232,8 +233,8 @@
                                       border-shark-200 dark:border-shark-800
                                       text-shark-900 dark:text-shark-100
                                       placeholder-shark-400 dark:placeholder-shark-600
-                                      focus:outline-none focus:border-amber-400 dark:focus:border-amber-600
-                                      focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20
+                                      focus:outline-none focus:border-gold-400 dark:focus:border-gold-600
+                                      focus:ring-2 focus:ring-gold-400/20 dark:focus:ring-gold-600/20
                                       transition-all duration-200
                                       @error('email') @enderror"
                             />
@@ -244,7 +245,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label
-                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
+                                class="block text-sm font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                                 for="company"
                             >
                                 Company / Organisation
@@ -255,23 +256,24 @@
                                 name="company"
                                 value="{{ old('company') }}"
                                 placeholder="Your company/Individual"
-                                class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-shark-900/40 border-shark-200 dark:border-shark-800 text-shark-900 dark:text-shark-100 placeholder-shark-400 dark:placeholder-shark-600 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20 transition-all duration-200"
+                                class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-shark-900/40 border-shark-200 dark:border-shark-800 text-shark-900 dark:text-shark-100 placeholder-shark-400 dark:placeholder-shark-600 focus:outline-none focus:border-gold-400 dark:focus:border-gold-600 focus:ring-2 focus:ring-gold-400/20 dark:focus:ring-gold-600/20 transition-all duration-200"
                             />
                         </div>
                         <div>
                             <label
-                                class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
+                                class="block text-sm font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                                 for="phone"
                             >
-                                Phone Number
+                                Phone Number <span class="text-gold-800 dark:text-gold-400">*</span>
                             </label>
                             <input
                                 type="tel"
                                 id="phone"
                                 name="phone"
                                 value="{{ old('phone') }}"
+                                required
                                 placeholder="+254 700 000 000"
-                                class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-shark-900/40 border-shark-200 dark:border-shark-800 text-shark-900 dark:text-shark-100 placeholder-shark-400 dark:placeholder-shark-600 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20 transition-all duration-200"
+                                class="w-full px-4 py-3 rounded-lg border text-sm bg-white dark:bg-shark-900/40 border-shark-200 dark:border-shark-800 text-shark-900 dark:text-shark-100 placeholder-shark-400 dark:placeholder-shark-600 focus:outline-none focus:border-gold-400 dark:focus:border-gold-600 focus:ring-2 focus:ring-gold-400/20 dark:focus:ring-gold-600/20 transition-all duration-200 @error('phone') @enderror"
                             />
                         </div>
                     </div>
@@ -279,9 +281,9 @@
                     {{-- Service interest --}}
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
+                            class="block text-sm font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                         >
-                            I'm interested in <span class="text-amber-500">*</span>
+                            I'm interested in <span class="text-gold-800 dark:text-gold-400">*</span>
                         </label>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
                             @foreach ([
@@ -293,17 +295,17 @@
                             'SME Growth Program',
                         ] as $service)
                                 <label
-                                    class="relative flex items-center gap-2.5 px-3 py-2.5 rounded-lg border cursor-pointer border-shark-200 dark:border-shark-800 bg-white dark:bg-shark-900/40 hover:border-amber-300 dark:hover:border-amber-700 has-checked:border-amber-400 dark:has-checked:border-amber-600 has-checked:bg-amber-50 dark:has-checked:bg-amber-950/30 transition-all duration-200"
+                                    class="relative flex items-center gap-2.5 px-3 py-2.5 rounded-lg border cursor-pointer border-shark-200 dark:border-shark-800 bg-white dark:bg-shark-900/40 hover:border-gold-300 dark:hover:border-gold-700 has-checked:border-gold-400 dark:has-checked:border-gold-600 has-checked:bg-gold-50 dark:has-checked:bg-gold-950/30 transition-all duration-200"
                                 >
                                     <input
                                         type="checkbox"
                                         name="services[]"
                                         value="{{ $service }}"
                                         {{ in_array($service, old('services', [])) ? 'checked' : '' }}
-                                        class="w-3.5 h-3.5 rounded accent-amber-500 shrink-0"
+                                        class="w-3.5 h-3.5 rounded accent-gold-500 shrink-0"
                                     />
                                     <span
-                                        class="text-xs font-medium text-shark-600 dark:text-shark-400 leading-tight"
+                                        class="text-sm font-medium text-shark-600 dark:text-shark-400 leading-tight"
                                         >{{ $service }}</span
                                     >
                                 </label>
@@ -314,7 +316,7 @@
                     {{-- Budget --}}
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
+                            class="block text-sm font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                             for="budget"
                         >
                             Estimated Budget
@@ -322,9 +324,11 @@
                         <select
                             id="budget"
                             name="budget"
-                            class="w-full px-4 py-3 rounded-lg border text-sm appearance-none bg-white dark:bg-shark-900/40 border-shark-200 dark:border-shark-800 text-shark-900 dark:text-shark-100 focus:outline-none focus:border-amber-400 dark:focus:border-amber-600 focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20 transition-all duration-200"
+                            class="w-full px-4 py-3 rounded-lg border text-sm appearance-none bg-white dark:bg-shark-900/40 border-shark-200 dark:border-shark-800 text-shark-900 dark:text-shark-100 focus:outline-none focus:border-gold-400 dark:focus:border-gold-600 focus:ring-2 focus:ring-gold-400/20 dark:focus:ring-gold-600/20 transition-all duration-200"
                         >
-                            <option value="" disabled {{ old('budget') ? '' : 'selected' }}>Select a range...</option>
+                            <option value="" disabled {{ old('budget') ? '' : 'selected' }} class="dark:text-white"
+                                >Select a range...
+                            </option>
                             <option
                                 value="Under KES 500K"
                                 {{ old('budget') === 'Under KES 500K'       ? 'selected' : '' }}
@@ -359,10 +363,10 @@
                     {{-- Message --}}
                     <div>
                         <label
-                            class="block text-xs font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
+                            class="block text-sm font-semibold uppercase tracking-[0.15em] text-shark-500 dark:text-shark-400 mb-2"
                             for="message"
                         >
-                            Your Message <span class="text-amber-500">*</span>
+                            Your Message <span class="text-gold-800 dark:text-gold-400">*</span>
                         </label>
                         <textarea
                             id="message"
@@ -375,8 +379,8 @@
                                      border-shark-200 dark:border-shark-800
                                      text-shark-900 dark:text-shark-100
                                      placeholder-shark-400 dark:placeholder-shark-600
-                                     focus:outline-none focus:border-amber-400 dark:focus:border-amber-600
-                                     focus:ring-2 focus:ring-amber-400/20 dark:focus:ring-amber-600/20
+                                     focus:outline-none focus:border-gold-400 dark:focus:border-gold-600
+                                     focus:ring-2 focus:ring-gold-400/20 dark:focus:ring-gold-600/20
                                      transition-all duration-200
                                      @error('message') @enderror"
                             >{{ old('message') }}</textarea
@@ -385,7 +389,7 @@
 
                     {{-- Submit row --}}
                     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-1">
-                        <p class="text-xs text-shark-400 dark:text-shark-600 leading-relaxed max-w-xs">By submitting this form you agree to our <a href="/privacy" class="underline underline-offset-2 hover:text-shark-700 dark:hover:text-shark-300 transition-colors">privacy policy</a>. We never share your data.</p>
+                        <p class="text-sm text-shark-500 dark:text-shark-400 leading-relaxed max-w-xs">By submitting this form you agree to our <a href="/privacy" class="underline underline-offset-2 hover:text-shark-700 dark:hover:text-shark-300 transition-colors">privacy policy</a>. We never share your data.</p>
                         <button
                             type="submit"
                             class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-display font-semibold text-sm shrink-0 bg-shark-900 dark:bg-white text-white dark:text-shark-900 hover:opacity-85 hover:-translate-y-0.5 transition-all duration-200"
@@ -414,9 +418,9 @@
             <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10">
                 <div data-animate>
                     <div class="flex items-center gap-3 mb-4">
-                        {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
+                        {{-- <div class="w-8 h-px bg-gold-400"></div> --}}
                         <span
-                            class="text-xs font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400"
+                            class="text-sm font-semibold uppercase tracking-[0.2em] text-shark-500 dark:text-shark-400"
                             >FAQ</span
                         >
                     </div>
@@ -445,11 +449,11 @@
                                 >
                                 <span
                                     class="shrink-0 w-5 h-5 rounded-full border border-shark-300 dark:border-shark-700 flex items-center justify-center transition-transform duration-300"
-                                    :class="open === {{ $i }} ? 'rotate-45 border-amber-500 bg-amber-50 dark:bg-amber-950/30' : ''"
+                                    :class="open === {{ $i }} ? 'rotate-45 border-gold-400 bg-gold-50 dark:bg-gold-950/30' : ''"
                                 >
                                     <svg
                                         class="w-2.5 h-2.5 text-shark-500 dark:text-shark-400"
-                                        :class="open === {{ $i }} ? 'text-amber-600 dark:text-amber-400' : ''"
+                                        :class="open === {{ $i }} ? 'text-gold-800 dark:text-gold-400 dark:text-gold-400' : ''"
                                         fill="none"
                                         stroke="currentColor"
                                         stroke-width="2.5"

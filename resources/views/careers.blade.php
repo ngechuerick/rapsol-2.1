@@ -1,5 +1,6 @@
 @extends ('layouts.app')
 @section ('title', 'Careers | Rapsoltech Consulting')
+@section ('description', 'Join Rapsoltech Consulting. See open roles for engineers, consultants and analysts working on technology projects across East Africa.')
 
 @section ('content')
     {{--HERO  --}}
@@ -13,7 +14,7 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         <div class="flex items-center gap-3 mb-6" data-animate>
-            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                 Careers at Rapsoltech Consulting
             </span>
         </div>
@@ -24,7 +25,7 @@
             data-delay="1"
         >
             Build the future of<br />
-            East Africa <span class="text-black-pearl-900 dark:text-amber-500">with us.</span>
+            East Africa <span class="text-black-pearl-900 dark:text-gold-400">with us.</span>
         </h1>
 
         <p
@@ -63,7 +64,7 @@
     ] as [$val, $lbl])
             <div class="py-6 text-center" data-animate>
                 <div class="font-display font-black text-2xl text-zinc-900 dark:text-white mb-1">{{ $val }}</div>
-                <div class="text-xs text-zinc-400 dark:text-zinc-600">{{ $lbl }}</div>
+                <div class="text-sm text-zinc-500 dark:text-zinc-400">{{ $lbl }}</div>
             </div>
         @endforeach
     </div> --}}
@@ -74,8 +75,8 @@
 
         <div class="px-7 py-16">
             <div class="flex items-center gap-3 mb-3" data-animate>
-                {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                {{-- <div class="w-8 h-px bg-gold-400"></div> --}}
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                     Why join us
                 </span>
             </div>
@@ -129,10 +130,10 @@
                         data-delay="{{ ($i % 3) + 1 }}"
                     >
                         <div
-                            class="w-9 h-9 rounded-lg bg-black-pearl-100 dark:bg-amber-950/30 flex items-center justify-center mb-4 group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-900/40 transition-colors duration-300"
+                            class="w-9 h-9 rounded-lg bg-black-pearl-100 dark:bg-gold-950/30 flex items-center justify-center mb-4 group-hover:bg-black-pearl-200 dark:group-hover:bg-gold-900/40 transition-colors duration-300"
                         >
                             <svg
-                                class="w-8 h-8 text-black-pearl-950 dark:text-amber-400"
+                                class="w-8 h-8 text-black-pearl-950 dark:text-gold-400"
                                 fill="none"
                                 stroke="currentColor"
                                 stroke-width="1.5"
@@ -141,7 +142,7 @@
                                 {!! $icon !!}
                             </svg>
                         </div>
-                        <h3 class="font-display font-semibold text-sm text-zinc-900 dark:text-white mb-2">
+                        <h3 class="font-display font-bold text-base text-zinc-900 dark:text-white mb-2">
                             {{ $title }}
                         </h3>
                         <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ $desc }}</p>
@@ -157,8 +158,8 @@
 
         <div class="px-7 py-14">
             <div class="flex items-center gap-3 mb-3" data-animate>
-                {{-- <div class="w-8 h-px bg-amber-500"></div> --}}
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                {{-- <div class="w-8 h-px bg-gold-400"></div> --}}
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                     How we hire
                 </span>
             </div>
@@ -172,7 +173,7 @@
 
             <div class="relative pl-2">
                 <div
-                    class="absolute left-2 top-2 bottom-2 w-0.5 bg-linear-to-b from-amber-500 via-amber-500/40 to-transparent"
+                    class="absolute left-2 top-2 bottom-2 w-0.5 bg-linear-to-b from-gold-400 via-gold-400/40 to-transparent"
                 ></div>
 
                 @foreach ([
@@ -184,10 +185,10 @@
             ] as $i => [$step, $desc])
                     <div class="relative pl-9 pb-8 last:pb-0" data-animate data-delay="{{ min($i + 1, 5) }}">
                         <div
-                            class="absolute -left-2 right top-1 w-4.5 h-4.5 rounded-full border-4 border-zinc-50 bg-black-pearl-950 dark:border-zinc-950 dark:bg-amber-500 z-10"
+                            class="absolute -left-2 right top-1 w-4.5 h-4.5 rounded-full border-4 border-zinc-50 bg-black-pearl-950 dark:border-zinc-950 dark:bg-gold-400 z-10"
                         ></div>
                         <div
-                            class="text-xs font-bold text-dark-pearl-950 dark:text-amber-500 mb-1 uppercase tracking-wider"
+                            class="text-sm font-bold text-dark-pearl-950 dark:text-gold-400 mb-1 uppercase tracking-wider"
                         >
                             Step {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}
                         </div>
@@ -215,8 +216,8 @@
             <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10" data-animate>
                 <div>
                     <div class="flex items-center gap-3 mb-3">
-                        <div class="w-8 h-px bg-amber-500"></div>
-                        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+                        <div class="w-8 h-px bg-gold-400"></div>
+                        <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                             Open Positions
                         </span>
                     </div>
@@ -226,7 +227,7 @@
                         8 roles available
                     </h2>
                 </div>
-                <p class="text-sm text-zinc-400 dark:text-zinc-600 md:text-right max-w-xs">All roles are based in Nairobi unless stated otherwise.</p>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 md:text-right max-w-xs">All roles are based in Nairobi unless stated otherwise.</p>
             </div>
 
             @php
@@ -315,7 +316,7 @@
                         data-delay="{{ min($i + 1, 5) }}"
                     >
                         <div
-                            class="font-display font-black text-3xl w-12 shrink-0 text-zinc-200 dark:text-zinc-800 group-hover:text-amber-200 dark:group-hover:text-amber-900 transition-colors duration-300 hidden md:block"
+                            class="font-display font-black text-3xl w-12 shrink-0 text-zinc-200 dark:text-zinc-800 group-hover:text-gold-200 dark:group-hover:text-gold-900 transition-colors duration-300 hidden md:block"
                         >
                             {{ $job['num'] }}
                         </div>
@@ -323,31 +324,31 @@
                         <div class="flex-1 min-w-0">
                             <div class="flex flex-wrap items-center gap-2 mb-1.5">
                                 <span
-                                    class="px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wide bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400"
+                                    class="px-2 py-0.5 rounded text-sm font-semibold uppercase tracking-wide bg-gold-100 dark:bg-gold-950/40 text-gold-800 dark:text-gold-400 dark:text-gold-400"
                                 >
                                     {{ $job['tag'] }}
                                 </span>
-                                <span class="text-xs text-zinc-400 dark:text-zinc-600"> {{ $job['dept'] }} </span>
+                                <span class="text-sm text-zinc-500 dark:text-zinc-400"> {{ $job['dept'] }} </span>
                             </div>
                             <h3
-                                class="font-display font-bold text-base text-zinc-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300"
+                                class="font-display font-bold text-base text-zinc-900 dark:text-white group-hover:text-gold-800 dark:group-hover:text-gold-400 dark:group-hover:text-gold-400 transition-colors duration-300"
                             >
                                 {{ $job['title'] }}
                             </h3>
                             <div class="flex items-center gap-3 mt-1">
-                                <span class="text-xs text-zinc-400 dark:text-zinc-600"> Nairobi, Kenya </span>
+                                <span class="text-sm text-zinc-500 dark:text-zinc-400"> Nairobi, Kenya </span>
                                 <span class="w-1 h-1 rounded-full bg-zinc-300 dark:bg-zinc-700"></span>
-                                <span class="text-xs text-zinc-400 dark:text-zinc-600">{{ $job['type'] }}</span>
+                                <span class="text-sm text-zinc-500 dark:text-zinc-400">{{ $job['type'] }}</span>
                                 <span class="w-1 h-1 rounded-full bg-zinc-300 dark:bg-zinc-700"></span>
-                                <span class="text-xs text-zinc-400 dark:text-zinc-600">{{ $job['mode'] }}</span>
+                                <span class="text-sm text-zinc-500 dark:text-zinc-400">{{ $job['mode'] }}</span>
                             </div>
                         </div>
 
                         <div
-                            class="w-9 h-9 rounded-full border border-zinc-200 dark:border-zinc-800 flex items-center justify-center shrink-0 group-hover:border-amber-300 dark:group-hover:border-amber-700 group-hover:bg-amber-50 dark:group-hover:bg-amber-950/30 transition-all duration-300"
+                            class="w-9 h-9 rounded-full border border-zinc-200 dark:border-zinc-800 flex items-center justify-center shrink-0 group-hover:border-gold-300 dark:group-hover:border-gold-700 group-hover:bg-gold-50 dark:group-hover:bg-gold-950/30 transition-all duration-300"
                         >
                             <svg
-                                class="w-4 h-4 text-zinc-400 dark:text-zinc-600 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300"
+                                class="w-4 h-4 text-zinc-500 dark:text-zinc-400 group-hover:text-gold-800 dark:group-hover:text-gold-400 dark:group-hover:text-gold-400 transition-colors duration-300"
                                 fill="none"
                                 stroke="currentColor"
                                 stroke-width="2"
@@ -364,7 +365,7 @@
     {{--OPEN APPLICATION CTA  --}}
     <div class="relative border-t border-zinc-200 dark:border-zinc-800 overflow-hidden bg-zinc-900 dark:bg-zinc-950">
         <div
-            class="absolute -right-8 -bottom-6 font-display font-black text-[180px] leading-none text-white/3 select-none"
+            class="absolute -right-8 -bottom-6 font-display font-black text-[11.25rem] leading-none text-white/3 select-none"
             aria-hidden="true"
         >
             RTC
@@ -372,18 +373,18 @@
 
         <div class="relative px-7 py-16 text-center" data-animate>
             <div class="flex items-center justify-center gap-3 mb-6">
-                <div class="w-8 h-px bg-amber-500"></div>
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+                <div class="w-8 h-px bg-gold-400"></div>
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
                     Don't see your role?
                 </span>
-                <div class="w-8 h-px bg-amber-500"></div>
+                <div class="w-8 h-px bg-gold-400"></div>
             </div>
             <h2
                 class="font-display text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-4 max-w-xl mx-auto"
             >
                 Send an open application.
             </h2>
-            <p class="text-base text-zinc-400 leading-relaxed mb-8 max-w-md mx-auto">We hire talent first, roles second. If you're exceptional at what you do and believe in what we're building, tell us about yourself.</p>
+            <p class="text-base text-zinc-500 dark:text-zinc-400 leading-relaxed mb-8 max-w-md mx-auto">We hire talent first, roles second. If you're exceptional at what you do and believe in what we're building, tell us about yourself.</p>
             <a
                 href="/contact?type=career"
                 class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-display font-semibold text-sm bg-black-pearl-300 hover:bg-black-pearl-400 text-shark-900 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black-pearl-300"

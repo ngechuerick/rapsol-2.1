@@ -4,3 +4,9 @@
 - #0A1628
 - #C9A84C
   -#27272a
+
+#TODO
+
+1. Working on blogs feature.
+2. All inquiries to be sent via email.
+3. News letter signups also to be sent to emails.

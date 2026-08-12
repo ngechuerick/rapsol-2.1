@@ -4,12 +4,12 @@
 
     {{-- Mission / Vision --}}
     <div class="px-7 pt-16 pb-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="border-l-2 border-black-pearl-900 dark:border-amber-500 pl-6" data-animate>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-600 mb-3">Our Mission</p>
+        <div class="border-l-2 border-black-pearl-900 dark:border-gold-400 pl-6" data-animate>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400 mb-3">Our Mission</p>
             <p class="font-display text-lg md:text-xl font-medium text-zinc-900 dark:text-white leading-snug">To empower African businesses with technology and strategy that's world-class in quality and local in understanding.</p>
         </div>
         <div class="border-l-2 border-zinc-300 dark:border-zinc-700 pl-6" data-animate data-delay="1">
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-600 mb-3">Our Vision</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400 mb-3">Our Vision</p>
             <p class="font-display text-lg md:text-xl font-medium text-zinc-900 dark:text-white leading-snug">A continent where every ambitious organisation has access to the tools, capital, and expertise to compete globally.</p>
         </div>
     </div>
@@ -18,7 +18,7 @@
     <div class="px-7 pb-16">
         <div class="mb-8" data-animate>
             <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
                     >What We Stand For</span
                 >
             </div>
@@ -44,12 +44,12 @@
                     data-delay="{{ ($i % 3) + 1 }}"
                 >
                     <div
-                        class="w-9 h-9 rounded-lg bg-black-pearl-100 dark:bg-amber-950/30 flex items-center justify-center mb-4 group-hover:bg-black-pearl-200 dark:group-hover:bg-amber-900/40 transition-colors duration-300"
+                        class="w-9 h-9 rounded-lg bg-black-pearl-100 dark:bg-gold-950/30 flex items-center justify-center mb-4 group-hover:bg-black-pearl-200 dark:group-hover:bg-gold-900/40 transition-colors duration-300"
                     >
-                        <svg class="w-4 h-4 text-black-pearl-950 dark:text-amber-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">{!! $icon !!}</svg>
+                        <svg class="w-4 h-4 text-black-pearl-950 dark:text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">{!! $icon !!}</svg>
                     </div>
-                    <h3 class="font-display font-semibold text-sm text-zinc-900 dark:text-white mb-2">{{ $title }}</h3>
-                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ $desc }}</p>
+                    <h3 class="font-display font-bold text-base text-zinc-900 dark:text-white mb-2">{{ $title }}</h3>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ $desc }}</p>
                 </div>
             @endforeach
         </div>

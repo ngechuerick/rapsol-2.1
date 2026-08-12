@@ -56,6 +56,46 @@
     --color-hot-cinnamon-900: #6a2b1d;
     --color-hot-cinnamon-950: #3c140c;
 
+    /* ── BRAND GOLD ──
+       Anchored on the logo's own gold, #FEC00F (gold-400). The site had been
+       using Tailwind's stock `amber` across 11 different steps, which is a
+       different, more orange hue than the mark. This is the one gold.
+
+       Contrast against the dark surfaces, all comfortably AA:
+         gold-400 on shark-950 #09090b .......... 12.1:1
+         gold-400 on shark-900 #18181b .......... 10.5:1
+         gold-400 on black-pearl-950 #0a1628 .... 11.1:1
+       On LIGHT backgrounds gold-400 is only 1.6:1, so light-mode gold TEXT
+       must use gold-800 (6.1:1 on shark-50). Same hue, readable weight. */
+    --color-gold-50: #fff8e6;
+    --color-gold-100: #ffefc2;
+    --color-gold-200: #fee18a;
+    --color-gold-300: #fed14d;
+    --color-gold-400: #fec00f;
+    --color-gold-500: #e8ac00;
+    --color-gold-600: #c28c00;
+    --color-gold-700: #9b6f00;
+    --color-gold-800: #7a5700;
+    --color-gold-900: #614600;
+    --color-gold-950: #3a2900;
+
+    /* ── bp-* aliases ──
+       The views were written against `bp-*` but the scale is declared as
+       `black-pearl-*`, so 16 elements were styling themselves with classes
+       Tailwind never emitted. Aliasing rather than renaming keeps both
+       spellings valid and avoids touching every view. */
+    --color-bp-50: var(--color-black-pearl-50);
+    --color-bp-100: var(--color-black-pearl-100);
+    --color-bp-200: var(--color-black-pearl-200);
+    --color-bp-300: var(--color-black-pearl-300);
+    --color-bp-400: var(--color-black-pearl-400);
+    --color-bp-500: var(--color-black-pearl-500);
+    --color-bp-600: var(--color-black-pearl-600);
+    --color-bp-700: var(--color-black-pearl-700);
+    --color-bp-800: var(--color-black-pearl-800);
+    --color-bp-900: var(--color-black-pearl-900);
+    --color-bp-950: var(--color-black-pearl-950);
+
     /* For text and background colors */
     --color-shark-50: #fafafa;
     --color-shark-100: #f4f4f5;
@@ -73,9 +113,21 @@
 @layer base {
     /* globals.css */
 
+    /* ── GLOBAL TYPE SCALE ──
+       106.25% of the browser default = 17px on a stock 16px browser.
+       Every Tailwind text-* AND spacing value is rem-based, so this scales
+       type and layout together and the design proportions are unchanged.
+
+       Expressed as a PERCENTAGE, not `17px`, so a visitor who has raised
+       their browser font size still gets it: 106.25% of their 20px is
+       21.25px, whereas a hard `17px` would silently override them. */
+    html {
+        font-size: 106.25%;
+    }
+
     body {
         font-family: var(--font-sans);
-        font-size: 1.6rem; /* = 16px */
+        /* font-size: 1.6rem; = 16px */
         font-weight: 400;
     }
 
@@ -89,9 +141,19 @@
    SCROLL REVEAL ANIMATION SYSTEM
    Elements start hidden, become visible
    when they enter the viewport via JS observer
+
+   EVERY rule below is scoped to `[data-js]`, set on <html> by an inline
+   script in the head, before paint. Without that scoping the default state
+   is opacity:0, and since ~100% of the page's text sits inside a
+   [data-animate] wrapper, any failure to load or run the bundle rendered a
+   completely blank page. No JS now means no animation, not no content.
+
+   It must be a DATA ATTRIBUTE, not a class: <html> carries Alpine's
+   :class="dark ? 'dark' : ''" binding, which owns the class attribute and
+   strips anything it did not put there.
 ══════════════════════════════════════════ */
 
-[data-animate] {
+[data-js] [data-animate] {
     opacity: 0;
     transform: translateY(20px);
     transition:
@@ -99,50 +161,134 @@
         transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-[data-animate].is-visible {
+[data-js] [data-animate].is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Stagger delays — use data-delay="1" through data-delay="5" */
-[data-animate][data-delay="1"] {
+[data-js] [data-animate][data-delay="1"] {
     transition-delay: 80ms;
 }
-[data-animate][data-delay="2"] {
+[data-js] [data-animate][data-delay="2"] {
     transition-delay: 160ms;
 }
-[data-animate][data-delay="3"] {
+[data-js] [data-animate][data-delay="3"] {
     transition-delay: 240ms;
 }
-[data-animate][data-delay="4"] {
+[data-js] [data-animate][data-delay="4"] {
     transition-delay: 320ms;
 }
-[data-animate][data-delay="5"] {
+[data-js] [data-animate][data-delay="5"] {
     transition-delay: 400ms;
 }
 
 /* Slide from left variant */
-[data-animate="left"] {
+[data-js] [data-animate="left"] {
     opacity: 0;
     transform: translateX(-20px);
     transition:
         opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
         transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
-[data-animate="left"].is-visible {
+[data-js] [data-animate="left"].is-visible {
     opacity: 1;
     transform: translateX(0);
 }
 
 /* Scale variant */
-[data-animate="scale"] {
+[data-js] [data-animate="scale"] {
     opacity: 0;
     transform: scale(0.96);
     transition:
         opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
         transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
-[data-animate="scale"].is-visible {
+[data-js] [data-animate="scale"].is-visible {
     opacity: 1;
     transform: scale(1);
+}
+
+/* ══════════════════════════════════════════
+   THEME SWITCH — keep the crossfade, make it cheap
+
+   ~125 elements carry a transition (74 `transition-colors`, 50
+   `transition-all`). Flipping the theme ran all of them for 300ms at once,
+   and because `transition-all` includes transform, filter and
+   backdrop-filter, three blurred surfaces were recomposited for that whole
+   time. That was the lag — not the fade itself.
+
+   So keep the fade, but during a switch force every transitioning element
+   down to one short, colour-only transition. Nothing animates layout, blur
+   or transform, and everything lands together instead of straggling.
+
+   Scoped to [class*="transition"] rather than `*` deliberately: a universal
+   rule would give all ~825 elements a colour transition instead of the ~125
+   that actually have one, which would be slower than what we started with.
+══════════════════════════════════════════ */
+
+[data-theme-switching] [class*="transition"] {
+    transition-property: color, background-color, border-color, fill, stroke !important;
+    transition-duration: 160ms !important;
+    transition-timing-function: linear !important;
+    transition-delay: 0s !important;
+}
+
+/* ══════════════════════════════════════════
+   ACCESSIBILITY PREFERENCES
+══════════════════════════════════════════ */
+
+/* Reduced motion: keep the reveal as a short opacity fade, drop all
+   translation/scale. Also neutralises the 120 colour/all transitions
+   that otherwise all fire at once on a theme toggle. */
+@media (prefers-reduced-motion: reduce) {
+    [data-js] [data-animate],
+    [data-js] [data-animate="left"],
+    [data-js] [data-animate="scale"] {
+        transform: none !important;
+        transition: opacity 0.2s ease !important;
+    }
+
+    [data-js] [data-animate].is-visible,
+    [data-js] [data-animate="left"].is-visible,
+    [data-js] [data-animate="scale"].is-visible {
+        transform: none !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Reduced transparency: make the translucent header/drawer/banner solid
+   rather than blurred, so text never sits over moving content. */
+@media (prefers-reduced-transparency: reduce) {
+    [class*="backdrop-blur"] {
+        backdrop-filter: none !important;
+        background-color: #fff !important;
+    }
+
+    .dark [class*="backdrop-blur"] {
+        background-color: var(--color-shark-950) !important;
+    }
+}
+
+/* Increased contrast: give translucent and hairline-bordered surfaces a
+   defined edge. */
+@media (prefers-contrast: more) {
+    [class*="backdrop-blur"] {
+        backdrop-filter: none !important;
+        background-color: #fff !important;
+        border-color: var(--color-shark-900) !important;
+    }
+
+    .dark [class*="backdrop-blur"] {
+        background-color: var(--color-shark-950) !important;
+        border-color: var(--color-shark-100) !important;
+    }
 }

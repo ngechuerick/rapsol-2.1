@@ -1,5 +1,6 @@
 @extends ('layouts.app')
 @section ('title', 'About | Rapsoltech Consulting')
+@section ('description', 'Meet Rapsoltech Consulting: a Kenyan-rooted technology and consulting firm pairing deep local market knowledge with global delivery standards.')
 
 @section ('content')
     <div class="relative px-7 py-24 overflow-hidden">
@@ -12,7 +13,7 @@
         <div class="absolute -bottom-1.25 -right-1.25 w-2.5 h-2.5 rotate-45 bg-zinc-300 dark:bg-zinc-700"></div>
 
         <div class="flex items-center gap-3 mb-7" data-animate>
-            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
                 About Rapsoltech Consulting &mdash; Established 2020
             </span>
         </div>
@@ -23,7 +24,7 @@
             data-delay="1"
         >
             We're building<br />Africa's
-            <em class="not-italic text-black-pearl-900 dark:text-amber-500">digital</em> future.
+            <em class="not-italic text-black-pearl-900 dark:text-gold-400">digital</em> future.
         </h1>
 
         <p

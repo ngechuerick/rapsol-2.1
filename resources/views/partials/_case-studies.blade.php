@@ -14,7 +14,7 @@
     <div class="px-7 pt-16 pb-16">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10" data-animate>
             <div>
-                <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-black-pearl-950 dark:text-amber-500 mb-3">Our Work</p>
+                <p class="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-black-pearl-950 dark:text-gold-400 mb-3">Our Work</p>
                 <h2
                     class="font-display text-3xl md:text-4xl font-bold tracking-tight text-shark-900 dark:text-white leading-tight"
                 >
@@ -23,7 +23,7 @@
             </div>
             {{-- <a
                 href="/case-studies"
-                class="inline-flex items-center gap-2 text-xs font-medium text-shark-500 dark:text-shark-400 hover:text-shark-900 dark:hover:text-white transition-colors duration-200"
+                class="inline-flex items-center gap-2 text-sm font-medium text-shark-500 dark:text-shark-400 hover:text-shark-900 dark:hover:text-white transition-colors duration-200"
             >
                 View all case studies
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -38,18 +38,18 @@
             data-animate
         >
             {{-- Decorative gradient band --}}
-            <div class="h-1 bg-linear-to-r from-black-pearl-950 via-amber-500 to-amber-600"></div>
+            <div class="h-1 bg-linear-to-r from-black-pearl-950 via-gold-400 to-gold-400"></div>
 
             <div class="p-7 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                 {{-- Project info --}}
                 <div class="lg:col-span-2">
                     <div class="flex items-center gap-3 mb-5">
                         <span
-                            class="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider bg-black-pearl-100 dark:bg-amber-950/40 text-black-pearl-950 dark:text-amber-400"
+                            class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-mono font-bold uppercase tracking-wider bg-black-pearl-100 dark:bg-gold-950/40 text-black-pearl-950 dark:text-gold-400"
                         >
                             NGO
                         </span>
-                        <span class="font-mono text-[10px] text-shark-400 dark:text-shark-600"
+                        <span class="font-mono text-xs text-shark-500 dark:text-shark-400"
                             >2025 Nairobi, Kenya</span
                         >
                     </div>
@@ -64,7 +64,7 @@
                     <div class="flex flex-wrap gap-2">
                         @foreach (['Asset Tagging', 'Asset Management', 'Data', 'Staff Training'] as $tag)
                             <span
-                                class="px-2.5 py-1 rounded-md text-[12px] bg-black-pearl-100 dark:bg-shark-800 text-black-pearl-950 dark:text-shark-400"
+                                class="px-2.5 py-1 rounded-md text-xs bg-black-pearl-100 dark:bg-shark-800 text-black-pearl-950 dark:text-shark-400"
                             >
                                 {{ $tag }}
                             </span>
@@ -76,10 +76,10 @@
             </div>
 
             <div class="border-t border-shark-100 dark:border-shark-800 px-7 py-4 flex items-center justify-between">
-                <span class="text-sm text-shark-400 dark:text-shark-600">12-month engagement · Technology</span>
+                <span class="text-sm text-shark-500 dark:text-shark-400">12-month engagement · Technology</span>
                 {{-- <a
                     href="#"
-                    class="inline-flex items-center gap-1.5 text-xs font-medium text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 transition-colors duration-200"
+                    class="inline-flex items-center gap-1.5 text-sm font-medium text-gold-800 dark:text-gold-400 dark:text-gold-400 hover:text-gold-800 dark:hover:text-gold-400 dark:hover:text-gold-300 transition-colors duration-200"
                 >
                     Read full case study
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -115,12 +115,12 @@
                     <div class="p-6 flex-1">
                         <div class="flex items-center gap-3 mb-4">
                             <span
-                                class="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider dark:bg-blue-950/30 text-black-pearl-950 dark:text-blue-400 bg-black-pearl-100"
+                                class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-mono font-bold uppercase tracking-wider dark:bg-blue-950/30 text-black-pearl-950 dark:text-blue-400 bg-black-pearl-100"
                             >
                                 {{ $cs['tag'] }}
                             </span>
                             <span
-                                class="font-mono text-[10px] text-shark-400 dark:text-shark-600"
+                                class="font-mono text-xs text-shark-500 dark:text-shark-400"
                                 >{{ $cs['year'] }}</span
                             >
                         </div>
@@ -135,7 +135,7 @@
                         class="border-t border-shark-100 dark:border-shark-800 px-6 py-3 flex items-center justify-between"
                     >
                         <span
-                            class="text-[12px] text-shark-400 dark:text-shark-600 font-mono"
+                            class="text-xs text-shark-500 dark:text-shark-400 font-mono"
                             >{{ $cs['duration'] }}</span
                         >
                     </div>

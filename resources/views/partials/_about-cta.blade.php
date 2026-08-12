@@ -1,6 +1,6 @@
 <section class="relative border-t border-zinc-200 dark:border-zinc-800 overflow-hidden bg-zinc-900 dark:bg-zinc-950">
     <div
-        class="absolute -right-8 -bottom-6 font-display font-black text-[180px] leading-none text-white/3 select-none"
+        class="absolute -right-8 -bottom-6 font-display font-black text-[11.25rem] leading-none text-white/3 select-none"
         aria-hidden="true"
     >
         RTC
@@ -8,16 +8,16 @@
 
     <div class="relative px-7 py-20 text-center" data-animate>
         <div class="flex items-center justify-center gap-3 mb-7">
-            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400">Careers at Rapsoltech</span>
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">Careers at Rapsoltech</span>
         </div>
 
         <h2
             class="font-display text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-5 max-w-2xl mx-auto"
         >
-            Want to <span class="text-amber-400">join us</span>?
+            Want to <span class="text-gold-400">join us</span>?
         </h2>
 
-        <p class="text-base text-zinc-400 leading-relaxed mb-10 max-w-lg mx-auto">We're always looking for exceptional engineers, consultants, and strategists who share our values and want to shape Africa's digital future.</p>
+        <p class="text-base text-zinc-500 dark:text-zinc-400 leading-relaxed mb-10 max-w-lg mx-auto">We're always looking for exceptional engineers, consultants, and strategists who share our values and want to shape Africa's digital future.</p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

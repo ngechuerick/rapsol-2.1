@@ -6,7 +6,7 @@
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10" data-animate>
             <div>
                 <div class="flex items-center gap-3 mb-4">
-                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
+                    <span class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400"
                         >Leadership</span
                     >
                 </div>
@@ -27,7 +27,7 @@
         --}}
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
             @foreach ([
-                ['JM','from-amber-500 to-amber-700',   'Josephat M.', 'Co-Founder & CEO',        'Former Logistics Manager and CEO with 15 years industrial expirience', null],
+                ['JM','from-gold-400 to-gold-400',   'Josephat M.', 'Co-Founder & CEO',        'Former Logistics Manager and CEO with 15 years industrial expirience', null],
                 ['EN','from-sky-500 to-sky-700',        'Erick N.','Co-Founder & CTO',        'Software architect who has led engineering teams from startup to scale across three continents.', null],
                 ['KM','from-emerald-500 to-emerald-700','Kennedy M.',  'Head of Consulting',      'Strategy consultant and CFA charterholder specialising in digital transformation.', null],
                 ['CW','from-violet-500 to-violet-700',  'Cynthia W.',  'Head of Business IT',         'Business strategist with deep expertise in M&A and corporate restructuring.', null],
@@ -52,13 +52,13 @@
                         <div
                             class="absolute inset-0 bg-black/75 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-5"
                         >
-                            <p class="text-xs text-white/90 leading-relaxed text-center">{{ $bio }}</p>
+                            <p class="text-sm text-white/90 leading-relaxed text-center">{{ $bio }}</p>
                         </div>
                     </div>
                     <div class="p-4">
                         <div class="font-display font-semibold text-sm text-zinc-900 dark:text-white">{{ $name }}</div>
                         <div
-                            class="text-xs font-semibold uppercase tracking-widest text-amber-600 dark:text-amber-500 mt-1"
+                            class="text-sm font-semibold uppercase tracking-widest text-gold-800 dark:text-gold-400 dark:text-gold-400 mt-1"
                         >
                             {{ $role }}
                         </div>
